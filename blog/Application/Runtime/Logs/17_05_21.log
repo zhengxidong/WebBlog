@@ -1,0 +1,120 @@
+[ 2017-05-21T02:27:06+08:00 ] 220.181.108.182 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001683s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001645s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('220.181.108.182','2017-05-21 02:27:06','中国北京市北京市') [ RunTime:0.008373s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001424s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005275s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001137s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001569s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001375s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.006727s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005776s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001460s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001293s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001277s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001158s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001409s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2017-05-21T02:36:22+08:00 ] 220.181.108.165 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001943s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001955s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('220.181.108.165','2017-05-21 02:36:22','中国北京市北京市') [ RunTime:0.003987s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001646s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.006533s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001268s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001815s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001652s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007298s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006711s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001604s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001494s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001548s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001387s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001595s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-05-21T03:19:58+08:00 ] 140.205.205.9 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002113s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001945s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('140.205.205.9','2017-05-21 03:19:58','中国上海市上海市') [ RunTime:0.004722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001633s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.006400s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001136s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001584s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001785s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.006342s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006404s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001438s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001350s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001339s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001200s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001460s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+

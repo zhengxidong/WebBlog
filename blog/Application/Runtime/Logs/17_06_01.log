@@ -1,0 +1,1678 @@
+[ 2017-06-01T00:06:57+08:00 ] 183.13.91.202 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-06-01T00:07:05+08:00 ] 113.87.183.233 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.001915s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2017-06-01T00:07:06+08:00 ] 183.13.101.36 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002445s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.002059s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.13.101.36','2017-06-01 00:07:06','中国广东省深圳市') [ RunTime:0.005236s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.002191s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003872s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001502s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002057s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001790s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010131s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006555s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001982s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001705s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001798s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001607s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001980s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2017-06-01T00:07:06+08:00 ] 113.87.183.233 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001751s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001682s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('113.87.183.233','2017-06-01 00:07:06','中国广东省深圳市') [ RunTime:0.003671s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001228s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003889s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001236s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001553s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009039s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005243s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001498s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001437s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001359s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001487s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2017-06-01T00:07:06+08:00 ] 113.87.183.233 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001581s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001305s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001383s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2017-06-01T00:07:07+08:00 ] 101.226.125.16 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-06-01T00:07:14+08:00 ] 113.87.183.233 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001581s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001293s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001171s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2017-06-01T00:07:16+08:00 ] 113.87.183.233 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-06-01T00:07:16+08:00 ] 112.65.193.15 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001331s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001336s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2017-06-01T00:07:16+08:00 ] 112.65.193.15 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001527s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001427s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('112.65.193.15','2017-06-01 00:07:16','中国上海市上海市') [ RunTime:0.004744s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001054s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003206s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001406s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008443s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004980s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001482s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001284s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001147s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001406s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-06-01T00:07:18+08:00 ] 180.153.214.192 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001867s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001305s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001578s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001292s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2017-06-01T00:07:20+08:00 ] 101.226.33.217 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001716s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001696s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('101.226.33.217','2017-06-01 00:07:20','中国上海市上海市') [ RunTime:0.003816s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001242s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003805s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001262s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001255s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001546s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008915s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005118s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001520s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001518s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001249s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001690s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-06-01T00:07:22+08:00 ] 113.87.183.233 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001636s ]
+SQL: INSERT INTO `tb_tag` (`name`) VALUES ('Ubuntu') [ RunTime:0.006765s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-06-01T00:07:23+08:00 ] 113.87.183.233 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001522s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001466s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-06-01T00:07:24+08:00 ] 101.226.89.121 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001565s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001307s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001286s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2017-06-01T00:07:25+08:00 ] 101.226.33.202 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001858s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001354s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001352s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-06-01T00:07:26+08:00 ] 101.226.125.105 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-06-01T00:07:26+08:00 ] 101.226.65.105 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2017-06-01T00:07:29+08:00 ] 113.87.183.233 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001749s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001224s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2017-06-01T00:07:31+08:00 ] 113.87.183.233 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001909s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001476s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001675s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001563s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-06-01T00:07:39+08:00 ] 180.163.2.118 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001629s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001122s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002591s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-06-01T00:07:41+08:00 ] 180.153.206.20 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001601s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002618s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2017-06-01T00:07:41+08:00 ] 101.226.89.116 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001465s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001488s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-06-01T00:07:44+08:00 ] 101.226.65.104 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001514s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001317s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2017-06-01T00:07:48+08:00 ] 101.226.65.104 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.002014s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001610s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001856s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001525s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-06-01T00:09:40+08:00 ] 183.13.99.103 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001615s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('用winscp的root连接ubuntu“拒绝访问”的解决方法 ','用winscp的root连接ubuntu“拒绝访问”的解决方法 ','0','2017-06-01 00:09:40','&lt;p&gt;第一步：&lt;br/&gt;&lt;/p&gt;&lt;p&gt;ubuntu 服务器默认的root账号是没有激活的，需要用初装的用户账号给root设置管理密码�\�&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;user@ubuntu12:~$ sudo passwd root //用sudo修改root帐户&lt;br/&gt;&lt;br/&gt;Password: //输入密码&lt;br/&gt;Enter new UNIX password: //提示输入新的root帐户密码&lt;br/&gt;Retype new UNIX password:&amp;nbsp; //再输入一次确认密�\�&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;修改成功之后你就可以使用root账号了，可以使用su root 命令切换到root�\�&lt;br/&gt;&lt;br/&gt;但是碰到过一次情况，就是修改之后，直接用root账号无法登陆远程终端，这是还需要修改ssh配置文件�\�&lt;br/&gt;&lt;br/&gt;/etc/ssh/sshd_config 修改该配置文件：&lt;br/&gt;&lt;br/&gt;# Authentication:&lt;br/&gt;LoginGraceTime 120&lt;br/&gt;PermitRootLogin without-password&lt;br/&gt;StrictModes yes&lt;br/&gt;&lt;br/&gt;�\� PermitRootLogin without-password&amp;nbsp; 修改�\� PermitRootLogin yes，如下：&lt;br/&gt;&lt;br/&gt;# Authentication:&lt;br/&gt;LoginGraceTime 120&lt;br/&gt;PermitRootLogin yes&lt;br/&gt;StrictModes yes&lt;/p&gt;&lt;p&gt;&lt;strong&gt;第二步：&lt;/strong&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;1. 首先在服务器上安装ssh的服务器端�\�&lt;/p&gt;&lt;p&gt;$ sudo aptitude install openssh-server&lt;/p&gt;&lt;p&gt;2. 启动ssh-server�\�&lt;/p&gt;&lt;p&gt;$&amp;nbsp; sudo /etc/init.d/ssh restart&lt;/p&gt;&lt;p&gt;3. 确认ssh-server已经正常工作�\�&lt;/p&gt;&lt;p&gt;$ netstat -tlp&lt;/p&gt;&lt;p&gt;tcp6&amp;nbsp;&amp;nbsp;&amp;nbsp; 0&amp;nbsp;&amp;nbsp;&amp;nbsp; 0 *:ssh&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; *:*&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; LISTEN&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; -&lt;/p&gt;&lt;p&gt;看到上面这一行输出说明ssh-server已经在运行了�\�&lt;/p&gt;&lt;p&gt;4.关闭防火�\�&lt;/p&gt;&lt;p&gt;sudo&amp;nbsp; ufw disable&lt;/p&gt;&lt;p&gt;5.在客户端用putty软件连接,端口默认是：22，协议是：ssh&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','2017-05-01/149357249859061b923bdd2.png') [ RunTime:0.004233s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001421s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (27,2) [ RunTime:0.009131s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (27,19) [ RunTime:0.005718s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-06-01T00:09:41+08:00 ] 183.13.99.103 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001480s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002844s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-06-01T00:09:44+08:00 ] 113.87.183.233 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001680s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001772s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('113.87.183.233','2017-06-01 00:09:44','中国广东省深圳市') [ RunTime:0.005006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001139s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002732s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001331s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001434s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001499s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008690s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005315s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001550s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001148s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001377s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001149s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001501s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2017-06-01T00:09:53+08:00 ] 180.163.1.46 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.003092s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001677s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('180.163.1.46','2017-06-01 00:09:53','中国上海市上海市') [ RunTime:0.005395s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001092s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002450s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001123s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001542s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008175s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004782s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001371s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001422s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001392s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001521s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-06-01T00:09:57+08:00 ] 117.185.27.115 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001764s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001732s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('117.185.27.115','2017-06-01 00:09:57','中国上海市上海市') [ RunTime:0.006097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001314s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002885s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001547s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.006623s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001664s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010590s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005007s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001586s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001730s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001459s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001264s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001546s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-06-01T04:51:45+08:00 ] 123.125.71.45 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013098s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001981s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001943s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.45','2017-06-01 04:51:45','中国北京市北京市') [ RunTime:0.004223s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001928s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003223s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001349s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.006152s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001623s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010472s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005475s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001649s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001609s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001572s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001458s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001672s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-06-01T09:12:56+08:00 ] 183.14.135.196 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2017-06-01T11:52:01+08:00 ] 204.44.65.210 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001735s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001697s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('204.44.65.210','2017-06-01 11:52:01','美国') [ RunTime:0.003749s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001544s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002855s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001193s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001629s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001477s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009491s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005478s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001501s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001721s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001287s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001541s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-06-01T11:52:05+08:00 ] 204.44.65.210 /Home/About/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `tb_info` [ RunTime:0.002177s ]
+SQL: SELECT * FROM `tb_info`  [ RunTime:0.001974s ]
+SQL: SHOW COLUMNS FROM `tb_about_blog` [ RunTime:0.001878s ]
+SQL: SELECT * FROM `tb_about_blog`  [ RunTime:0.001761s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-06-01T14:56:35+08:00 ] 183.14.135.196 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-06-01T14:56:43+08:00 ] 183.14.135.196 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.001562s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001671s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-06-01T14:56:43+08:00 ] 183.14.135.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001848s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001878s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.196','2017-06-01 14:56:43','中国广东省深圳市') [ RunTime:0.005047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001637s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002888s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001168s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002287s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001597s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010093s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006387s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001664s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001409s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001420s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001255s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001567s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2017-06-01T14:56:43+08:00 ] 183.14.135.196 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002135s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001892s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.196','2017-06-01 14:56:43','中国广东省深圳市') [ RunTime:0.004068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001357s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003164s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001467s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001591s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001755s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010488s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005510s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001845s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001388s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001615s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001394s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001626s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2017-06-01T14:56:44+08:00 ] 183.14.135.196 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001570s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001457s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-06-01T14:56:53+08:00 ] 180.153.205.252 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001562s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001634s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('180.153.205.252','2017-06-01 14:56:53','中国上海市上海市') [ RunTime:0.004339s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001105s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002680s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001111s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001475s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008725s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005686s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001406s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001330s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001098s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001372s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-06-01T14:57:01+08:00 ] 183.14.135.196 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001644s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001079s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002986s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-06-01T15:42:35+08:00 ] 183.14.135.196 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001995s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001841s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001805s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2017-06-01T15:44:01+08:00 ] 183.14.135.196 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002070s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('Windows下用NaviCat远程链接虚拟机Ubuntu Linux下MySQL数据�\�','Windows下用NaviCat远程链接虚拟机Ubuntu Linux下MySQL数据�\�','0','2017-06-01 15:44:01','&lt;p&gt;Windows下用NaviCat远程链接虚拟机Ubuntu Linux下MySQL数据�\�&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;注意：这是Ubuntu当中的muysql，Ubuntu当中root，并没有设置密码，需要重新给root设置密码，否则WinSCP、NaviCat或PUTTY连接Ubuntu都会被拒绝访问，因为你没有密码进去，Ubuntu中的系统的进去设置的用户及密码只是个人管理员的账号，并不是超级管理员的账号，root才是超级管理员账号。在CentOS中进去的直接就是root，也就是超级管理员，所以WinSCP连接到CentOS当中并不会出现拒绝访问的问题，有也是防火墙的问题�\�&lt;br/&gt;&lt;br/&gt;我用navicat去远程链接我虚拟机中的MySQL，发现连接测试失败�\�&lt;br/&gt;主机名或IP地址，在Linux中查看ip地址命令为：ifconfig&lt;br/&gt;&lt;br/&gt;解决方法�\�&lt;br/&gt;&lt;br/&gt;1、然后在虚拟机中查看网络端口信息�\�&lt;br/&gt;&lt;br/&gt;　　netstat -ntpl&amp;nbsp;&amp;nbsp; 查看mysql 3306有没有启�\�&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;2、清除防火墙中的规则或者添加一条新规则（添加新规则本人没试过）&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 清除�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; iptables -F&lt;br/&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 在这之后，又尝试连接mysql，出现以下错误，是因为mysql没有允许远程登陆，所有要授权mysql远程登陆&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 错误提示�\�1130 - Host &amp;#39;192.168.149.129&amp;#39; is not allowed to connect this MySQL server&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 添加�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; vi /etc/sysconfig/iptables&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 注意：新加的规则写在-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT&amp;nbsp;&amp;nbsp; 之后&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 无论清除还是添加，执行重启一下service iptables restart&lt;br/&gt;&lt;br/&gt;3、Linux中的MySQL登录&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; mysql -h 主机地址 -u 用户�\� -p 用户密码&lt;br/&gt;&amp;nbsp;&amp;nbsp; 或�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp; mysql -u 用户�\� -p 用户密码&lt;br/&gt;&lt;br/&gt;4、两种授权方�\�&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 方法一：本地登入mysql，更�\� &amp;quot;mysql&amp;quot; 数据库里�\� &amp;quot;user&amp;quot; 表里�\� &amp;quot;host&amp;quot; 项，�\�&amp;quot;localhost&amp;quot;改为&amp;quot;%&amp;quot;&lt;br/&gt;&lt;br/&gt;　　#mysql -u root -proot&lt;br/&gt;　　mysql&amp;gt;use mysql;&lt;br/&gt;　　mysql&amp;gt;update user set host = &amp;#39;%&amp;#39; where user = &amp;#39;root&amp;#39;;&lt;br/&gt;　　mysql&amp;gt;select host, user from user;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 方法二：直接授权（推荐）&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 从任何主机上使用root用户，密码：youpassword（你的root密码）连接到mysql服务器：&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; mysql&amp;gt;GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;youpassword&amp;#39; WITH GRANT OPTION;&lt;br/&gt;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 授权完毕&lt;br/&gt;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 退出MySql&lt;br/&gt;&amp;nbsp;&amp;nbsp; mysql&amp;gt;exit或quit&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 重启MySQL&lt;br/&gt;&amp;nbsp;&amp;nbsp; 集成环境重启：lnmp restart&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 只重启mysql：mysql restart&lt;br/&gt;&lt;br/&gt;5、执行以下命令刷新权�\� &lt;br/&gt;&amp;nbsp;&amp;nbsp; FLUSH PRIVILEGES&lt;br/&gt;&lt;br/&gt;6、再通过navicat远程链接MySQL，连接测试，如果不成功，接着往下�\�&lt;br/&gt;&lt;br/&gt;7、防火墙&lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 打开3306端口&lt;br/&gt;&amp;nbsp;&amp;nbsp; sudo ufw allow 3306&lt;br/&gt;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 关闭防火墙：&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; sudo ufw disable &lt;br/&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp; 开启防火墙�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; sudo ufw enable&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; sudo ufw default deny&lt;br/&gt;&amp;nbsp;&amp;nbsp; 查看防火墙状态：&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; sudo ufw status&lt;br/&gt;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&amp;nbsp; &amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;','2017-05-01/149357249859061b923bdd2.png') [ RunTime:0.018867s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001840s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (28,2) [ RunTime:0.004353s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (28,4) [ RunTime:0.004463s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (28,19) [ RunTime:0.004260s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-06-01T15:44:02+08:00 ] 183.14.135.196 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001785s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001605s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-06-01T15:44:11+08:00 ] 183.14.135.196 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002468s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001822s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.196','2017-06-01 15:44:11','中国广东省深圳市') [ RunTime:0.004221s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001366s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003843s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001375s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001761s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001671s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010841s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006203s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001714s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001577s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001582s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001359s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-06-01T15:44:47+08:00 ] 183.14.135.196 /Home/Index/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001756s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001636s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.196','2017-06-01 15:44:46','中国广东省深圳市') [ RunTime:0.004322s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001162s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001884s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.004213s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001187s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001284s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001489s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008569s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004866s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001434s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001880s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001206s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001544s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017390s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-06-01T15:55:16+08:00 ] 117.185.27.113 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007808s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001792s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001832s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('117.185.27.113','2017-06-01 15:55:16','中国上海市上海市') [ RunTime:0.004544s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001533s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002556s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001087s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001425s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008805s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005086s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001431s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001272s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001351s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001148s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001402s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077293s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-06-01T15:55:47+08:00 ] 180.163.2.118 /Home/Index/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.003102s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001509s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('180.163.2.118','2017-06-01 15:55:47','中国上海市上海市') [ RunTime:0.004883s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001089s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001360s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.004044s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001086s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001487s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008733s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004594s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001656s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001308s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001081s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001365s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-06-01T15:56:45+08:00 ] 101.226.33.201 /Home/Index/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001535s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001489s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('101.226.33.201','2017-06-01 15:56:45','中国上海市上海市') [ RunTime:0.006571s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001060s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001045s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '2' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.003619s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001060s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001336s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008321s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004517s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001374s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001293s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001051s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001436s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2017-06-01T16:46:13+08:00 ] 123.125.71.111 /Home/Index/index/id/6/p/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001708s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001733s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.111','2017-06-01 16:46:13','中国北京市北京市') [ RunTime:0.003879s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001059s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '6' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001510s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '6' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.001217s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001618s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001415s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009682s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004788s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001465s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001311s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001284s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001152s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001398s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2017-06-01T17:19:33+08:00 ] 123.125.71.73 /Home/Index/index/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001566s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.73','2017-06-01 17:19:33','中国北京市北京市') [ RunTime:0.006479s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001125s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '19' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001905s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '19' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.001535s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001109s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001413s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010367s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004952s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001452s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001371s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001391s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.002024s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001504s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined index: views /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 93 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2017-06-01T17:52:53+08:00 ] 123.125.71.115 /Home/NewList/newdetail/id/28.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001853s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 28 ) [ RunTime:0.003909s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 28 ) LIMIT 1   [ RunTime:0.001478s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<28 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001492s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>28 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001453s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2017-06-01T18:26:13+08:00 ] 123.125.71.57 /Home/NewList/newdetail/id/27.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001874s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 27 ) [ RunTime:0.004252s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 27 ) LIMIT 1   [ RunTime:0.001410s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<27 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001701s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>27 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-06-01T18:59:33+08:00 ] 123.125.71.40 /Home/NewList/newdetail/id/26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001810s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 26 ) [ RunTime:0.004601s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.001404s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<26 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001419s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>26 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001296s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-06-01T19:32:53+08:00 ] 220.181.108.171 /Home/NewList/newdetail/id/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001956s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 28 ) [ RunTime:0.004133s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 28 ) LIMIT 1   [ RunTime:0.001633s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<28 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001719s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>28 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001491s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-06-01T20:06:13+08:00 ] 220.181.108.172 /Home/NewList/newdetail/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002154s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 25 ) [ RunTime:0.004396s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.001584s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<25 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001737s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>25 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001750s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2017-06-01T20:39:33+08:00 ] 220.181.108.111 /Home/NewList/newdetail/id/27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002095s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 27 ) [ RunTime:0.004835s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 27 ) LIMIT 1   [ RunTime:0.001488s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<27 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001724s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>27 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+

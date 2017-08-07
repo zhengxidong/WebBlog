@@ -1,0 +1,22 @@
+[ 2017-04-10T09:28:45+08:00 ] ::1 /MyProject/blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028356s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.118149s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.406978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.407243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.031096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.031250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.021259s ]
+INFO: [ app_end ] --END-- [ RunTime:0.021401s ]
+

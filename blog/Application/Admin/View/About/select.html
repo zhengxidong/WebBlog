@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>写个人 - 博客管理系统</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="__PUBLIC__/Admin/images/icon/icon.png">
+<link rel="shortcut icon" href="__PUBLIC__/Admin/images/icon/favicon.ico">
+<script src="__PUBLIC__/Admin/js/jquery-2.1.4.min.js"></script>
+<!--[if gte IE 9]>
+  <script src="__PUBLIC__/Admin/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/html5shiv.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/respond.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+    <!--编辑器第一步-->
+    <link rel="stylesheet" href="__PUBLIC__/Plugin/themes/default/default.css" />
+    <script charset="utf-8" src="__PUBLIC__/Plugin/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/Plugin/lang/zh-CN.js"></script>
+    <!--日期选择器-->
+    <script language="javascript" type="text/javascript" src="__PUBLIC__/Plugin/My97DatePicker/WdatePicker.js"></script>
+<!--[if lt IE 9]>
+  <script>window.location.href='upgrade-browser.html';</script>
+<![endif]-->
+</head>
+
+<body class="user-select">
+<section class="container-fluid">
+  <header>
+      <!--加载顶部导航-->
+      <include file="./Application/Admin/View/Public/nav.html"/>
+  </header>
+  <div class="row">
+      <!--加载左边导航-->
+      <include file="./Application/Admin/View/Public/left_nav.html"/>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
+      <div class="row">
+        <form action="__URL__/update" method="post" class="add-article-form">
+          <div class="col-md-9">
+            <h1 class="page-header">撰写个人信息</h1>
+           <!-- <div class="form-group ">
+              <label for="article-title" class="sr-only">标题</label>
+              <input type="text" id="article-title" name="articletitle" class="form-control" placeholder="在此处输入标题" required autofocus autocomplete="off">
+            </div>-->
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>籍贯</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" name="info_nativeplace" value="<!--{$arr[0]['info_nativeplace']}-->" class="form-control" placeholder="请输入籍贯" autocomplete="off">
+                    <span class="prompt-text">写火星也可以。</span> </div>
+            </div>
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>现居地</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" name="info_nowliving" value="<!--{$arr[0]['info_nowliving']}-->" class="form-control" placeholder="请输入现居地" autocomplete="off">
+                    <span class="prompt-text">写本人的现居地。</span> </div>
+            </div>
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>职业</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" name="info_career" value="<!--{$arr[0]['info_career']}-->" class="form-control" placeholder="请输入职业" autocomplete="off">
+                    <span class="prompt-text">可填可不填。</span> </div>
+            </div>
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>喜欢的书</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" name="info_likebook" value="<!--{$arr[0]['info_likebook']}-->" class="form-control" placeholder="请输入书籍" autocomplete="off">
+                    <span class="prompt-text">写几本有艺术性，有意义的书籍</span> </div>
+            </div>
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>喜欢的音乐</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" name="info_likemusic" value="<!--{$arr[0]['info_likemusic']}-->" class="form-control" placeholder="请输入音乐" autocomplete="off">
+                    <span class="prompt-text">填写自己喜欢的音乐。</span> </div>
+            </div>
+            <div class="form-group">
+              <label for="article-content" class="sr-only">个人描述</label>
+              <textarea id="article-content" name="info_content" style="width: 800px;height: 400px;"><!--{$arr[0]['info_content']}--></textarea>
+            </div>
+              <input type="hidden" name="id" value="<!--{$arr[0]['id']}-->"/>
+          </div>
+          <div class="col-md-3">
+            <h1 class="page-header">操作</h1>
+
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>网名</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" class="form-control" placeholder="输入网名" name="info_nickname" value="<!--{$arr[0]['info_nickname']}-->" autocomplete="off">
+                <span class="prompt-text">写个性的网名</span> </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>名字</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" class="form-control" placeholder="请输入名字"  name="info_name" value="<!--{$arr[0]['info_name']}-->" autocomplete="off">
+              </div>
+            </div>
+            <div class="add-article-box">
+                <h2 class="add-article-box-title"><span>生日</span></h2>
+                <div class="add-article-box-content">
+                    <input type="text" class="form-control" placeholder="请输入生日"  name="info_birthday" value="<!--{$arr[0]['info_birthday']}-->" onClick="WdatePicker()" autocomplete="off">
+                </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>发布</span></h2>
+              <div class="add-article-box-footer">
+                <button class="btn btn-primary" type="submit" name="submit">更新</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script> 
+<script src="__PUBLIC__/Admin/js/admin-scripts.js"></script>
+<!--<script src="__PUBLIC__/Admin/lib/ueditor/ueditor.config.js"></script>
+<script src="__PUBLIC__/Admin/lib/ueditor/ueditor.all.min.js"> </script>
+<script src="__PUBLIC__/Admin/lib/ueditor/lang/zh-cn/zh-cn.js"></script>-->
+<script id="uploadEditor" type="text/plain" style="display:none;"></script>
+<script type="text/javascript">
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="info_content"]');
+    });
+    /*$(function(){
+        var mydate = new Date();
+        var t = mydate.getFullYear()+"-";
+         t +=(mydate.getMonth()+1)+"-";
+         t +=mydate.getDate()+"";
+         t +=mydate.getHours()+":";
+         t +=mydate.getMinutes()+":";
+        t +=mydate.getSeconds();
+        $("#time").val(t);
+    })*/
+</script>
+</body>
+</html>

@@ -1,0 +1,1383 @@
+[ 2017-06-07T04:47:31+08:00 ] 123.125.71.46 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.003555s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.002057s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.46','2017-06-07 04:47:31','中国北京市北京市') [ RunTime:0.004904s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.002065s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005451s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001530s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002129s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001800s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.011836s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006215s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001862s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001716s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001559s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001884s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2017-06-07T07:56:28+08:00 ] 123.125.71.42 /Home/Index/index/id/6/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001709s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001869s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.42','2017-06-07 07:56:28','中国北京市北京市') [ RunTime:0.010023s ]
+SQL: SHOW COLUMNS FROM tb_article as a [ RunTime:0.001098s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article as a
+SQL: SELECT COUNT(*) AS tp_count FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '6' ) AND ( a.ispublic = '0' ) LIMIT 1   [ RunTime:0.001543s ]
+SQL: SELECT a.id,a.titlepic,a.articletitle,a.articlecontent,a.articletime,at.articleid,t.name FROM tb_article as a INNER JOIN tb_article_tag as at on a.id=at.articleid INNER JOIN tb_tag as t on at.tagid=t.id  WHERE ( at.tagid = '6' ) AND ( a.ispublic = '0' ) LIMIT 0,7   [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001069s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001468s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.010762s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006960s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001529s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001285s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001133s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001422s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 55 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2017-06-07T09:33:33+08:00 ] 183.14.135.36 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-06-07T09:33:38+08:00 ] 183.14.135.36 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.001611s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001433s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-06-07T09:33:39+08:00 ] 183.14.135.36 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002084s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001722s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.36','2017-06-07 09:33:39','中国广东省深圳市') [ RunTime:0.003954s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001716s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004612s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001489s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001812s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001543s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009557s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005497s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001559s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001518s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001366s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001678s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2017-06-07T09:33:39+08:00 ] 183.14.135.36 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001770s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001683s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.135.36','2017-06-07 09:33:39','中国广东省深圳市') [ RunTime:0.004353s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001393s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005849s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001364s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001609s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009392s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005387s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001620s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001495s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001304s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-06-07T09:33:40+08:00 ] 183.14.135.36 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001598s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001467s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001536s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001277s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-06-07T09:33:43+08:00 ] 180.153.81.212 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-06-07T09:33:55+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001772s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001523s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-06-07T09:33:57+08:00 ] 183.14.135.36 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2017-06-07T09:34:16+08:00 ] 183.14.135.36 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.003128s ]
+SQL: INSERT INTO `tb_tag` (`name`) VALUES ('Javascript') [ RunTime:0.005497s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2017-06-07T09:34:18+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001709s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001362s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001278s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-06-07T09:37:06+08:00 ] 101.226.65.104 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001848s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001308s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001273s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-06-07T09:37:08+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001897s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001234s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2017-06-07T09:37:17+08:00 ] 101.226.89.116 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001809s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001285s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004412s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2017-06-07T09:37:21+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001589s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001482s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042347s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2017-06-07T09:37:21+08:00 ] 101.226.65.108 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001563s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001067s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003871s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-06-07T09:37:30+08:00 ] 101.226.66.180 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001697s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001279s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001483s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-06-07T09:37:35+08:00 ] 101.226.66.177 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001581s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001175s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001355s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-06-07T09:37:39+08:00 ] 101.226.66.177 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001533s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001420s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.002478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-06-07T09:38:03+08:00 ] 101.226.33.219 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001669s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001688s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('101.226.33.219','2017-06-07 09:38:03','中国上海市上海市') [ RunTime:0.004678s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001055s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003864s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001170s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001544s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001369s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008807s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005009s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001405s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001292s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001173s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001550s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2017-06-07T09:41:08+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001729s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('DOMContentLoaded事件','DOMContentLoaded事件','0','2017-06-07 09:41:07','&lt;p&gt;当初始HTML文档被完全加载和解析时，&lt;strong&gt;DOMContentLoaded &lt;/strong&gt;事件被触发，而无需等待样式表、图像和子框架完成加载。另一个不同的事件&amp;nbsp;&lt;code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/load&quot;&gt;load&lt;/a&gt;&amp;nbsp;&lt;/code&gt;应该仅用于检测一个完全加载的页面�\� 在使�\� DOMContentLoaded 更加合适的情况下使�\�&amp;nbsp;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/load&quot;&gt;&lt;code&gt;load&lt;/code&gt;&lt;/a&gt;&amp;nbsp;是一个非常流行的错误，所以要谨慎�\�&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 示例&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;pre&gt;&amp;lt;script&amp;gt;\r\n&amp;nbsp;&amp;nbsp;document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;,&amp;nbsp;function(event)&amp;nbsp;{\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;console.log(&amp;quot;DOM&amp;nbsp;fully&amp;nbsp;loaded&amp;nbsp;and&amp;nbsp;parsed&amp;quot;);\r\n&amp;nbsp;&amp;nbsp;});\r\n&amp;lt;/script&amp;gt;&lt;/pre&gt;&lt;pre&gt;&amp;lt;script&amp;gt;\r\n&amp;nbsp;&amp;nbsp;document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;,&amp;nbsp;function(event)&amp;nbsp;{\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;console.log(&amp;quot;DOM&amp;nbsp;fully&amp;nbsp;loaded&amp;nbsp;and&amp;nbsp;parsed&amp;quot;);\r\n&amp;nbsp;&amp;nbsp;});\r\n\r\n&amp;nbsp;&amp;nbsp;for(var&amp;nbsp;i=0;&amp;nbsp;i&amp;lt;1000000000;&amp;nbsp;i++){\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;这个同步脚本将延迟DOM的解析�\�\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;//&amp;nbsp;所以DOMContentLoaded事件稍后将启动�\�&amp;nbsp;&amp;nbsp;}&amp;nbsp;&amp;lt;/script&amp;gt;&lt;/pre&gt;&lt;h3 id=&quot;兼容不支持该事件的浏览器&quot;&gt;兼容不支持该事件的浏览器&lt;/h3&gt;&lt;p&gt;在IE8�\�,可以使用&lt;code&gt;readystatechange&lt;/code&gt;事件来检测DOM文档是否加载完毕.在更早的IE版本�\�,可以通过每隔一段时间执行一�\�&lt;code&gt;document.documentElement.doScroll(&amp;quot;left&amp;quot;)来检测这一状态，&lt;/code&gt;因为这条代码在DOM加载完毕之前执行时会抛出错误(throw an error)�\�&lt;/p&gt;&lt;p&gt;诸如jQuery这样的通用JS库，会提供跨浏览器的方法来检测DOM是否加载完成。也有其他专门实现该功能的脚�\�:&lt;a href=&quot;https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js&quot; class=&quot;external external-icon&quot; title=&quot;https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js&quot;&gt;contentloaded.js&lt;/a&gt;&amp;nbsp;(只能添一个时间监听函�\�)以及&lt;a href=&quot;https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js&quot; class=&quot;external external-icon&quot; title=&quot;https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js&quot;&gt;jquery.documentReady.js&lt;/a&gt;&amp;nbsp;(并不依赖jQuery,虽然名字中有jquery).&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','2017-05-01/149357583259062898e4f8b.png') [ RunTime:0.004842s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001552s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (30,20) [ RunTime:0.003399s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-06-07T09:41:09+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001603s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001479s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004114s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2017-06-07T09:53:26+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001698s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001436s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001564s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001318s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2017-06-07T09:53:43+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001489s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001200s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-06-07T09:53:48+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001852s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001811s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2017-06-07T09:53:49+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001719s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001470s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001228s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2017-06-07T09:53:53+08:00 ] 101.226.66.181 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001701s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001220s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001172s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-06-07T09:53:58+08:00 ] 101.226.51.228 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001471s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001108s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2017-06-07T10:12:28+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.009094s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('关于object-fit属�\�','关于object-fit属�\�','0','2017-06-07 10:12:28','&lt;p&gt;&lt;strong&gt;一、替换元�\�&lt;/strong&gt;&lt;br/&gt;不是所有元素都叫“替换元素”。在CSS中，“替换元素”指的是（引用自&lt;a href=&quot;http://openwares.net/internet/css_replaced_element.html&quot; target=&quot;_blank&quot;&gt;这里&lt;/a&gt;）：&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;其内容不受CSS视觉格式化模型（中文释义参见&lt;a href=&quot;http://openwares.net/internet/css_visual_formatting_model.html&quot; target=&quot;_blank&quot;&gt;这里&lt;/a&gt;）控制的元素，比�\�&lt;code&gt;image&lt;/code&gt;, 嵌入的文�\�(&lt;code&gt;iframe&lt;/code&gt;之类)或�\�&lt;code&gt;applet&lt;/code&gt;。比如，&lt;code&gt;img&lt;/code&gt;元素的内容通常会被�\�&lt;code&gt;src&lt;/code&gt;属性指定的图像替换掉。替换元素通常有其固有的尺寸：一个固有的宽度，一个固有的高度和一个固有的比率。比如一幅位图有固有用绝对单位指定的宽度和高度，从而也有固有的宽高比率。另一方面，其他文档也可能没有固有的尺寸，比如一个空白的html文档�\�&lt;/p&gt;&lt;p&gt;CSS渲染模型不考虑替换元素内容的渲染。这些替换元素的展现独立于CSS�\�&lt;code&gt;object&lt;/code&gt;, &lt;code&gt;video&lt;/code&gt;, &lt;code&gt;textarea&lt;/code&gt;, &lt;code&gt;input&lt;/code&gt;也是替换元素�\�&lt;code&gt;audio&lt;/code&gt;�\�&lt;code&gt;canvas&lt;/code&gt;在某些特定情形下为替换元素�\�&lt;/p&gt;&lt;p&gt;使用CSS�\�&lt;code&gt;content&lt;/code&gt;属性插入的对象是匿名替换元素�\�&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 也就是说，本文的&lt;code&gt;object-fit&lt;/code&gt;只针对替换元素有作用，也就是&lt;code&gt;form&lt;/code&gt;表单家族控件系列，老牌劲旅&lt;code&gt;img&lt;/code&gt;图片，HTML5新贵&lt;code&gt;video&lt;/code&gt;视频等元素�\�&lt;/p&gt;&lt;p&gt;&lt;strong&gt;二、为什么需�\�&lt;code&gt;object-fit&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp; 从上面“替换元素”的官方解释可以看出，替换元素通常都有着固定的尺寸，比方说图片，例如，下面这张眼熟能详的图片�\�&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp; 其原本的尺寸�\�256*191像素。但是，现代web显示环境万变，响应式布局(适配移动�\�)、半响应布局(宽窄屏适配)以及传统流体布局（任意宽度水平自适应）都比较常见，结果，在处理这些有着固定尺寸的元素的时候，就会遇到障碍，例如，一�\�2:1的视频，永远要等比例充满容器，但是，随着浏览器宽度不一样，容器的长宽比有可能小�\�2，也有可能大�\�2.\r\n 你说，你能轻松实现小于比�\�2时候，视频宽度100%；比例大�\�2的时候，高度100%吗？&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&lt;strong&gt;二�\�&lt;code&gt;object-fit理解&lt;/code&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&lt;strong&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp; &lt;code&gt;object-fit&lt;/code&gt;也是类似的，但还是有些差异，具体�\�5个值：&lt;/code&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&lt;strong&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp; &lt;/code&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.fill&amp;nbsp;{&amp;nbsp;object-fit:&amp;nbsp;fill;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.contain&amp;nbsp;{&amp;nbsp;object-fit:&amp;nbsp;contain;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.cover&amp;nbsp;{&amp;nbsp;object-fit:&amp;nbsp;cover;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.none&amp;nbsp;{&amp;nbsp;object-fit:&amp;nbsp;none;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.scale-down&amp;nbsp;{&amp;nbsp;object-fit:&amp;nbsp;scale-down;&amp;nbsp;}&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;每个属性值的具体含义如下（自己理解的白话文，官方释义见官网）�\�&lt;/p&gt;&lt;ul class=&quot; list-paddingleft-2&quot;&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;fill&lt;/strong&gt;: 中文释义“填充”。默认值。替换内容拉伸填满整个content box, 不保证保持原有的比例�\�&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;contain&lt;/strong&gt;: 中文释义“包含”。保持原有尺寸比例。保证替换内容尺寸一定可以在容器里面放得下。因此，此参数可能会在容器内留下空白�\�&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;cover&lt;/strong&gt;: 中文释义“覆盖”。保持原有尺寸比例。保证替换内容尺寸一定大于容器尺寸，宽度和高度至少有一个和容器一致。因此，此参数可能会让替换内容（如图片）部分区域不可见�\�&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;none&lt;/strong&gt;: 中文释义“无”。保持原有尺寸比例。同时保持替换内容原始尺寸大小�\�&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;scale-down&lt;/strong&gt;: 中文释义“降低”。就好像依次设置�\�&lt;strong&gt;none&lt;/strong&gt;�\�&lt;strong&gt;contain&lt;/strong&gt;, 最终呈现的是尺寸比较小的那个�\�&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;&lt;strong&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp; 具体更加详细介绍，请前往http://www.zhangxinxu.com/wordpress/2015/03/css3-object-position-object-fit/&lt;/code&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;','2017-05-01/149357583259062898e4f8b.png') [ RunTime:0.005178s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001539s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (31,9) [ RunTime:0.003517s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2017-06-07T10:12:29+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001825s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001592s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.006251s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2017-06-07T10:22:38+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001617s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001417s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001283s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-06-07T10:43:07+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001795s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('Html5+Javascript+PHP实现拍照（PC端，手机端没试过�\�','Html5+Javascript+PHP实现拍照','0','2017-06-07 10:43:07','&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;getUserMedia(streams, success, error);&amp;nbsp;&lt;br/&gt;streams：表示包括哪些多媒体设备的对�\�&amp;nbsp;&lt;br/&gt;success：回调函数，获取多媒体设备成功时调用&amp;nbsp;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;error：回调函数，获取多媒体设备失败时调用&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;createObjectURL(blob || file);&lt;br/&gt;File对象或者Blob对象&lt;br/&gt;File对象,就是一个文�\�,比如我用input type=&amp;quot;file&amp;quot;标签来上传文�\�,那么里面的每个文件都是一个File对象.&lt;br/&gt;Blob对象,就是二进制数�\�,比如通过new Blob()创建的对象就是Blob对象.又比�\�,在XMLHttpRequest�\�,如果指定responseType为blob,那么得到的返回值也是一个blob对象.&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;toDataURL，将canvas画布转化成base64编码的image;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;1、获取照相设�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;2、拍�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;3、将拍来的照片绘制到canvas画布�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;4、将canvas画布转化成base64编码的图�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;5、上传图片并保存&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;注意的是�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px; color:#ff0000&quot;&gt;1、真正图像数据是base64编码逗号之后的部分，所以我们实际服务器处理的图像数据应该是这部分�\�&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px; color:#ff0000&quot;&gt;&amp;nbsp;2、有时候用base64_encode加密�\�,以GET的形式传到其他页�\�,用base64_decode解密的时�\�,出现乱码.先用+号替换空�\�.那么输出就正常了$img = str_replace(&amp;#39; &amp;#39;, &amp;#39;+&amp;#39;, $img);&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px; color:#ff0000&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;pre class=&quot;brush:php;toolbar:false&quot;&gt;html�\�\r\n&amp;lt;a&amp;nbsp;href=&amp;quot;#open-modal&amp;quot;&amp;nbsp;onclick=&amp;quot;show()&amp;quot;&amp;gt;Open&amp;lt;/a&amp;gt;&amp;lt;div&amp;nbsp;id=&amp;quot;open-modal&amp;quot;&amp;nbsp;class=&amp;quot;modal-window&amp;quot;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;div&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;a&amp;nbsp;href=&amp;quot;#modal-close&amp;quot;&amp;nbsp;title=&amp;quot;关闭&amp;quot;&amp;nbsp;class=&amp;quot;modal-close&amp;quot;&amp;gt;&amp;lt;i&amp;nbsp;class=&amp;quot;fa&amp;nbsp;fa-close&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;\r\n&amp;lt;/a&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;div&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;video&amp;nbsp;id=&amp;quot;video&amp;quot;&amp;nbsp;&amp;nbsp;autoplay&amp;gt;&amp;lt;/video&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;canvas&amp;nbsp;style=&amp;quot;display:none&amp;quot;&amp;nbsp;id=&amp;quot;canvas&amp;quot;&amp;nbsp;width=&amp;quot;640&amp;quot;&amp;nbsp;height=&amp;quot;480&amp;quot;&amp;gt;\r\n&amp;lt;/canvas&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;div&amp;nbsp;id=&amp;quot;btn&amp;quot;&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;button&amp;nbsp;id=&amp;quot;camera&amp;quot;&amp;nbsp;class=&amp;quot;btn&amp;nbsp;btn-default&amp;quot;&amp;gt;&amp;lt;i&amp;nbsp;class=&amp;quot;fa&amp;nbsp;fa-camera&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;\r\n&amp;lt;/button&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;!--&amp;nbsp;&amp;lt;button&amp;nbsp;id=&amp;quot;cp&amp;quot;&amp;nbsp;class=&amp;quot;btn&amp;nbsp;btn-default&amp;quot;&amp;nbsp;style=&amp;quot;display:none&amp;quot;&amp;gt;重拍\r\n&amp;lt;/button&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;button&amp;nbsp;id=&amp;quot;sc&amp;quot;&amp;gt;上传&amp;lt;/button&amp;gt;&amp;nbsp;&amp;nbsp;--&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;/div&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;/div&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;lt;/div&amp;gt;&amp;nbsp;\r\n&amp;lt;/div&amp;gt;&amp;nbsp;\r\n&amp;lt;div&amp;nbsp;id=&amp;quot;loading&amp;quot;&amp;nbsp;style=&amp;quot;width:100px;height:100px;margin:0&amp;nbsp;auto;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;pre class=&quot;brush:php;toolbar:false&quot;&gt;css�\�\r\n&amp;nbsp;&amp;nbsp;*&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;-webkit-box-sizing:border-box;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;-moz-box-sizing:border-box;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;box-sizing:border-box;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;body&amp;nbsp;{&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;font:16px/1.5&amp;nbsp;sans-serif;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;padding:&amp;nbsp;2rem;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-window&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;position:fixed;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;background-color:&amp;nbsp;rgba(200,200,200,0.75);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;top:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;right:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;bottom:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;left:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;z-index:999;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;opacity:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;pointer-events:none;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;-webkit-transition:all&amp;nbsp;0.3s;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;-moz-transition:all&amp;nbsp;0.3s;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;transition:all&amp;nbsp;0.3s;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-window:target&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;opacity:1;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;pointer-events:auto;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-window&amp;gt;div&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;width:708px;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;position:relative;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;margin:2%&amp;nbsp;auto;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;padding:2rem;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;background:#fff;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;color:#444;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;border-radius:5px;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-window&amp;nbsp;header&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;font-weight:bold;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-close&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;color:#aaa;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;line-height:30px;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;font-size:80%;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;position:absolute;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;right:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;text-align:center;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;top:0;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;width:35px;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;text-decoration:none;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;border:0px&amp;nbsp;solid&amp;nbsp;red;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;.modal-close:hover&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;color:#000;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;canvas{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;margin:15px&amp;nbsp;0&amp;nbsp;0&amp;nbsp;10px;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;#btn{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;text-align:&amp;nbsp;center;\r\n&amp;nbsp;&amp;nbsp;}\r\n&amp;nbsp;&amp;nbsp;video{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;margin:15px&amp;nbsp;0&amp;nbsp;0&amp;nbsp;10px;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;object-fit:fill&amp;nbsp;!important;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;width:&amp;nbsp;640px&amp;nbsp;!important;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;height:&amp;nbsp;480px&amp;nbsp;!important;\r\n&amp;nbsp;&amp;nbsp;}&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;pre class=&quot;brush:php;toolbar:false&quot;&gt;js�\�\r\n&amp;lt;script&amp;nbsp;src=&amp;quot;js/jquery-1.9.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;//注意引入Jquery文件\r\n&amp;lt;script&amp;nbsp;type=&amp;quot;text/JavaScript&amp;quot;&amp;gt;&amp;nbsp;\r\nvar&amp;nbsp;video&amp;nbsp;=&amp;nbsp;document.getElementById(&amp;#39;video&amp;#39;);\r\nwindow.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;,&amp;nbsp;function(){\r\nnavigator.getUserMedia&amp;nbsp;=&amp;nbsp;navigator.getUserMedia&amp;nbsp;||&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nnavigator.webkitGetUserMedia&amp;nbsp;||&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nnavigator.mozGetUserMedia&amp;nbsp;||&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nnavigator.msGetUserMedia;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nif&amp;nbsp;(navigator.getUserMedia)&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nnavigator.getUserMedia({video:true},&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nfunction(stream)&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvideo.src&amp;nbsp;=&amp;nbsp;window.URL.createObjectURL(stream);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvideo.onloadedmetadata&amp;nbsp;=&amp;nbsp;function(e)&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvideo.play();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n};&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n},&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nfunction(err)&amp;nbsp;{&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nalert(err.name);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n}&amp;nbsp;\r\n});&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n//触发拍照$(&amp;quot;#camera&amp;quot;).click(function(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvar&amp;nbsp;canvas&amp;nbsp;=&amp;nbsp;document.getElementById(&amp;#39;canvas&amp;#39;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvar&amp;nbsp;context2D&amp;nbsp;=&amp;nbsp;canvas.getContext(&amp;quot;2d&amp;quot;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ncontext2D.fillStyle&amp;nbsp;=&amp;nbsp;&amp;quot;#ffffff&amp;quot;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ncontext2D.fillRect(0,&amp;nbsp;0,&amp;nbsp;640,&amp;nbsp;480);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ncontext2D.drawImage(video,&amp;nbsp;0,&amp;nbsp;0,&amp;nbsp;640,&amp;nbsp;480);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;video&amp;#39;).hide();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;#canvas&amp;#39;).show();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;#cp&amp;#39;).show();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nvar&amp;nbsp;image_code&amp;nbsp;=canvas.toDataURL(&amp;quot;image/png&amp;quot;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$.ajax({&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ntype:&amp;nbsp;&amp;quot;POST&amp;quot;,&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nurl:&amp;nbsp;&amp;#39;./camerasave.php&amp;#39;,&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ndataType&amp;nbsp;:&amp;nbsp;&amp;quot;json&amp;quot;,&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ndata:&amp;nbsp;&amp;quot;image_code=&amp;quot;+image_code,&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nbeforeSend:function(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;quot;#loading&amp;quot;).append(&amp;quot;正在上传&amp;lt;i&amp;nbsp;class=&amp;#39;fa&amp;nbsp;fa-spinner&amp;nbsp;fa-pulse&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;).fadeIn(&amp;quot;slow&amp;quot;);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n},&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nsuccess:&amp;nbsp;function(msg){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nconsole.log(&amp;quot;Save&amp;nbsp;success:&amp;quot;+msg.msg);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nwindow.location.href=&amp;quot;#modal-close&amp;quot;;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n},&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\ncomplete:function(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;quot;#loading&amp;quot;).empty().append(&amp;quot;上传完成&amp;lt;i&amp;nbsp;class=&amp;#39;fa&amp;nbsp;fa-spinner&amp;nbsp;fa-pulse&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;).fadeOut(&amp;quot;slow&amp;quot;);&amp;nbsp;&amp;nbsp;\r\n}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n});&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n});//触发重拍$(&amp;#39;#cp&amp;#39;).click(function(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nshow();})function&amp;nbsp;show(){&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;video&amp;#39;).show();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;#canvas&amp;#39;).hide();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;#camera&amp;#39;).show();&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\n$(&amp;#39;#cp&amp;#39;).hide();}\r\n&amp;lt;/script&amp;gt;&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;pre class=&quot;brush:php;toolbar:false&quot;&gt;PHP端：\r\n&amp;lt;?php$image_code&amp;nbsp;=&amp;nbsp;$_POST[&amp;#39;image_code&amp;#39;];\r\n$img&amp;nbsp;=&amp;nbsp;str_replace(&amp;#39;data:image/png;base64,&amp;#39;,&amp;nbsp;&amp;#39;&amp;#39;,&amp;nbsp;$image_code);\r\n$img&amp;nbsp;=&amp;nbsp;str_replace(&amp;#39;&amp;nbsp;&amp;#39;,&amp;nbsp;&amp;#39;+&amp;#39;,&amp;nbsp;$img);\r\n$data&amp;nbsp;=&amp;nbsp;base64_decode($img);\r\n$file_name&amp;nbsp;=&amp;nbsp;&amp;quot;data/images/camera_&amp;quot;.time().&amp;quot;.png&amp;quot;;\r\n$fp&amp;nbsp;=&amp;nbsp;fopen($file_name,&amp;nbsp;&amp;#39;w&amp;#39;);fwrite($fp,&amp;nbsp;$data);&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\r\nfclose($fp);$res&amp;nbsp;[&amp;#39;err_no&amp;#39;]&amp;nbsp;=&amp;nbsp;0;\r\n$res&amp;nbsp;[&amp;#39;msg&amp;#39;]&amp;nbsp;=&amp;nbsp;&amp;quot;Success�\�&amp;quot;;\r\ndie(json_encode($res));&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;','2017-05-01/149357583259062898e4f8b.png') [ RunTime:0.021757s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001550s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (32,3) [ RunTime:0.004215s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (32,9) [ RunTime:0.003528s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (32,10) [ RunTime:0.003397s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (32,20) [ RunTime:0.005246s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-06-07T10:43:08+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001883s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001629s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005861s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2017-06-07T10:44:26+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.002150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001683s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001514s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-06-07T10:44:36+08:00 ] 183.14.135.36 /Admin/Tag/select/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001632s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001303s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 8,8   [ RunTime:0.001291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2017-06-07T10:44:42+08:00 ] 183.14.135.36 /Admin/Tag/select/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001810s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001312s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2017-06-07T10:44:46+08:00 ] 61.151.218.119 /Admin/Tag/select/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001588s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001147s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 8,8   [ RunTime:0.001116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2017-06-07T10:44:54+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001611s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001370s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001168s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2017-06-07T10:44:56+08:00 ] 183.14.135.36 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-06-07T10:45:01+08:00 ] 183.14.135.36 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001535s ]
+SQL: INSERT INTO `tb_tag` (`name`) VALUES ('SDK') [ RunTime:0.004054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-06-07T10:45:02+08:00 ] 183.14.135.36 /Admin/Tag/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001843s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001574s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001518s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2017-06-07T10:45:04+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001527s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001080s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005076s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-06-07T10:45:06+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001552s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001308s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001408s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001289s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2017-06-07T10:45:06+08:00 ] 140.207.124.105 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-06-07T10:45:09+08:00 ] 101.226.33.220 /Admin/Tag/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007880s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2017-06-07T10:47:20+08:00 ] 183.14.135.36 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002156s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('产品对接，一篇文章看懂API和SDK','产品对接，一篇文章看懂API和SDK','0','2017-06-07 10:47:20','&lt;p&gt;从事互联网行业，总会碰到两个词——SDK �\� API \r\n。它们可是现在特别流行的好东西，互联网产品接入它们之后会有一些神奇的效果，比如我们常用的支付宝，接入支付�\� \r\nSDK，就可以实现支付功能，在线交易；比如现在直播视频比较火，接入直播的SDK，就可以实现在线直播的功能�\�&lt;/p&gt;&lt;p&gt;但是，据说这两个词总会让程序猿悲喜交加。因为，不论是销售还是产品等相关人员总会问：SDK和API到底是什么鬼？今天我们就来搞明白它！&lt;/p&gt;&lt;p&gt;API 和SDK 到底是什�\�&lt;/p&gt;&lt;p&gt;API 和SDK是软件行业的两个缩写词�\�&lt;/p&gt;&lt;p&gt;API (Application Programming Interface)=应用程序编程接口&lt;/p&gt;&lt;p&gt;通过一套套的要求，用来管理应用程序之间的沟通。一个API相当于你跟它说要求，它会为你完成任务。而且你不需要知道它是如何做到的，你只需要问你想要的东西�\�&lt;/p&gt;&lt;p&gt;SDK (Software Development Kit)=软件开发工具包&lt;/p&gt;&lt;p&gt;可用于开发面向特定平台的软件应用程序的工具包。举个例子，如果你想组装一个模型车或飞机。在构建这个模型时，需要一整套物品去组装。SDK相当于组装它们所需的工具，包括装配说明等等�\�&lt;/p&gt;&lt;p&gt;可能你还不够明白，为了便于理解，我们就再举个不完全恰当的例子�\�&lt;/p&gt;&lt;p&gt;你想吃面包，而你家对街有一家面包店卖面包和烤面包机。API方式是你经过马路去这家面包店买了一个面包。API就是买面包�\�&lt;/p&gt;&lt;p&gt;而SDK方式是，你向面包店买了一个烤面包机，在自己家里安装好，然后烤了一个面包。SDK是这个面包机和配料�\�&lt;/p&gt;&lt;p&gt;1号签提供的API和SDK是什么？&lt;/p&gt;&lt;p&gt;SDK和API都是服务的消费者，提供SDK和API的都是服务的提供者。信息化时代，为了让使用者高效的来使用厂商提供的功能、系统或平台，需要大量的API/SDK对接�\�&lt;/p&gt;&lt;p&gt;比如，我�\�1号签是做电子签约的，提供合同文件在线签署服务。很多App、网站等消费者都需要使用在线合同签署这个功�\�/服务，但是又不想自己去开发这个东西，那就可以找到我们1号签，通过SDK/API方式嵌入�\�&lt;/p&gt;&lt;p&gt;我们1号签的API相当于，帮对接平台做了一个文件柜，文件柜可以实现包括合同签署、查看、下载、验签等功能�\�&lt;/p&gt;&lt;p&gt;我们1号签的SDK相当于，�\�1号签的功能打包，在对接平台放了一个电子签章�\�&lt;/p&gt;&lt;p&gt;如何选择API和SDK对接&lt;/p&gt;&lt;p&gt;但是，问题又来了。API和SDK这两种产品对接方式，选择哪种比较好呢�\�&lt;/p&gt;&lt;p&gt;API和SDK对接，适合最重要。没有哪种最好，只有最适合�\�&lt;/p&gt;&lt;p&gt;API和SDK最终实现的功能都是一样的，至于采用哪一种，需要结合对接平台的需求（保密程度，特殊需求、开发成本等等）�\�&lt;/p&gt;&lt;p&gt;选择API&lt;/p&gt;&lt;p&gt;优势：API开发成本低，对接比较简单，可以快速验证商业模式和用户体验�\�&lt;/p&gt;&lt;p&gt;劣势：API会经过对接平台，厂商可以获取对接平台相关数据信息�\�&lt;/p&gt;&lt;p&gt;选择SDK&lt;/p&gt;&lt;p&gt;优势：SDK对接后的功能比较稳定，响应速度快，而且对接平台相关数据不会被获取�\�&lt;/p&gt;&lt;p&gt;劣势：需要开发的环节较多，开发工作量大，对接周期略长�\�&lt;/p&gt;&lt;p&gt;如何选择1号签提供的API和SDK&lt;/p&gt;&lt;p&gt;1号签可同时提供API和SDK这两种对接方式，业内极少数友商可以做到�\�&lt;/p&gt;&lt;p&gt;两种对接方式没有孰优孰劣，对接方可根据自身的实际情况进行选择。但还是要献上我们的建议�\�&lt;/p&gt;&lt;p&gt;如果对接方研发力量强、合同敏感性高、签约业务量大，建议用：1号签提供的SDK服务�\�&lt;/p&gt;&lt;p&gt;1号签的SDK，电子签章响应速度极快。签约文件只存放在对接平台，包括1号签在内的任何第三方平台都不能获取对接平台上的签约文件内容�\�&lt;/p&gt;&lt;p&gt;如果对接方想快速对接，建议用：1号签提供的API服务�\�&lt;/p&gt;&lt;p&gt;API方式的对接非常快速，而且1号签平台的许多已运营模块可直接使用，比如，微信签约，自定义的可视化合同模板。此外，之后等技术工作准备充分了，还可以再用 SDK方式�\�&lt;/p&gt;&lt;p&gt;&lt;br/&gt;本文转自https://baijiahao.baidu.com/po/feed/share?wfr=spider&amp;amp;for=pc&amp;amp;context=%7B%22sourceFrom%22%3A%22bjh%22%2C%22nid%22%3A%22news_2900177733918419348%22%7D&lt;/p&gt;','2017-05-01/149357583259062898e4f8b.png') [ RunTime:0.004962s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001797s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (33,13) [ RunTime:0.004277s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (33,21) [ RunTime:0.004459s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-06-07T10:47:22+08:00 ] 183.14.135.36 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001705s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001528s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005713s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2017-06-07T10:47:25+08:00 ] 183.14.135.36 /Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+
+[ 2017-06-07T10:47:26+08:00 ] 183.14.135.36 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000504s ]
+
+[ 2017-06-07T10:47:34+08:00 ] 101.226.33.226 /Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+
+[ 2017-06-07T10:47:37+08:00 ] 61.151.226.202 /Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+
+[ 2017-06-07T10:47:38+08:00 ] 61.151.226.202 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-06-07T10:55:53+08:00 ] 180.153.206.18 /Admin/Tag/select/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.003429s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_tag` LIMIT 1   [ RunTime:0.001422s ]
+SQL: SELECT * FROM `tb_tag` LIMIT 0,8   [ RunTime:0.001262s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2017-06-07T10:58:08+08:00 ] 101.226.66.193 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2017-06-07T10:58:34+08:00 ] 101.226.89.122 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-06-07T19:20:43+08:00 ] 202.108.211.56 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001690s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('202.108.211.56','2017-06-07 19:20:42','中国北京市北京市') [ RunTime:0.004586s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001660s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.006416s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001126s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001694s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001411s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007810s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005355s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001596s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001274s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001320s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001153s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001486s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+

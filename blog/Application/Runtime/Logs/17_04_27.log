@@ -1,0 +1,628 @@
+[ 2017-04-27T04:10:22+08:00 ] 123.125.71.41 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002876s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001883s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001508s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2017-04-27T04:10:22+08:00 ] 123.125.71.32 /index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001846s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.003623s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001518s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-04-27T04:43:42+08:00 ] 220.181.108.101 /index.php/Home/Xinqing/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `tb_process` [ RunTime:0.002804s ]
+SQL: SELECT `updatedate` FROM `tb_process` ORDER BY updatedate desc  [ RunTime:0.001518s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+SQL: SELECT * FROM `tb_process` WHERE ( `updatedate` LIKE '2017-04-20%' ) ORDER BY updatedate desc  [ RunTime:0.001558s ]
+SQL: SELECT * FROM `tb_process` WHERE ( `updatedate` LIKE '2017-04-10%' ) ORDER BY updatedate desc  [ RunTime:0.001423s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-04-27T05:17:02+08:00 ] 123.125.71.34 /index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001834s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001623s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001629s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001467s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-04-27T05:50:22+08:00 ] 123.125.71.38 /index.php/Home/Message/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-04-27T06:23:42+08:00 ] 123.125.71.50 /index.php/Home/NewList/newlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072470s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-04-27T06:57:02+08:00 ] 220.181.108.102 /index.php/Home/NewList/newdetail/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001927s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 6 ) LIMIT 1   [ RunTime:0.001557s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<6 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001621s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>6 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001405s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2017-04-27T07:30:22+08:00 ] 123.125.71.34 /index.php/Home/MoodList/moodlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2017-04-27T08:03:42+08:00 ] 220.181.108.95 /index.php/Home/Knowledge/knowledge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-04-27T08:52:54+08:00 ] 220.181.108.115 /index.php/Home/About/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `tb_info` [ RunTime:0.001666s ]
+SQL: SELECT * FROM `tb_info`  [ RunTime:0.001462s ]
+SQL: SHOW COLUMNS FROM `tb_about_blog` [ RunTime:0.001534s ]
+SQL: SELECT * FROM `tb_about_blog`  [ RunTime:0.001528s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-04-27T09:00:49+08:00 ] 220.181.108.156 /index.php/Home/NewList/newdetail/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001996s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001642s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<4 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001544s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>4 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2017-04-27T09:08:45+08:00 ] 123.125.71.116 /index.php/Home/NewList/newdetail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001762s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.001430s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<7 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001209s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>7 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001203s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2017-04-27T09:16:40+08:00 ] 123.125.71.45 /index.php/Home/NewList/newdetail/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001723s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001677s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<3 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001269s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>3 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001392s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2017-04-27T09:24:36+08:00 ] 123.125.71.46 /index.php/Home/Share/share.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028355s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-04-27T09:32:32+08:00 ] 220.181.108.167 /index.php/Home/NewList/newdetail/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001947s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.001795s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<5 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001393s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>5 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001512s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2017-04-27T09:40:27+08:00 ] 123.125.71.30 /index.php/Home/NewList/newdetail/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001775s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.001536s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<7 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001404s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>7 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001209s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-04-27T10:04:14+08:00 ] 220.181.108.117 /index.php/Home/NewList/newdetail/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001703s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001422s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<3 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001250s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>3 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2017-04-27T10:12:09+08:00 ] 123.125.71.39 /index.php/Home/NewList/newdetail/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001996s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001599s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<4 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001417s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>4 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001676s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2017-04-27T10:20:05+08:00 ] 123.125.71.57 /index.php/Home/NewList/newdetail/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001677s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 6 ) LIMIT 1   [ RunTime:0.001309s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<6 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001475s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>6 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-04-27T10:28:01+08:00 ] 220.181.108.108 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002015s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001743s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001762s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-04-27T11:30:04+08:00 ] 183.57.53.197 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001887s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001675s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001549s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001565s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2017-04-27T11:30:05+08:00 ] 117.136.76.235 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001955s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001531s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001309s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-04-27T14:29:28+08:00 ] 123.125.71.31 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002012s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001679s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001569s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.002764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-04-27T15:26:41+08:00 ] 58.251.185.14 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001958s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001759s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001619s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001474s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-04-27T17:32:11+08:00 ] 123.125.71.42 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001757s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001483s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001430s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-04-27T20:15:07+08:00 ] 220.181.108.117 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001937s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001593s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001526s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2017-04-27T23:19:35+08:00 ] 123.125.71.39 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002413s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.001843s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001740s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001658s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+

@@ -1,0 +1,2412 @@
+[ 2017-05-03T00:20:37+08:00 ] 183.13.85.204 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-05-03T00:20:38+08:00 ] 183.13.85.204 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002314s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006814s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001441s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002259s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001747s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.006265s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005399s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001790s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001736s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001628s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001554s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001786s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001724s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2017-05-03T00:20:45+08:00 ] 113.116.143.33 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.001727s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-05-03T00:20:46+08:00 ] 113.116.143.33 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001784s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001509s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001459s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-05-03T00:20:49+08:00 ] 113.116.143.33 /Admin/Resources/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `tb_resources` [ RunTime:0.001729s ]
+SQL: SELECT * FROM `tb_resources`  [ RunTime:0.001481s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-05-03T00:20:59+08:00 ] 101.226.125.111 /Admin/Resources/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `tb_resources` [ RunTime:0.001723s ]
+SQL: SELECT * FROM `tb_resources`  [ RunTime:0.001240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-05-03T01:04:02+08:00 ] 113.87.183.102 /Admin/Resources/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2017-05-03T01:04:12+08:00 ] 101.226.33.223 /Admin/Resources/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-05-03T01:04:12+08:00 ] 113.87.183.102 /Admin/Resources/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `tb_resources` [ RunTime:0.001802s ]
+SQL: INSERT INTO `tb_resources` (`name`,`url`,`resourcesdate`) VALUES ('白色简洁的bootstrap后台响应式模板下�\�','http://www.17sucai.com/pins/11373.html','2017-05-03 01:04:12') [ RunTime:0.006328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-05-03T01:04:13+08:00 ] 183.13.86.181 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001486s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005772s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001128s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001594s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004372s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004292s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001489s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001322s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001392s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001399s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-05-03T01:04:13+08:00 ] 113.87.183.102 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001541s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005166s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001193s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001472s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004419s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004679s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001440s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001188s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001402s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001413s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2017-05-03T01:04:13+08:00 ] 113.87.183.102 /Admin/Resources/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `tb_resources` [ RunTime:0.001662s ]
+SQL: SELECT * FROM `tb_resources`  [ RunTime:0.001373s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+NOTIC: [8] Undefined index: link_id /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/bd41875d39a622ae06b9b4258cf12abf.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-05-03T03:30:44+08:00 ] 123.125.71.54 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002078s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005793s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001393s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001688s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001836s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005302s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005373s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001760s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001492s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001620s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001704s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001552s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2017-05-03T09:53:29+08:00 ] 123.125.71.106 /Home/NewList/newdetail/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001879s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 4 ) [ RunTime:0.004202s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001318s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<4 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001261s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>4 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001790s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2017-05-03T10:26:49+08:00 ] 123.125.71.46 /Home/NewList/newdetail/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001973s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 3 ) [ RunTime:0.004622s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001625s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<3 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001629s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>3 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001704s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-05-03T10:51:31+08:00 ] 183.13.86.119 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001974s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005815s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001186s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001695s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001879s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004985s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004677s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001567s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001477s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001332s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001458s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001488s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2017-05-03T10:52:53+08:00 ] 113.116.141.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001810s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006396s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001411s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001743s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004867s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005025s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001701s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001410s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001694s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001396s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001610s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001388s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2017-05-03T10:53:51+08:00 ] 113.89.238.153 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001572s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.003977s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001100s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001623s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003953s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003863s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001292s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001272s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001333s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001088s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2017-05-03T10:54:44+08:00 ] 183.13.86.119 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001399s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004894s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001082s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001356s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004003s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004398s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001351s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001280s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001302s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2017-05-03T10:58:47+08:00 ] 113.116.141.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001694s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004724s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001083s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001462s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003905s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004287s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001435s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001402s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001508s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-05-03T13:13:40+08:00 ] 113.87.182.155 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001788s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005171s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001073s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001544s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001371s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005769s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004173s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001486s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001333s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001448s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001470s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2017-05-03T13:15:13+08:00 ] 113.116.141.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002304s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.007169s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001668s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001688s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002040s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005715s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005982s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.002065s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001697s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001924s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001944s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001682s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-05-03T14:22:38+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002041s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006926s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001419s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001921s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001784s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005037s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005640s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001709s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001640s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001632s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001614s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001993s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001902s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-05-03T14:22:42+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001628s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005007s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001203s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001421s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004558s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004190s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001505s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001429s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001358s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001522s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2017-05-03T14:23:05+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001976s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005024s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001375s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001428s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001847s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004546s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004497s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001744s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001401s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001642s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001387s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001700s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-05-03T14:23:07+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001613s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005308s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001154s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001467s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004292s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005221s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001395s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001424s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001347s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001344s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2017-05-03T14:23:11+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001754s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004849s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001186s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001631s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004227s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003896s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001442s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001207s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001359s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001109s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001360s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001139s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2017-05-03T14:23:16+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001997s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005846s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001415s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001423s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001722s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004948s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005153s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001671s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001691s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001655s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2017-05-03T14:23:18+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001651s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006706s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001149s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001414s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003746s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004354s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001360s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001414s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001372s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001108s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-05-03T14:23:20+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002133s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006289s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001378s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001706s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004821s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004933s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001649s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001450s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001612s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001574s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+
+[ 2017-05-03T14:23:21+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002413s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005848s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001654s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001658s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001938s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005637s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005954s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001897s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001841s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001697s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001929s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001664s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2017-05-03T14:23:23+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001740s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004769s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001142s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001497s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004091s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004459s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.002846s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.003384s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001408s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001113s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017257s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2017-05-03T14:23:24+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001845s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005757s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001367s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001420s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001886s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004823s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005088s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001767s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001642s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.002416s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001783s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001391s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-05-03T14:23:25+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002121s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.007375s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001841s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001665s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002143s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005714s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005945s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001967s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001888s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001664s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001896s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2017-05-03T14:23:27+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001929s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005604s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001397s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001412s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001719s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004629s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004903s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001878s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001417s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001620s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001427s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001616s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001375s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2017-05-03T14:23:28+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001614s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005280s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001138s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001549s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004225s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004318s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001544s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001391s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001334s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-05-03T14:23:30+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001609s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005631s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.002032s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001589s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004459s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.008266s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001376s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001347s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001361s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-05-03T14:24:48+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002139s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.007047s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001648s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001646s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002020s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005733s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005474s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001896s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001665s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001925s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001634s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.002086s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-05-03T14:25:06+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001759s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004673s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001124s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001499s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004621s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003633s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001360s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001270s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001293s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-05-03T14:25:10+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002010s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004888s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001428s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002153s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005304s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004912s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001835s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001401s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001799s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001480s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001914s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2017-05-03T14:25:23+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001641s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004810s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001249s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001514s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004997s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004326s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001351s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001342s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001446s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001186s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-05-03T14:25:25+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002076s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004834s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001349s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001377s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001668s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005040s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005114s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001616s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001368s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001557s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001715s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2017-05-03T14:25:36+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001752s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004635s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001198s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001233s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001460s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004231s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004440s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001413s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001142s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001408s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001378s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001234s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2017-05-03T14:25:38+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001985s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004881s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001174s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001133s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002270s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004169s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004370s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001530s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001125s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001355s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001398s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-05-03T14:25:39+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001531s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005167s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001066s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001453s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004051s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004220s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001351s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001108s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001298s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001309s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001099s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2017-05-03T14:25:41+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001656s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005066s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001189s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001104s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001416s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003928s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004174s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001333s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001281s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001272s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-05-03T14:25:47+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001533s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005173s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001107s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001371s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004445s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004101s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001382s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001135s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001306s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001321s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-05-03T14:25:48+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001730s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004910s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001193s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001201s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001528s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004430s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003940s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001453s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001401s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001411s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001724s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2017-05-03T14:25:50+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002208s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006880s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001622s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002294s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005632s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005367s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001944s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001775s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001954s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001704s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001914s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2017-05-03T14:25:52+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001640s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005229s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001127s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001417s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004111s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003905s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001348s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001329s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001370s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001100s ]
+
+[ 2017-05-03T14:25:59+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001630s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004680s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001146s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001564s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003954s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004887s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001530s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001433s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001510s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001175s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2017-05-03T15:04:30+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001755s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005513s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001121s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001613s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001403s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004134s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004300s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001563s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001600s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001349s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001432s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-05-03T15:37:09+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001743s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005769s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001064s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001671s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001408s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004247s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004521s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001392s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001272s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001346s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001352s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001319s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2017-05-03T15:37:11+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001906s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006135s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001391s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001375s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001720s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004785s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005058s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001699s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001399s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001641s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001397s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001684s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001389s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-05-03T15:37:12+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002165s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.006787s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001643s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001670s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.003338s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005636s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.008653s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.003530s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001661s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.004645s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001659s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001901s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2017-05-03T15:37:14+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001874s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.004729s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001999s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001376s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001664s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004642s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004514s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001665s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001368s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001547s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001583s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001354s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2017-05-03T15:37:15+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001528s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.003836s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001184s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001508s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003556s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.003634s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001331s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001282s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001374s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2017-05-03T15:37:17+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001796s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005380s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001229s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001565s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004498s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004785s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001474s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001465s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001188s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001510s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2017-05-03T15:37:21+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.003164s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005728s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001455s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001419s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001691s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004790s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004758s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001809s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001603s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001734s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001405s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000910s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+
+[ 2017-05-03T15:37:29+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001577s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005039s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001084s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001421s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003881s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004748s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001414s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001350s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001456s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-05-03T16:12:14+08:00 ] 183.39.197.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001751s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005194s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001125s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001648s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001480s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004116s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001413s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001301s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001361s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001452s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-05-03T16:24:21+08:00 ] 113.89.238.153 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002227s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.007617s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001645s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002108s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001937s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.006167s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006164s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.002008s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001892s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001883s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001731s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001927s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001860s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-05-03T16:24:22+08:00 ] 113.116.141.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001666s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.005163s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001241s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001461s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.003918s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004375s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001334s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001353s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001109s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001399s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-05-03T17:50:49+08:00 ] 113.116.141.114 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002129s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' )  [ RunTime:0.007147s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001368s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002120s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001713s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.006492s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005322s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001850s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001802s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001656s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001493s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.002117s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 141 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000856s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2017-05-03T22:18:54+08:00 ] 183.13.98.70 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002136s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001626s ]
+
+[ 2017-05-03T22:22:38+08:00 ] 113.87.182.155 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001763s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001089s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) LIMIT 0,4   [ RunTime:0.002903s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001094s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001678s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001380s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004040s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004353s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001429s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001305s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001347s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001409s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 169 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2017-05-03T22:25:23+08:00 ] 183.13.86.119 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001861s ]
+NOTIC: [8] Undefined index: ip /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 11 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001508s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) LIMIT 0,7   [ RunTime:0.006100s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001377s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001674s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.004880s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005155s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001703s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001998s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001706s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001641s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 169 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+

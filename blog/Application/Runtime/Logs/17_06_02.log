@@ -1,0 +1,1022 @@
+[ 2017-06-02T04:45:43+08:00 ] 123.125.71.39 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002089s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001918s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('123.125.71.39','2017-06-02 04:45:43','中国北京市北京市') [ RunTime:0.003960s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001934s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003548s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001488s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001994s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001791s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.011338s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.006376s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001930s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001789s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001710s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001596s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001814s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-06-02T11:39:59+08:00 ] 183.14.29.226 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2017-06-02T11:40:06+08:00 ] 183.14.29.226 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.002050s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001612s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-06-02T11:40:06+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001872s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001522s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 11:40:06','中国广东省深圳市') [ RunTime:0.012593s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001667s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002857s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001146s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001908s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001598s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009211s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005188s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001549s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001380s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001246s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001586s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2017-06-02T11:40:37+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001672s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001894s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 11:40:37','中国广东省深圳市') [ RunTime:0.004039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001262s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002835s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001286s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001601s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009071s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005241s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001531s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001564s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001297s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001597s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-06-02T11:40:37+08:00 ] 183.14.29.226 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001468s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001320s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001413s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001101s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-06-02T11:40:47+08:00 ] 183.14.29.226 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001613s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001066s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.002867s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010868s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2017-06-02T11:40:51+08:00 ] 183.14.29.226 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001539s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001377s ]
+SQL: SHOW COLUMNS FROM `tb_img` [ RunTime:0.001418s ]
+SQL: SELECT * FROM `tb_img`  [ RunTime:0.001337s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-06-02T11:52:31+08:00 ] 183.14.29.226 /Admin/Article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001885s ]
+SQL: INSERT INTO `tb_article` (`articletitle`,`description`,`ispublic`,`articletime`,`articlecontent`,`titlepic`) VALUES ('MySQL命令','mysql命令','0','2017-06-02 11:52:30','&lt;h1 align=&quot;center&quot;&gt;1、连接Mysql&lt;/h1&gt;&lt;p&gt;格式�\� mysql -h主机地址 -u用户�\� －p用户密码&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、连接到本机上的MYSQL�\�&lt;/strong&gt;&lt;br/&gt;首先打开DOS窗口，然后进入目录mysql\\bin，再键入命令mysql -u root -p，回车后提示你输密码.注意用户名前可以有空格也可以没有空格，但是密码前必须没有空格，否则让你重新输入密码�\�&lt;br/&gt;&lt;br/&gt;如果刚安装好MYSQL，超级用户root是没有密码的，故直接回车即可进入到MYSQL中了，MYSQL的提示符是： mysql&amp;gt;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、连接到远程主机上的MYSQL�\�&lt;/strong&gt;假设远程主机的IP为：110.110.110.110，用户名为root,密码为abcd123。则键入以下命令�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysql -h110.110.110.110 -u root -p 123;（注:u与root之间可以不用加空格，其它也一样）&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3、退出MYSQL命令&lt;/strong&gt;�\� exit （回车）&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;2、修改密�\�&lt;/h1&gt;&lt;p&gt;格式：mysqladmin -u用户�\� -p旧密�\� password 新密�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、给root加个密码ab12�\�&lt;/strong&gt;&lt;br/&gt;首先在DOS下进入目录mysql\\bin，然后键入以下命�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqladmin -u root -password ab12&lt;br/&gt;注：因为开始时root没有密码，所�\�-p旧密码一项就可以省略了�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、再将root的密码改为djg345�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqladmin -u root -p ab12 password djg345&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;3、增加新用户&lt;/h1&gt;&lt;p&gt;注意：和上面不同，下面的因为是MYSQL环境中的命令，所以后面都带一个分号作为命令结束符&lt;br/&gt;&lt;br/&gt;格式：grant select on 数据�\�.* to 用户名@登录主机 identified by “密码�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用root用户连入MYSQL，然后键入以下命令：&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on *.* to [email=test1@�\�%]test1@�\�%[/email]�\� Identified by “abc�\�;&lt;br/&gt;&lt;br/&gt;但增加的用户是十分危险的，你想如某个人知道test1的密码，那么他就可以在internet上的任何一台电脑上登录你的mysql数据库并对你的数据可以为所欲为了，解决办法�\�2�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、增加一个用户test2密码为abc,让他只可以在localhost上登录，并可以对数据库mydb进行查询、插入、修改、删除的操作（localhost指本地主机，即MYSQL数据库所在的那台主机�\�&lt;/strong&gt;，这样用户即使用知道test2的密码，他也无法从internet上直接访问数据库，只能通过MYSQL主机上的web页来访问了�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on mydb.* to [email=test2@localhost]test2@localhost[/email] identified by “abc�\�;&lt;br/&gt;&lt;br/&gt;如果你不想test2有密码，可以再打一个命令将密码消掉�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on mydb.* to [email=test2@localhost]test2@localhost[/email] identified by “�\�;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.1 创建数据�\�&lt;/h1&gt;&lt;p&gt;注意：创建数据库之前要先连接Mysql服务�\�&lt;br/&gt;&lt;br/&gt;命令：create database &amp;lt;数据库名&amp;gt;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;�\�1：建立一个名为xhkdb的数据库&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; create database xhkdb;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;�\�2：创建数据库并分配用�\�&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;①CREATE DATABASE 数据库名;&lt;br/&gt;&lt;br/&gt;②GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON 数据库名.* TO 数据库名@localhost IDENTIFIED BY &amp;#39;密码&amp;#39;;&lt;br/&gt;&lt;br/&gt;③SET PASSWORD FOR&amp;nbsp;&amp;#39;数据库名&amp;#39;@&amp;#39;localhost&amp;#39; = OLD_PASSWORD(&amp;#39;密码&amp;#39;);&lt;br/&gt;&lt;br/&gt;依次执行3个命令完成数据库创建。注意：中文 “密码”和“数据库”是户自己需要设置的�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.2 显示数据�\�&lt;/h1&gt;&lt;p&gt;命令：show databases （注意：最后有个s�\�&lt;br/&gt;mysql&amp;gt; show databases;&lt;br/&gt;&lt;br/&gt;注意：为了不再显示的时候乱码，要修改数据库默认编码。以下以GBK编码页面为例进行说明�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、修改MYSQL的配置文件：&lt;/strong&gt;my.ini里面修改default-character-set=gbk&lt;br/&gt;&lt;strong&gt;2、代码运行时修改�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;①Java代码：jdbc:mysql://localhost:3306/test?useUnicode=true&amp;amp;characterEncoding=gbk&lt;br/&gt;&amp;nbsp; &amp;nbsp;②PHP代码：header(&amp;quot;Content-Type:text/html;charset=gb2312&amp;quot;);&lt;br/&gt;&amp;nbsp; &amp;nbsp;③C语言代码：int mysql_set_character_set( MYSQL * mysql, char * csname)�\�&lt;br/&gt;该函数用于为当前连接设置默认的字符集。字符串csname指定�\�1个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与SET\r\n NAMES语句类似，但它还能设置mysql- &amp;gt; charset的值，从而影响了由mysql_real_escape_string() \r\n设置的字符集�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.3 删除数据�\�&lt;/h1&gt;&lt;p&gt;命令：drop database &amp;lt;数据库名&amp;gt;&lt;br/&gt;例如：删除名�\� xhkdb的数据库&lt;br/&gt;mysql&amp;gt; drop database xhkdb;&lt;br/&gt;&lt;br/&gt;例子1：删除一个已经确定存在的数据�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected (0.00 sec)&lt;br/&gt;&lt;br/&gt;例子2：删除一个不确定存在的数据库&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;ERROR 1008 (HY000): Can&amp;#39;t drop database &amp;#39;drop_database&amp;#39;; database doesn&amp;#39;t exist&lt;br/&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; //发生错误，不能删�\�&amp;#39;drop_database&amp;#39;数据库，该数据库不存在�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database if exists drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected, 1 warning (0.00 sec)//产生一个警告说明此数据库不存在&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; create database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 1 row affected (0.00 sec)&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database if exists drop_database;//if exists 判断数据库是否存在，不存在也不产生错�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.4 连接数据�\�&lt;/h1&gt;&lt;p&gt;命令�\� use &amp;lt;数据库名&amp;gt;&lt;br/&gt;&lt;br/&gt;例如：如果xhkdb数据库存在，尝试存取它：&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; use xhkdb;&lt;br/&gt;屏幕提示：Database changed&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;use 语句可以通告MySQL把db_name数据库作为默认（当前）数据库使用，用于后续语句�\�&lt;/strong&gt;该数据库保持为默认数据库，直到语段的结尾，或者直到发布一个不同的USE语句�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db1;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT COUNT(*) FROM mytable;&amp;nbsp;&amp;nbsp; # selects from db1.mytable&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db2;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT COUNT(*) FROM mytable;&amp;nbsp;&amp;nbsp; # selects from db2.mytable&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;使用USE语句为一个特定的当前的数据库做标记，不会阻碍您访问其它数据库中的表�\�&lt;/strong&gt;下面的例子可以从db1数据库访问作者表，并从db2数据库访问编辑表�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db1;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT author_name,editor_name FROM author,db2.editor&lt;br/&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; WHERE author.editor_id = db2.editor.editor_id;&lt;br/&gt;&lt;br/&gt;USE语句被设立出来，用于与Sybase相兼容�\�&lt;br/&gt;&lt;br/&gt;有些网友问到，连接以后怎么退出。其实，不用退出来，use 数据库后，使用show databases就能查询所有数据库，如果想跳到其他数据库，�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;use 其他数据库名�\�&lt;br/&gt;就可以了�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.5 当前选择的数据库&lt;/h1&gt;&lt;p&gt;命令：mysql&amp;gt; select database();&lt;br/&gt;&lt;br/&gt;MySQL中SELECT命令类似于其他编程语言里的print或者write，你可以用它来显示一个字符串、数字、数学表达式的结果等等。如何使用MySQL中SELECT命令的特殊功能？&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1.显示MYSQL的版�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; select version();&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;| version()&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;| 6.0.4-alpha-community |&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.02 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2. 显示当前时间&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; select now();&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| now()&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| 2009-09-15 22:35:32 |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.04 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3. 显示年月�\�&lt;/strong&gt;&lt;br/&gt;SELECT DAYOFMONTH(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;| DAYOFMONTH(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 15 |&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.01 sec)&amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;SELECT MONTH(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| MONTH(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 9 |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;SELECT YEAR(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;| YEAR(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 2009 |&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;4. 显示字符�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; SELECT &amp;quot;welecome to my blog!&amp;quot;;&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| welecome to my blog! |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| welecome to my blog! |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;5. 当计算器�\�&lt;/strong&gt;&lt;br/&gt;select ((4 * 4) / 10 ) + 25;&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| ((4 * 4) / 10 ) + 25 |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 26.60 |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;6. 串接字符�\�&lt;/strong&gt;&lt;br/&gt;select CONCAT(f_name, &amp;quot; &amp;quot;, l_name)&amp;nbsp;&lt;br/&gt;AS Name&amp;nbsp;&lt;br/&gt;from employee_data&amp;nbsp;&lt;br/&gt;where title = &amp;#39;Marketing Executive&amp;#39;;&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;| Name&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;| Monica Sehgal |&amp;nbsp;&lt;br/&gt;| Hal Simlai&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;| Joseph Irvine |&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;3 rows in set (0.00 sec)&amp;nbsp;&lt;br/&gt;注意：这里用到CONCAT()函数，用来把字符串串接起来。另外，我们还用到以前学到的AS给结果列&amp;#39;CONCAT(f_name, &amp;quot; &amp;quot;, l_name)&amp;#39;起了个假名�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.1 创建数据�\�&lt;/h1&gt;&lt;p&gt;命令：create table &amp;lt;表名&amp;gt; ( &amp;lt;字段�\�1&amp;gt; &amp;lt;类型1&amp;gt; [,..&amp;lt;字段名n&amp;gt; &amp;lt;类型n&amp;gt;]);&lt;br/&gt;&lt;br/&gt;例如，建立一个名为MyClass的表�\�&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;字段�\�&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;类型&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;数据宽度&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;是否为空&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;是否为主�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;自动增加&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;80&quot; valign=&quot;top&quot;&gt;默认�\�&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;p&gt;id&lt;/p&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;int&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;4&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;primary key&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;130&quot; valign=&quot;top&quot;&gt;auto_increment&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;name&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;char&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;20&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;sex&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;int&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;4&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;80&quot; valign=&quot;top&quot;&gt;0&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;degree&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;double&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;16&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;mysql&amp;gt;&amp;nbsp;&lt;strong&gt;create&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;table&lt;/strong&gt;&amp;nbsp;MyClass(&lt;br/&gt;&amp;gt; id int(4) not null&amp;nbsp;&lt;strong&gt;primary key auto_increment&lt;/strong&gt;,&lt;br/&gt;&amp;gt; name char(20) not null,&lt;br/&gt;&amp;gt; sex int(4) not null&lt;strong&gt;&amp;nbsp;default&lt;/strong&gt;&amp;nbsp;&amp;#39;0&amp;#39;,&lt;br/&gt;&amp;gt; degree double(16,2));&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.3 删除数据�\�&lt;/h1&gt;&lt;p&gt;命令：drop table &amp;lt;表名&amp;gt;&lt;br/&gt;&lt;br/&gt;例如：删除表名为 MyClass 的表&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop table MyClass;&lt;br/&gt;&lt;br/&gt;DROP TABLE用于取消一个或多个表。您必须有每个表的DROP权限。所有的表数据和表定义会被取消，所以使用本语句要小心！&lt;br/&gt;&lt;br/&gt;注意：对于一个带分区的表，DROP TABLE会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。DROP TABLE还会取消与被取消的表有关联的分区定义�\�.par）文件�\�&lt;br/&gt;&lt;br/&gt;对与不存在的表，使用IF EXISTS用于防止错误发生。当使用IF EXISTS时，对于每个不存在的表，会生成一个NOTE�\�&lt;br/&gt;&lt;br/&gt;RESTRICT和CASCADE可以使分区更容易。目前，RESTRICT和CASCADE不起作用�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.4 表插入数�\�&lt;/h1&gt;&lt;p&gt;命令：insert into &amp;lt;表名&amp;gt; [( &amp;lt;字段�\�1&amp;gt;[,..&amp;lt;字段名n &amp;gt; ])] values ( �\�1 )[, ( 值n )]&lt;br/&gt;&lt;br/&gt;例如：往�\� MyClass中插入二条记�\�, 这二条记录表示：编号�\�1的名为Tom的成绩为96.45, 编号�\�2 的名为Joan 的成绩为82.99�\� 编号�\�3 的名为Wang 的成绩为96.5�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; insert into MyClass values(1,&amp;#39;Tom&amp;#39;,96.45),(2,&amp;#39;Joan&amp;#39;,82.99), (2,&amp;#39;Wang&amp;#39;, 96.59);&lt;br/&gt;&lt;br/&gt;注意：insert into每次只能向表中插入一条记录�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.5 查询表中的数�\�&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;1)、查询所有行&lt;/strong&gt;&lt;br/&gt;命令�\� select &amp;lt;字段1，字�\�2�\�...&amp;gt; from &amp;lt; 表名 &amp;gt; where &amp;lt; 表达�\� &amp;gt;&lt;br/&gt;例如：查看表 MyClass 中所有数�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; select * from MyClass;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2）、查询前几行数据&lt;/strong&gt;&lt;br/&gt;例如：查看表 MyClass 中前2行数�\�&lt;br/&gt;mysql&amp;gt; select * from MyClass order by id limit 0,2;&lt;br/&gt;&lt;br/&gt;select一般配合where使用，以查询更精确更复杂的数据�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.6 删除表中数据&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;命令：delete from 表名 where 表达�\�&lt;br/&gt;&lt;br/&gt;例如：删除表 MyClass中编号为1 的记�\�&lt;br/&gt;mysql&amp;gt; delete from MyClass where id=1;&lt;br/&gt;&lt;br/&gt;下面是一个删除数据前后表的对比�\�&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;FirstName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;LastName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Age&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Peter&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Griffin&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Glenn&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Quagmire&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;下面以PHP代码为例删除 &amp;quot;Persons&amp;quot; 表中所�\� LastName=&amp;#39;Griffin&amp;#39; 的记录：&lt;br/&gt;&lt;/p&gt;&lt;pre&gt;&amp;lt;?php&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;$con&amp;nbsp;=&amp;nbsp;mysql_connect(&amp;quot;localhost&amp;quot;,&amp;quot;peter&amp;quot;,&amp;quot;abc123&amp;quot;);&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;if&amp;nbsp;(!$con)&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;{\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;die(&amp;#39;Could&amp;nbsp;not&amp;nbsp;connect:&amp;nbsp;&amp;#39;&amp;nbsp;.&amp;nbsp;mysql_error());&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;}&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;mysql_select_db(&amp;quot;my_db&amp;quot;,&amp;nbsp;$con);&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;mysql_query(&amp;quot;DELETE&amp;nbsp;FROM&amp;nbsp;Persons&amp;nbsp;WHERE&amp;nbsp;LastName=&amp;#39;Griffin&amp;#39;&amp;quot;);&amp;nbsp;mysql_close($con);&amp;nbsp;\r\n?&amp;gt;&lt;/pre&gt;&lt;p&gt;在这次删除之后，表是这样的：&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;FirstName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;LastName&lt;/td&gt;&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot; style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Age&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Glenn&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Quagmire&lt;/td&gt;&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot; style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h1 align=&quot;center&quot;&gt;5.7 修改表中数据&lt;/h1&gt;&lt;p&gt;语法：update 表名 set 字段=新�\�,�\� where 条件&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; update MyClass set name=&amp;#39;Mary&amp;#39; where id=1;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;例子1：单表的MySQL UPDATE语句�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;\r\n &amp;nbsp;UPDATE [LOW_PRIORITY] [IGNORE] tbl_name&amp;nbsp;SET col_name1=expr1 [, \r\ncol_name2=expr2 ...]&amp;nbsp;[WHERE where_definition]&amp;nbsp;[ORDER BY ...]&amp;nbsp;[LIMIT \r\nrow_count]&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;例子2：多表的UPDATE语句�\�&lt;/strong&gt;&lt;br/&gt;UPDATE [LOW_PRIORITY] [IGNORE] table_references&amp;nbsp;SET col_name1=expr1 [, col_name2=expr2 ...]&amp;nbsp;[WHERE where_definition]&lt;br/&gt;&lt;br/&gt;UPDATE语法可以用新值更新原有表行中的各列。SET子句指示要修改哪些列和要给予哪些值。WHERE子句指定应更新哪些行。如果没有WHERE子句，则更新所有的行。如果指定了ORDER\r\n BY子句，则按照被指定的顺序对行进行更新。LIMIT子句用于给定一个限值，限制可以被更新的行的数目�\�&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.8 增加字段&lt;/h1&gt;&lt;p&gt;命令�\�&lt;strong&gt;alter table&lt;/strong&gt;&amp;nbsp;表名&amp;nbsp;&lt;strong&gt;add&lt;/strong&gt;字段 类型 其他;&lt;br/&gt;例如：在表MyClass中添加了一个字段passtest，类型为int(4)，默认值为0&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt;&amp;nbsp;&lt;strong&gt;alter table&lt;/strong&gt;&amp;nbsp;MyClass&amp;nbsp;&lt;strong&gt;add&amp;nbsp;&lt;/strong&gt;passtest&amp;nbsp;&lt;strong&gt;int(&lt;/strong&gt;4&lt;strong&gt;) default&lt;/strong&gt;&amp;nbsp;&amp;#39;0&amp;#39;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加索�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 add index 索引�\� (字段�\�1[，字段名2 …]);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add index emp_name (name);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加主关键字的索引&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; mysql&amp;gt; alter table 表名 add primary key (字段�\�);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add primary key(id);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加唯一限制条件的索�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 add unique 索引�\� (字段�\�);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add unique emp_name2(cardnumber);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;删除某个索引&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 drop index 索引�\�;&lt;br/&gt;例子�\� mysql&amp;gt;alter table employee drop index emp_name;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;增加字段�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; ALTER TABLE table_name ADD field_name field_type;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;修改原字段名称及类型�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; ALTER TABLE table_name CHANGE old_field_name new_field_name field_type;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;删除字段�\�&lt;/strong&gt;&lt;br/&gt;MySQL ALTER TABLE table_name DROP field_name;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.9 修改表名&lt;/h1&gt;&lt;p&gt;命令：rename table 原表�\� to 新表�\�;&lt;br/&gt;&lt;br/&gt;例如：在表MyClass名字更改为YouClass&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; rename table MyClass to YouClass;&lt;br/&gt;&lt;br/&gt;当你执行 RENAME 时，你不能有任何锁定的表或活动的事务。你同样也必须有对原初表�\� ALTER �\� DROP 权限，以及对新表�\� CREATE �\� INSERT 权限�\�&lt;br/&gt;&lt;br/&gt;如果在多表更名中，MySQL 遭遇到任何错误，它将对所有被更名的表进行倒退更名，将每件事物退回到最初状态�\�&lt;br/&gt;&lt;br/&gt;RENAME TABLE �\� MySQL 3.23.23 中被加入�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;6、备份数据库&lt;/h1&gt;&lt;p&gt;命令在DOS的[url=file://\\\\mysql\\\\bin]\\\\mysql\\\\bin[/url]目录下执�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1.导出整个数据�\�&lt;/strong&gt;&lt;br/&gt;导出文件默认是存在mysql\\bin目录�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u 用户�\� -p 数据库名 &amp;gt; 导出的文件名&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p123456 database_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2.导出一个表&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u 用户�\� -p 数据库名 表名&amp;gt; 导出的文件名&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p database_name table_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3.导出一个数据库结构&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p -d –add-drop-table database_name &amp;gt; outfile_name.sql&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; -d 没有数据 –add-drop-table 在每个create语句之前增加一个drop table&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;4.带语言参数导出&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -uroot -p –default-character-set=latin1 –set-charset=gbk –skip-opt database_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;例如，将aaa库备份到文件back_aaa中：&lt;br/&gt;　　[root@test1 root]# cd　/home/data/mysql&lt;br/&gt;　　[root@test1 mysql]# mysqldump -u root -p --opt aaa &amp;gt; back_aaa&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;7.1 一个建库和建表的实�\�1&lt;/h1&gt;&lt;p&gt;drop database if exists school; //如果存在SCHOOL则删�\�&lt;br/&gt;create database school; //建立库SCHOOL&lt;br/&gt;use school; //打开库SCHOOL&lt;br/&gt;create table teacher //建立表TEACHER&lt;br/&gt;(&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; id int(3) auto_increment not null primary key,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; name char(10) not null,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; address varchar(50) default ‘深圳�\�,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; year date&lt;br/&gt;); //建表结束&lt;br/&gt;&lt;br/&gt;//以下为插入字�\�&lt;br/&gt;insert into teacher values(�\�,’allen�\�,&amp;#39;大连一中�\�,&amp;#39;1976-10-10�\�);&lt;br/&gt;insert into teacher values(�\�,’jack�\�,&amp;#39;大连二中�\�,&amp;#39;1975-12-23�\�);&lt;br/&gt;&lt;br/&gt;如果你在mysql提示符键入上面的命令也可以，但不方便调试�\�&lt;br/&gt;1、你可以将以上命令原样写入一个文本文件中，假设为school.sql，然后复制到c:\\\\下，并在DOS状态进入目录[url=file://\\\\mysql\\\\bin]\\\\mysql\\\\bin[/url]，然后键入以下命令：&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysql -uroot -p密码 &amp;lt; c:\\\\school.sql&lt;br/&gt;如果成功，空出一行无任何显示；如有错误，会有提示。（以上命令已经调试，你只要�\�//的注释去掉即可使用）�\�&lt;br/&gt;&lt;br/&gt;2、或者进入命令行后使�\� mysql&amp;gt; source c:\\\\school.sql; 也可以将school.sql文件导入数据库中�\�&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;7.2 一个建库和建表的实�\�2&lt;/h1&gt;&lt;p&gt;drop database if exists school; //如果存在SCHOOL则删�\�&lt;br/&gt;create database school; //建立库SCHOOL&lt;br/&gt;use school; //打开库SCHOOL&lt;br/&gt;create table teacher //建立表TEACHER&lt;br/&gt;(&lt;br/&gt;&amp;nbsp; &amp;nbsp; id int(3) auto_increment not null primary key,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; name char(10) not null,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; address varchar(50) default &amp;#39;&amp;#39;深圳&amp;#39;&amp;#39;,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; year date&lt;br/&gt;); //建表结束&lt;br/&gt;&lt;br/&gt;//以下为插入字�\�&lt;br/&gt;insert into teacher values(&amp;#39;&amp;#39;&amp;#39;&amp;#39;,&amp;#39;&amp;#39;glchengang&amp;#39;&amp;#39;,&amp;#39;&amp;#39;深圳一�\�&amp;#39;&amp;#39;,&amp;#39;&amp;#39;1976-10-10&amp;#39;&amp;#39;);&lt;br/&gt;insert into teacher values(&amp;#39;&amp;#39;&amp;#39;&amp;#39;,&amp;#39;&amp;#39;jack&amp;#39;&amp;#39;,&amp;#39;&amp;#39;深圳一�\�&amp;#39;&amp;#39;,&amp;#39;&amp;#39;1975-12-23&amp;#39;&amp;#39;);&lt;br/&gt;&lt;br/&gt;注：在建表中&lt;br/&gt;1、将ID设为长度�\�3的数字字�\�:int(3)；并让它每个记录自动加一:auto_increment；并不能为空:not null；而且让他成为主字段primary key�\�&lt;br/&gt;&lt;br/&gt;2、将NAME设为长度�\�10的字符字�\�&lt;br/&gt;&lt;br/&gt;3、将ADDRESS设为长度50的字符字段，而且缺省值为深圳�\�&lt;br/&gt;&lt;br/&gt;4、将YEAR设为日期字段�\�&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','2017-05-01/149357240459061b345031b.png') [ RunTime:0.010417s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001802s ]
+SQL: INSERT INTO `tb_article_tag` (`articleid`,`tagid`) VALUES (29,4) [ RunTime:0.005286s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2017-06-02T11:52:32+08:00 ] 183.14.29.226 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001890s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001685s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.005263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2017-06-02T11:52:55+08:00 ] 183.14.29.226 /Admin/Article/edit/id/29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001791s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.003727s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001729s ]
+SQL: SELECT * FROM `tb_article_tag` WHERE ( `articleid` = 29 )  [ RunTime:0.001493s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001537s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001526s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+NOTIC: [8] Undefined index: articleid /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Admin/761055de2f430bef08441163fbb8bda7.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-06-02T11:56:28+08:00 ] 183.14.29.226 /Admin/Article/update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001797s ]
+SQL: SELECT `titlepic` FROM `tb_article` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.001679s ]
+SQL: UPDATE `tb_article` SET `id`=29,`views`=0,`articletitle`='MySQL命令',`description`='29',`ispublic`='0',`articletime`='2017-06-02 11:56:28',`articlecontent`='&lt;h1 align=&quot;center&quot;&gt;1、连接Mysql&lt;/h1&gt;&lt;p&gt;格式�\� mysql -h主机地址 -u用户�\� －p用户密码&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、连接到本机上的MYSQL�\�&lt;/strong&gt;&lt;br/&gt;首先打开DOS窗口，然后进入目录mysql\\bin，再键入命令mysql -u root -p，回车后提示你输密码.注意用户名前可以有空格也可以没有空格，但是密码前必须没有空格，否则让你重新输入密码�\�&lt;br/&gt;&lt;br/&gt;如果刚安装好MYSQL，超级用户root是没有密码的，故直接回车即可进入到MYSQL中了，MYSQL的提示符是： mysql&amp;gt;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、连接到远程主机上的MYSQL�\�&lt;/strong&gt;假设远程主机的IP为：110.110.110.110，用户名为root,密码为abcd123。则键入以下命令�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysql -h110.110.110.110 -u root -p 123;（注:u与root之间可以不用加空格，其它也一样）&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3、退出MYSQL命令&lt;/strong&gt;�\� exit （回车）&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;2、修改密�\�&lt;/h1&gt;&lt;p&gt;格式：mysqladmin -u用户�\� -p旧密�\� password 新密�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、给root加个密码ab12�\�&lt;/strong&gt;&lt;br/&gt;首先在DOS下进入目录mysql\\bin，然后键入以下命�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqladmin -u root -password ab12&lt;br/&gt;注：因为开始时root没有密码，所�\�-p旧密码一项就可以省略了�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、再将root的密码改为djg345�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqladmin -u root -p ab12 password djg345&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;3、增加新用户&lt;/h1&gt;&lt;p&gt;注意：和上面不同，下面的因为是MYSQL环境中的命令，所以后面都带一个分号作为命令结束符&lt;br/&gt;&lt;br/&gt;格式：grant select on 数据�\�.* to 用户名@登录主机 identified by “密码�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用root用户连入MYSQL，然后键入以下命令：&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on *.* to [email=test1@�\�%]test1@�\�%[/email]�\� Identified by “abc�\�;&lt;br/&gt;&lt;br/&gt;但增加的用户是十分危险的，你想如某个人知道test1的密码，那么他就可以在internet上的任何一台电脑上登录你的mysql数据库并对你的数据可以为所欲为了，解决办法�\�2�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2、增加一个用户test2密码为abc,让他只可以在localhost上登录，并可以对数据库mydb进行查询、插入、修改、删除的操作（localhost指本地主机，即MYSQL数据库所在的那台主机�\�&lt;/strong&gt;，这样用户即使用知道test2的密码，他也无法从internet上直接访问数据库，只能通过MYSQL主机上的web页来访问了�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on mydb.* to [email=test2@localhost]test2@localhost[/email] identified by “abc�\�;&lt;br/&gt;&lt;br/&gt;如果你不想test2有密码，可以再打一个命令将密码消掉�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; grant select,insert,update,delete on mydb.* to [email=test2@localhost]test2@localhost[/email] identified by “�\�;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.1 创建数据�\�&lt;/h1&gt;&lt;p&gt;注意：创建数据库之前要先连接Mysql服务�\�&lt;br/&gt;&lt;br/&gt;命令：create database &amp;lt;数据库名&amp;gt;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;�\�1：建立一个名为xhkdb的数据库&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; create database xhkdb;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;�\�2：创建数据库并分配用�\�&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;①CREATE DATABASE 数据库名;&lt;br/&gt;&lt;br/&gt;②GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON 数据库名.* TO 数据库名@localhost IDENTIFIED BY &amp;#39;密码&amp;#39;;&lt;br/&gt;&lt;br/&gt;③SET PASSWORD FOR&amp;nbsp;&amp;#39;数据库名&amp;#39;@&amp;#39;localhost&amp;#39; = OLD_PASSWORD(&amp;#39;密码&amp;#39;);&lt;br/&gt;&lt;br/&gt;依次执行3个命令完成数据库创建。注意：中文 “密码”和“数据库”是户自己需要设置的�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.2 显示数据�\�&lt;/h1&gt;&lt;p&gt;命令：show databases （注意：最后有个s�\�&lt;br/&gt;mysql&amp;gt; show databases;&lt;br/&gt;&lt;br/&gt;注意：为了不再显示的时候乱码，要修改数据库默认编码。以下以GBK编码页面为例进行说明�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1、修改MYSQL的配置文件：&lt;/strong&gt;my.ini里面修改default-character-set=gbk&lt;br/&gt;&lt;strong&gt;2、代码运行时修改�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;①Java代码：jdbc:mysql://localhost:3306/test?useUnicode=true&amp;amp;characterEncoding=gbk&lt;br/&gt;&amp;nbsp; &amp;nbsp;②PHP代码：header(&amp;quot;Content-Type:text/html;charset=gb2312&amp;quot;);&lt;br/&gt;&amp;nbsp; &amp;nbsp;③C语言代码：int mysql_set_character_set( MYSQL * mysql, char * csname)�\�&lt;br/&gt;该函数用于为当前连接设置默认的字符集。字符串csname指定�\�1个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与SET\r\n NAMES语句类似，但它还能设置mysql- &amp;gt; charset的值，从而影响了由mysql_real_escape_string() \r\n设置的字符集�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.3 删除数据�\�&lt;/h1&gt;&lt;p&gt;命令：drop database &amp;lt;数据库名&amp;gt;&lt;br/&gt;例如：删除名�\� xhkdb的数据库&lt;br/&gt;mysql&amp;gt; drop database xhkdb;&lt;br/&gt;&lt;br/&gt;例子1：删除一个已经确定存在的数据�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected (0.00 sec)&lt;br/&gt;&lt;br/&gt;例子2：删除一个不确定存在的数据库&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;ERROR 1008 (HY000): Can&amp;#39;t drop database &amp;#39;drop_database&amp;#39;; database doesn&amp;#39;t exist&lt;br/&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; //发生错误，不能删�\�&amp;#39;drop_database&amp;#39;数据库，该数据库不存在�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database if exists drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected, 1 warning (0.00 sec)//产生一个警告说明此数据库不存在&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; create database drop_database;&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 1 row affected (0.00 sec)&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop database if exists drop_database;//if exists 判断数据库是否存在，不存在也不产生错�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;Query OK, 0 rows affected (0.00 sec)&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.4 连接数据�\�&lt;/h1&gt;&lt;p&gt;命令�\� use &amp;lt;数据库名&amp;gt;&lt;br/&gt;&lt;br/&gt;例如：如果xhkdb数据库存在，尝试存取它：&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; use xhkdb;&lt;br/&gt;屏幕提示：Database changed&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;use 语句可以通告MySQL把db_name数据库作为默认（当前）数据库使用，用于后续语句�\�&lt;/strong&gt;该数据库保持为默认数据库，直到语段的结尾，或者直到发布一个不同的USE语句�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db1;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT COUNT(*) FROM mytable;&amp;nbsp;&amp;nbsp; # selects from db1.mytable&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db2;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT COUNT(*) FROM mytable;&amp;nbsp;&amp;nbsp; # selects from db2.mytable&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;使用USE语句为一个特定的当前的数据库做标记，不会阻碍您访问其它数据库中的表�\�&lt;/strong&gt;下面的例子可以从db1数据库访问作者表，并从db2数据库访问编辑表�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; USE db1;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; SELECT author_name,editor_name FROM author,db2.editor&lt;br/&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; WHERE author.editor_id = db2.editor.editor_id;&lt;br/&gt;&lt;br/&gt;USE语句被设立出来，用于与Sybase相兼容�\�&lt;br/&gt;&lt;br/&gt;有些网友问到，连接以后怎么退出。其实，不用退出来，use 数据库后，使用show databases就能查询所有数据库，如果想跳到其他数据库，�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;use 其他数据库名�\�&lt;br/&gt;就可以了�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;4.5 当前选择的数据库&lt;/h1&gt;&lt;p&gt;命令：mysql&amp;gt; select database();&lt;br/&gt;&lt;br/&gt;MySQL中SELECT命令类似于其他编程语言里的print或者write，你可以用它来显示一个字符串、数字、数学表达式的结果等等。如何使用MySQL中SELECT命令的特殊功能？&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1.显示MYSQL的版�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; select version();&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;| version()&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;| 6.0.4-alpha-community |&amp;nbsp;&lt;br/&gt;+-----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.02 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2. 显示当前时间&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; select now();&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| now()&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| 2009-09-15 22:35:32 |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.04 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3. 显示年月�\�&lt;/strong&gt;&lt;br/&gt;SELECT DAYOFMONTH(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;| DAYOFMONTH(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 15 |&amp;nbsp;&lt;br/&gt;+--------------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.01 sec)&amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;SELECT MONTH(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;| MONTH(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 9 |&amp;nbsp;&lt;br/&gt;+---------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;br/&gt;SELECT YEAR(CURRENT_DATE);&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;| YEAR(CURRENT_DATE) |&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 2009 |&amp;nbsp;&lt;br/&gt;+--------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;4. 显示字符�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; SELECT &amp;quot;welecome to my blog!&amp;quot;;&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| welecome to my blog! |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| welecome to my blog! |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;5. 当计算器�\�&lt;/strong&gt;&lt;br/&gt;select ((4 * 4) / 10 ) + 25;&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;| ((4 * 4) / 10 ) + 25 |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 26.60 |&amp;nbsp;&lt;br/&gt;+----------------------+&amp;nbsp;&lt;br/&gt;1 row in set (0.00 sec)&amp;nbsp;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;6. 串接字符�\�&lt;/strong&gt;&lt;br/&gt;select CONCAT(f_name, &amp;quot; &amp;quot;, l_name)&amp;nbsp;&lt;br/&gt;AS Name&amp;nbsp;&lt;br/&gt;from employee_data&amp;nbsp;&lt;br/&gt;where title = &amp;#39;Marketing Executive&amp;#39;;&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;| Name&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;| Monica Sehgal |&amp;nbsp;&lt;br/&gt;| Hal Simlai&amp;nbsp;&amp;nbsp;&amp;nbsp; |&amp;nbsp;&lt;br/&gt;| Joseph Irvine |&amp;nbsp;&lt;br/&gt;+---------------+&amp;nbsp;&lt;br/&gt;3 rows in set (0.00 sec)&amp;nbsp;&lt;br/&gt;注意：这里用到CONCAT()函数，用来把字符串串接起来。另外，我们还用到以前学到的AS给结果列&amp;#39;CONCAT(f_name, &amp;quot; &amp;quot;, l_name)&amp;#39;起了个假名�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.1 创建数据�\�&lt;/h1&gt;&lt;p&gt;命令：create table &amp;lt;表名&amp;gt; ( &amp;lt;字段�\�1&amp;gt; &amp;lt;类型1&amp;gt; [,..&amp;lt;字段名n&amp;gt; &amp;lt;类型n&amp;gt;]);&lt;br/&gt;&lt;br/&gt;例如，建立一个名为MyClass的表�\�&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;字段�\�&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;类型&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;数据宽度&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;是否为空&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;是否为主�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;自动增加&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;80&quot; valign=&quot;top&quot;&gt;默认�\�&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;p&gt;id&lt;/p&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;int&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;4&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;primary key&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;130&quot; valign=&quot;top&quot;&gt;auto_increment&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;name&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;char&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;20&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;sex&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;int&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;4&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;80&quot; valign=&quot;top&quot;&gt;0&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;degree&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;double&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;106&quot; valign=&quot;top&quot;&gt;16&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;�\�&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;106&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;130&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;td width=&quot;80&quot; valign=&quot;top&quot;&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;mysql&amp;gt;&amp;nbsp;&lt;strong&gt;create&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;table&lt;/strong&gt;&amp;nbsp;MyClass(&lt;br/&gt;&amp;gt; id int(4) not null&amp;nbsp;&lt;strong&gt;primary key auto_increment&lt;/strong&gt;,&lt;br/&gt;&amp;gt; name char(20) not null,&lt;br/&gt;&amp;gt; sex int(4) not null&lt;strong&gt;&amp;nbsp;default&lt;/strong&gt;&amp;nbsp;&amp;#39;0&amp;#39;,&lt;br/&gt;&amp;gt; degree double(16,2));&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.3 删除数据�\�&lt;/h1&gt;&lt;p&gt;命令：drop table &amp;lt;表名&amp;gt;&lt;br/&gt;&lt;br/&gt;例如：删除表名为 MyClass 的表&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; drop table MyClass;&lt;br/&gt;&lt;br/&gt;DROP TABLE用于取消一个或多个表。您必须有每个表的DROP权限。所有的表数据和表定义会被取消，所以使用本语句要小心！&lt;br/&gt;&lt;br/&gt;注意：对于一个带分区的表，DROP TABLE会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。DROP TABLE还会取消与被取消的表有关联的分区定义�\�.par）文件�\�&lt;br/&gt;&lt;br/&gt;对与不存在的表，使用IF EXISTS用于防止错误发生。当使用IF EXISTS时，对于每个不存在的表，会生成一个NOTE�\�&lt;br/&gt;&lt;br/&gt;RESTRICT和CASCADE可以使分区更容易。目前，RESTRICT和CASCADE不起作用�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.4 表插入数�\�&lt;/h1&gt;&lt;p&gt;命令：insert into &amp;lt;表名&amp;gt; [( &amp;lt;字段�\�1&amp;gt;[,..&amp;lt;字段名n &amp;gt; ])] values ( �\�1 )[, ( 值n )]&lt;br/&gt;&lt;br/&gt;例如：往�\� MyClass中插入二条记�\�, 这二条记录表示：编号�\�1的名为Tom的成绩为96.45, 编号�\�2 的名为Joan 的成绩为82.99�\� 编号�\�3 的名为Wang 的成绩为96.5�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; insert into MyClass values(1,&amp;#39;Tom&amp;#39;,96.45),(2,&amp;#39;Joan&amp;#39;,82.99), (2,&amp;#39;Wang&amp;#39;, 96.59);&lt;br/&gt;&lt;br/&gt;注意：insert into每次只能向表中插入一条记录�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.5 查询表中的数�\�&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;1)、查询所有行&lt;/strong&gt;&lt;br/&gt;命令�\� select &amp;lt;字段1，字�\�2�\�...&amp;gt; from &amp;lt; 表名 &amp;gt; where &amp;lt; 表达�\� &amp;gt;&lt;br/&gt;例如：查看表 MyClass 中所有数�\�&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; select * from MyClass;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2）、查询前几行数据&lt;/strong&gt;&lt;br/&gt;例如：查看表 MyClass 中前2行数�\�&lt;br/&gt;mysql&amp;gt; select * from MyClass order by id limit 0,2;&lt;br/&gt;&lt;br/&gt;select一般配合where使用，以查询更精确更复杂的数据�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.6 删除表中数据&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;命令：delete from 表名 where 表达�\�&lt;br/&gt;&lt;br/&gt;例如：删除表 MyClass中编号为1 的记�\�&lt;br/&gt;mysql&amp;gt; delete from MyClass where id=1;&lt;br/&gt;&lt;br/&gt;下面是一个删除数据前后表的对比�\�&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;FirstName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;LastName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Age&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Peter&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Griffin&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Glenn&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;Quagmire&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;275&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;下面以PHP代码为例删除 &amp;quot;Persons&amp;quot; 表中所�\� LastName=&amp;#39;Griffin&amp;#39; 的记录：&lt;br/&gt;&lt;/p&gt;&lt;pre&gt;&amp;lt;?php&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;$con&amp;nbsp;=&amp;nbsp;mysql_connect(&amp;quot;localhost&amp;quot;,&amp;quot;peter&amp;quot;,&amp;quot;abc123&amp;quot;);&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;if&amp;nbsp;(!$con)&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;{\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;die(&amp;#39;Could&amp;nbsp;not&amp;nbsp;connect:&amp;nbsp;&amp;#39;&amp;nbsp;.&amp;nbsp;mysql_error());&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;}&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;mysql_select_db(&amp;quot;my_db&amp;quot;,&amp;nbsp;$con);&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;mysql_query(&amp;quot;DELETE&amp;nbsp;FROM&amp;nbsp;Persons&amp;nbsp;WHERE&amp;nbsp;LastName=&amp;#39;Griffin&amp;#39;&amp;quot;);&amp;nbsp;mysql_close($con);&amp;nbsp;\r\n?&amp;gt;&lt;/pre&gt;&lt;p&gt;在这次删除之后，表是这样的：&lt;/p&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;FirstName&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;LastName&lt;/td&gt;&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot; style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Age&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Glenn&lt;/td&gt;&lt;td style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;Quagmire&lt;/td&gt;&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot; style=&quot;word-break: break-all;&quot; width=&quot;274&quot; valign=&quot;top&quot;&gt;35&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h1 align=&quot;center&quot;&gt;5.7 修改表中数据&lt;/h1&gt;&lt;p&gt;语法：update 表名 set 字段=新�\�,�\� where 条件&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; update MyClass set name=&amp;#39;Mary&amp;#39; where id=1;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;例子1：单表的MySQL UPDATE语句�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;\r\n &amp;nbsp;UPDATE [LOW_PRIORITY] [IGNORE] tbl_name&amp;nbsp;SET col_name1=expr1 [, \r\ncol_name2=expr2 ...]&amp;nbsp;[WHERE where_definition]&amp;nbsp;[ORDER BY ...]&amp;nbsp;[LIMIT \r\nrow_count]&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;例子2：多表的UPDATE语句�\�&lt;/strong&gt;&lt;br/&gt;UPDATE [LOW_PRIORITY] [IGNORE] table_references&amp;nbsp;SET col_name1=expr1 [, col_name2=expr2 ...]&amp;nbsp;[WHERE where_definition]&lt;br/&gt;&lt;br/&gt;UPDATE语法可以用新值更新原有表行中的各列。SET子句指示要修改哪些列和要给予哪些值。WHERE子句指定应更新哪些行。如果没有WHERE子句，则更新所有的行。如果指定了ORDER\r\n BY子句，则按照被指定的顺序对行进行更新。LIMIT子句用于给定一个限值，限制可以被更新的行的数目�\�&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.7 查看数据库中的表&lt;/h1&gt;&lt;p&gt;1. 查看数据库中的表&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; show tables&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 同样也可以在information_schema中查看，show命令是方便使用的简短模式�\�&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; select table_name from tables where table_schema=&amp;#39;jblog&amp;#39;;&lt;/p&gt;&lt;p&gt;2. 查看表结�\�&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp; desc&amp;nbsp; table_name;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.8 增加字段&lt;/h1&gt;&lt;p&gt;命令�\�&lt;strong&gt;alter table&lt;/strong&gt;&amp;nbsp;表名&amp;nbsp;&lt;strong&gt;add&lt;/strong&gt;字段 类型 其他;&lt;br/&gt;例如：在表MyClass中添加了一个字段passtest，类型为int(4)，默认值为0&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt;&amp;nbsp;&lt;strong&gt;alter table&lt;/strong&gt;&amp;nbsp;MyClass&amp;nbsp;&lt;strong&gt;add&amp;nbsp;&lt;/strong&gt;passtest&amp;nbsp;&lt;strong&gt;int(&lt;/strong&gt;4&lt;strong&gt;) default&lt;/strong&gt;&amp;nbsp;&amp;#39;0&amp;#39;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加索�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 add index 索引�\� (字段�\�1[，字段名2 …]);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add index emp_name (name);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加主关键字的索引&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; mysql&amp;gt; alter table 表名 add primary key (字段�\�);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add primary key(id);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;加唯一限制条件的索�\�&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 add unique 索引�\� (字段�\�);&lt;br/&gt;例子�\� mysql&amp;gt; alter table employee add unique emp_name2(cardnumber);&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;删除某个索引&lt;/strong&gt;&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; alter table 表名 drop index 索引�\�;&lt;br/&gt;例子�\� mysql&amp;gt;alter table employee drop index emp_name;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;增加字段�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; ALTER TABLE table_name ADD field_name field_type;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;修改原字段名称及类型�\�&lt;/strong&gt;&lt;br/&gt;mysql&amp;gt; ALTER TABLE table_name CHANGE old_field_name new_field_name field_type;&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;删除字段�\�&lt;/strong&gt;&lt;br/&gt;MySQL ALTER TABLE table_name DROP field_name;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;5.9 修改表名&lt;/h1&gt;&lt;p&gt;命令：rename table 原表�\� to 新表�\�;&lt;br/&gt;&lt;br/&gt;例如：在表MyClass名字更改为YouClass&lt;br/&gt;&amp;nbsp; &amp;nbsp;mysql&amp;gt; rename table MyClass to YouClass;&lt;br/&gt;&lt;br/&gt;当你执行 RENAME 时，你不能有任何锁定的表或活动的事务。你同样也必须有对原初表�\� ALTER �\� DROP 权限，以及对新表�\� CREATE �\� INSERT 权限�\�&lt;br/&gt;&lt;br/&gt;如果在多表更名中，MySQL 遭遇到任何错误，它将对所有被更名的表进行倒退更名，将每件事物退回到最初状态�\�&lt;br/&gt;&lt;br/&gt;RENAME TABLE �\� MySQL 3.23.23 中被加入�\�&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;6、备份数据库&lt;/h1&gt;&lt;p&gt;命令在DOS的[url=file://\\\\mysql\\\\bin]\\\\mysql\\\\bin[/url]目录下执�\�&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;1.导出整个数据�\�&lt;/strong&gt;&lt;br/&gt;导出文件默认是存在mysql\\bin目录�\�&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u 用户�\� -p 数据库名 &amp;gt; 导出的文件名&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p123456 database_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;2.导出一个表&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u 用户�\� -p 数据库名 表名&amp;gt; 导出的文件名&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p database_name table_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;3.导出一个数据库结构&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -u user_name -p -d –add-drop-table database_name &amp;gt; outfile_name.sql&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; -d 没有数据 –add-drop-table 在每个create语句之前增加一个drop table&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;4.带语言参数导出&lt;/strong&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysqldump -uroot -p –default-character-set=latin1 –set-charset=gbk –skip-opt database_name &amp;gt; outfile_name.sql&lt;br/&gt;&lt;br/&gt;例如，将aaa库备份到文件back_aaa中：&lt;br/&gt;　　[root@test1 root]# cd　/home/data/mysql&lt;br/&gt;　　[root@test1 mysql]# mysqldump -u root -p --opt aaa &amp;gt; back_aaa&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;7.1 一个建库和建表的实�\�1&lt;/h1&gt;&lt;p&gt;drop database if exists school; //如果存在SCHOOL则删�\�&lt;br/&gt;create database school; //建立库SCHOOL&lt;br/&gt;use school; //打开库SCHOOL&lt;br/&gt;create table teacher //建立表TEACHER&lt;br/&gt;(&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; id int(3) auto_increment not null primary key,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; name char(10) not null,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; address varchar(50) default ‘深圳�\�,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; year date&lt;br/&gt;); //建表结束&lt;br/&gt;&lt;br/&gt;//以下为插入字�\�&lt;br/&gt;insert into teacher values(�\�,’allen�\�,&amp;#39;大连一中�\�,&amp;#39;1976-10-10�\�);&lt;br/&gt;insert into teacher values(�\�,’jack�\�,&amp;#39;大连二中�\�,&amp;#39;1975-12-23�\�);&lt;br/&gt;&lt;br/&gt;如果你在mysql提示符键入上面的命令也可以，但不方便调试�\�&lt;br/&gt;1、你可以将以上命令原样写入一个文本文件中，假设为school.sql，然后复制到c:\\\\下，并在DOS状态进入目录[url=file://\\\\mysql\\\\bin]\\\\mysql\\\\bin[/url]，然后键入以下命令：&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; mysql -uroot -p密码 &amp;lt; c:\\\\school.sql&lt;br/&gt;如果成功，空出一行无任何显示；如有错误，会有提示。（以上命令已经调试，你只要�\�//的注释去掉即可使用）�\�&lt;br/&gt;&lt;br/&gt;2、或者进入命令行后使�\� mysql&amp;gt; source c:\\\\school.sql; 也可以将school.sql文件导入数据库中�\�&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;&lt;h1 align=&quot;center&quot;&gt;7.2 一个建库和建表的实�\�2&lt;/h1&gt;&lt;p&gt;drop database if exists school; //如果存在SCHOOL则删�\�&lt;br/&gt;create database school; //建立库SCHOOL&lt;br/&gt;use school; //打开库SCHOOL&lt;br/&gt;create table teacher //建立表TEACHER&lt;br/&gt;(&lt;br/&gt;&amp;nbsp; &amp;nbsp; id int(3) auto_increment not null primary key,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; name char(10) not null,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; address varchar(50) default &amp;#39;&amp;#39;深圳&amp;#39;&amp;#39;,&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; year date&lt;br/&gt;); //建表结束&lt;br/&gt;&lt;br/&gt;//以下为插入字�\�&lt;br/&gt;insert into teacher values(&amp;#39;&amp;#39;&amp;#39;&amp;#39;,&amp;#39;&amp;#39;glchengang&amp;#39;&amp;#39;,&amp;#39;&amp;#39;深圳一�\�&amp;#39;&amp;#39;,&amp;#39;&amp;#39;1976-10-10&amp;#39;&amp;#39;);&lt;br/&gt;insert into teacher values(&amp;#39;&amp;#39;&amp;#39;&amp;#39;,&amp;#39;&amp;#39;jack&amp;#39;&amp;#39;,&amp;#39;&amp;#39;深圳一�\�&amp;#39;&amp;#39;,&amp;#39;&amp;#39;1975-12-23&amp;#39;&amp;#39;);&lt;br/&gt;&lt;br/&gt;注：在建表中&lt;br/&gt;1、将ID设为长度�\�3的数字字�\�:int(3)；并让它每个记录自动加一:auto_increment；并不能为空:not null；而且让他成为主字段primary key�\�&lt;br/&gt;&lt;br/&gt;2、将NAME设为长度�\�10的字符字�\�&lt;br/&gt;&lt;br/&gt;3、将ADDRESS设为长度50的字符字段，而且缺省值为深圳�\�&lt;br/&gt;&lt;br/&gt;4、将YEAR设为日期字段�\�&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;' WHERE ( `id` = 29 ) [ RunTime:0.010269s ]
+SQL: SHOW COLUMNS FROM `tb_article_tag` [ RunTime:0.001510s ]
+SQL: SELECT * FROM `tb_article_tag` WHERE ( `articleid` = 29 )  [ RunTime:0.001394s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-06-02T11:56:30+08:00 ] 183.14.29.226 /Admin/Article/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001504s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001347s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004364s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000703s ]
+
+[ 2017-06-02T11:56:37+08:00 ] 183.14.29.226 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001512s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 11:56:37','中国广东省深圳市') [ RunTime:0.004016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001089s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004171s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001062s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001446s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001371s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007506s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004907s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001397s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001285s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001272s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001216s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001492s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-06-02T11:56:41+08:00 ] 183.14.29.226 /Home/NewList/newdetail/id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001690s ]
+SQL: UPDATE `tb_article` SET `views`=views+1 WHERE ( `id` = 29 ) [ RunTime:0.004860s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.003512s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id<29 ) ORDER BY id DESC LIMIT 1   [ RunTime:0.001815s ]
+SQL: SELECT * FROM `tb_article` WHERE ( id>29 ) ORDER BY id ASC LIMIT 1   [ RunTime:0.001507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2017-06-02T11:56:42+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001694s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001711s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 11:56:42','中国广东省深圳市') [ RunTime:0.003882s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001412s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004169s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001122s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001630s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007953s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005383s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001496s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001186s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001600s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001158s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001560s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2017-06-02T19:40:56+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001647s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:40:56','中国广东省深圳市') [ RunTime:0.005681s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001887s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004464s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001196s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001733s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002310s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008734s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005474s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001732s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001670s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001419s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001589s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001594s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2017-06-02T19:41:26+08:00 ] 183.14.29.226 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-06-02T19:41:31+08:00 ] 183.14.29.226 /Admin/Login/check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `tb_admin` [ RunTime:0.002254s ]
+SQL: SELECT * FROM `tb_admin` WHERE ( `username` = 'admin' ) AND ( `password` = 'd033e22ae348aeb5660fc2140aec35850c4da997' ) LIMIT 1   [ RunTime:0.001870s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-06-02T19:41:32+08:00 ] 183.14.29.226 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+NOTIC: [2] mysql_get_server_info(): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2) /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /data/home/bxu2442410262/htdocs/Application/Admin/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001557s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_friendlylink` LIMIT 1   [ RunTime:0.001368s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001501s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001889s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2017-06-02T19:41:46+08:00 ] 183.14.29.226 /Admin/Visitors/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001823s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_visitors` LIMIT 1   [ RunTime:0.001678s ]
+SQL: SELECT * FROM `tb_visitors` ORDER BY ipdate desc LIMIT 0,20   [ RunTime:0.001718s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-06-02T19:42:54+08:00 ] 183.14.29.226 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001715s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001628s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:42:54','中国广东省深圳市') [ RunTime:0.004049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001119s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003940s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001123s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002153s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008698s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005072s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001400s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001321s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001070s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-06-02T19:42:58+08:00 ] 183.14.29.226 /Admin/Visitors/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001564s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_visitors` LIMIT 1   [ RunTime:0.001638s ]
+SQL: SELECT * FROM `tb_visitors` ORDER BY ipdate desc LIMIT 0,20   [ RunTime:0.001474s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-06-02T19:45:06+08:00 ] 183.14.29.226 /Home/About/about.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `tb_info` [ RunTime:0.001916s ]
+SQL: SELECT * FROM `tb_info`  [ RunTime:0.001796s ]
+SQL: SHOW COLUMNS FROM `tb_about_blog` [ RunTime:0.001701s ]
+SQL: SELECT * FROM `tb_about_blog`  [ RunTime:0.001311s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-06-02T19:46:02+08:00 ] 183.14.29.226 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.003171s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:46:02','中国广东省深圳市') [ RunTime:0.005849s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001051s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003593s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001045s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001064s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001446s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008517s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004706s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001632s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001703s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001118s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2017-06-02T19:46:15+08:00 ] 183.14.29.226 /Home/Message/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-06-02T19:46:16+08:00 ] 183.14.29.226 /Home/Message/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `tb_message` [ RunTime:0.001521s ]
+SQL: SELECT * FROM `tb_message`  [ RunTime:0.001432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2017-06-02T19:46:17+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001592s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001631s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:46:17','中国广东省深圳市') [ RunTime:0.004106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001095s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.003761s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001114s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001606s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007394s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004739s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001646s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001371s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001079s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001364s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-06-02T19:46:20+08:00 ] 183.14.29.226 /Home/Knowledge/knowledge.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-06-02T19:46:21+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001627s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001593s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:46:21','中国广东省深圳市') [ RunTime:0.004042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001064s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004191s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001054s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001364s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007522s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004766s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001303s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001256s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001030s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001388s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2017-06-02T19:46:25+08:00 ] 183.14.29.226 /Home/NewList/newlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001674s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.009886s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.005539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-06-02T19:46:26+08:00 ] 183.14.29.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.004111s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001675s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:46:26','中国广东省深圳市') [ RunTime:0.004437s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001089s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004094s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001148s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001615s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.007528s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.004904s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001432s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001239s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001047s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001323s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-06-02T19:46:28+08:00 ] 183.14.29.226 /Home/Mood/select.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `tb_mood` [ RunTime:0.001971s ]
+SQL: SELECT * FROM `tb_mood` ORDER BY mood_time desc  [ RunTime:0.001756s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-06-02T19:46:32+08:00 ] 183.14.29.226 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.004378s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.002107s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('183.14.29.226','2017-06-02 19:46:32','中国广东省深圳市') [ RunTime:0.005336s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001394s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004563s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001365s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.002006s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.002159s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.008885s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005466s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001810s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001442s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001578s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001361s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001693s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-06-02T21:18:41+08:00 ] 202.173.11.239 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001783s ]
+SQL: SHOW COLUMNS FROM `tb_visitors` [ RunTime:0.001943s ]
+SQL: INSERT INTO `tb_visitors` (`ip`,`ipdate`,`address`) VALUES ('202.173.11.239','2017-06-02 21:18:41','中国北京市北京市') [ RunTime:0.004880s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tb_article` LIMIT 1   [ RunTime:0.001748s ]
+SQL: SELECT * FROM `tb_article` WHERE ( `ispublic` = '0' ) ORDER BY articletime desc LIMIT 0,7   [ RunTime:0.004573s ]
+SQL: SHOW COLUMNS FROM tb_article_tag as at [ RunTime:0.001185s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as at' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM tb_article_tag as at
+SQL: SELECT * FROM tb_article_tag as at INNER JOIN tb_tag as t on at.tagid=t.id   [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `tb_article` [ RunTime:0.001662s ]
+SQL: SELECT * FROM `tb_article` ORDER BY views desc  [ RunTime:0.009398s ]
+SQL: SELECT * FROM `tb_article` ORDER BY articletime desc  [ RunTime:0.005578s ]
+SQL: SHOW COLUMNS FROM `tb_friendlylink` [ RunTime:0.001554s ]
+SQL: SELECT * FROM `tb_friendlylink`  [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `tb_tag` [ RunTime:0.001370s ]
+SQL: SELECT * FROM `tb_tag`  [ RunTime:0.001252s ]
+SQL: SELECT COUNT(distinct(ip)) AS tp_count FROM `tb_visitors` WHERE ( `ip` = 'ip' ) LIMIT 1   [ RunTime:0.001564s ]
+NOTIC: [8] Undefined index: www.zxdphp.site /data/home/bxu2442410262/htdocs/Application/Home/Controller/IndexController.class.php 第 111 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 172 行.
+NOTIC: [8] Undefined variable: data /data/home/bxu2442410262/htdocs/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 174 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+

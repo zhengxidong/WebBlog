@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+.aboutcon{
+	background: #eae8df; color:#696969;
+	border: 1px solid rgba(255,255,255,0.65);
+box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+h1.t_nav { border-bottom: #F1F1F1 1px solid; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; }
+h1.t_nav a{width: 100px; display: block; text-align: center ; color: #fff; float:left}
+h1.t_nav span{float:right; color:#999}
+.n1 { background: #5EA51B; }
+.n2{ background: #8BBF5D; }
+.about{ 
+	width:740px;overflow: hidden; 
+	background: #f7f6f1;
+box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+border: 1px solid rgba(255,255,255,0.8);
+border-radius: 3px;
+	line-height:22px; 
+	margin-left: 10px;
+}
+.about_blog{
+    margin-left: 10px;
+}
+.about h2{ font-size:22px; font-family: 'Architects Daughter', cursive; 
+margin-bottom:20px;
+margin-left: 10px;
+border-bottom: 1px solid #e8e2d2;
+}
+.about p{ margin-bottom:20px;text-indent: 2em;}
+.about{margin:20px}
+.about ul{ width:710px;margin-left: 15px;}
+.about_a,.about_c{
+    color:#999;
+    line-height:26px;
+    background: #f7f6f1;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 395px;
+}
+.about_a{margin-top: 17px;
+    width: 250px;height: 395px;box-shadow: 0px 0px 5px rgba(0, 204,204, 1);border: 1px solid rgba(255,255,255,0.8);
+}
+.about_c{ 
+	padding:10px 0 0 10px;
+}
+/*.about_c span{ color:#19A566}*/
+a.blog_link{ color:#1CA368; margin:0 20px}

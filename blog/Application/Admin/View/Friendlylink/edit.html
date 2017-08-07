@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常规设置 - 博客管理系统</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/style.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="__PUBLIC__/Admin/images/icon/icon.png">
+<link rel="shortcut icon" href="__PUBLIC__/Admin/images/icon/favicon.ico">
+<script src="__PUBLIC__/Admin/js/jquery-2.1.4.min.js"></script>
+<!--[if gte IE 9]>
+  <script src="__PUBLIC__/Admin/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/html5shiv.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/respond.min.js" type="text/javascript"></script>
+  <script src="__PUBLIC__/Admin/js/selectivizr-min.js" type="text/javascript"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+  <script>window.location.href='upgrade-browser.html';</script>
+<![endif]-->
+</head>
+
+<body class="user-select">
+<section class="container-fluid">
+  <header>
+      <!--加载顶部导航-->
+      <include file="./Application/Admin/View/Public/nav.html"/>
+  </header>
+  <div class="row">
+      <!--加载左边导航-->
+      <include file="./Application/Admin/View/Public/left_nav.html"/>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
+      <div class="row">
+        <form action="__URL__/update" method="post" autocomplete="off" draggable="false">
+            <input type="hidden" name="link_id" value="<!--{$arr['link_id']}-->"/>
+          <div class="col-md-9">
+            <h1 class="page-header">增加友链</h1>
+
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>名字</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" name="link_name" value="<!--{$arr['link_name']}-->" class="form-control" placeholder="请输入站点副标题" autocomplete="off">
+                <span class="prompt-text">用简洁的文字描述本站点。</span> </div>
+            </div>
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>友链（URL）</span></h2>
+              <div class="add-article-box-content">
+                <input type="text" name="link_url" value="<!--{$arr['link_url']}-->" class="form-control" placeholder="在此处输入站点地址（URL）" required autocomplete="off">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h1 class="page-header">操作</h1>
+
+            <div class="add-article-box">
+              <h2 class="add-article-box-title"><span>保存</span></h2>
+              <div class="add-article-box-content"> <span class="prompt-text">请确定您对所有选项所做的更改</span> </div>
+              <div class="add-article-box-footer">
+                <button class="btn btn-primary" type="submit" name="submit">更新</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--提示模态框-->
+<div class="modal fade user-select" id="areDeveloping" tabindex="-1" role="dialog" aria-labelledby="areDevelopingModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areDevelopingModalLabel" style="cursor:default;">该功能正在日以继夜的开发中…</h4>
+      </div>
+      <div class="modal-body"> <img src="images/baoman/baoman_01.gif" alt="深思熟虑" />
+        <p style="padding:15px 15px 15px 100px; position:absolute; top:15px; cursor:default;">很抱歉，程序猿正在日以继夜的开发此功能，本程序将会在以后的版本中持续完善！</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">朕已阅</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--右键菜单列表-->
+<div id="rightClickMenu">
+  <ul class="list-group rightClickMenuList">
+    <li class="list-group-item disabled">欢迎访问异清轩博客</li>
+    <li class="list-group-item"><span>IP：</span>172.16.10.129</li>
+    <li class="list-group-item"><span>地址：</span>河南省郑州市</li>
+    <li class="list-group-item"><span>系统：</span>Windows10 </li>
+    <li class="list-group-item"><span>浏览器：</span>Chrome47</li>
+  </ul>
+</div>
+<script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script> 
+<script src="__PUBLIC__/Admin/js/admin-scripts.js"></script>
+</body>
+</html>
