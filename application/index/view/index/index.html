@@ -1,909 +1,843 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>
-    首页_大气漂亮的Bootstrap后台管理系统模板Se7en - JS代码网
-    </title>
-    <!--<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" type="text/css" />-->
-	<link href="__STATIC__/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="__STATIC__/stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" />
-	<link href="__STATIC__/stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" />
-	<link href="__STATIC__/stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" />
-	<link href="__STATIC__/stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" />
-	<script src="__STATIC__/javascripts/jquery.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery-ui.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/raphael.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/selectivizr-min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.mousewheel.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.vmap.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.vmap.world.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/fullcalendar.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/gcal.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/datatable-editable.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/excanvas.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.isotope.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/isotope_extras.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/modernizr.custom.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/select2.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/styleswitcher.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/wysiwyg.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/summernote.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.inputmask.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.validate.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap-fileupload.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap-datepicker.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap-timepicker.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap-colorpicker.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/bootstrap-switch.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/typeahead.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/daterange-picker.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/date.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/morris.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/skycons.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/fitvids.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/jquery.sparkline.min.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/main.js" type="text/javascript"></script>
-	<script src="__STATIC__/javascripts/respond.js" type="text/javascript"></script>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <!-- <style media="screen">
-      .nav{
-        float:left;
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>坚果极客 - 新知的世界</title>
+	<meta name="keywords" content="坚果极客,nutgeek,极客,苹果教程,电脑教程,涨姿势,教程,免费SS,SSR,p站中国,坚果,Daedalus">
+	<meta name="description" content="坚果极客，做最潮最有范儿的科教新媒体。聚合最有趣的科教文章，最需要的动手教程，最酷的科技资讯，最热门的分享，我们致力于打造最受年轻人喜爱的科教泛阅读媒体！">
+	<!-- <link rel="shortcut icon" href="20180318.ico" type="image/x-icon"> -->
+	<!-- <link rel="pingback" href="https://www.nutgeek.com/xmlrpc.php" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+	<!-- <link rel='dns-prefetch' href='//s.w.org' /> -->
+	<link rel='stylesheet' id='Grace-style-css' href='__STATIC__/index/css/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='animate-css' href='__STATIC__/index/css/animate.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='fontello-css' href='__STATIC__/index/font-awesome/css/fontello.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='animation-css' href='__STATIC__/index/font-awesome/css/animation.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='fontello-ie7-css' href='__STATIC__/index/font-awesome/css/fontello-ie7.css' type='text/css' media='all' />
 
-      }
-      .pull-left{
-        margin-right: 50px;
-      }
-      .nav > li > a >span {
-        width: 15px !important;
-        height: 15px !important;
-      }
-    </style> -->
-  </head>
-  <body>
-    <div class="modal-shiftfix">
-      <!-- Navigation -->
-      <div class="navbar navbar-fixed-top scroll-hide">
-        <div class="container-fluid top-bar">
-          <div class="pull-right">
-            <!-- <ul class="nav pull-left">
-              <li>
-                <a class="current" href="index-2.html"><span aria-hidden="true" class="se7en-home"></span>面板</a>
-              </li>
-              <li><a href="{:url('Article/index')}">
-                <span aria-hidden="true" class="se7en-feed"></span>文章管理</a>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-star"></span>Features<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="buttons.html">Buttons</a>
-                  </li>
-                  <li>
-                    <a href="fontawesome.html">Font Awesome Icons</a>
-                  </li>
-                  <li><a href="glyphicons.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Glyphicons
-                    </p></a>
+	<link rel='stylesheet' id='carousel-css' href='__STATIC__/index/css/owl.carousel.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='carousel-theme-css' href='__STATIC__/index/css/owl.theme.css' type='text/css' media='all' />
+	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery-migrate.min.js'></script>
+	<!--[if lt IE 9]>
+<script type='text/javascript' src='__STATIC__/index/js/html5shiv.js'></script>
+<![endif]-->
+	<!--[if lt IE 9]>
+<script type='text/javascript' src='__STATIC__/index/js/respond.min.js'></script>
+<![endif]-->
+	<link rel="icon" href="__STATIC__/index/20180318.ico" sizes="32x32" />
+	<!-- <link rel="icon" href="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-192x192.png" sizes="192x192" /> -->
+	<!-- <link rel="apple-touch-icon-precomposed" href="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-180x180.png" />
+	<meta name="msapplication-TileImage" content="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-270x270.png" /> -->
 
-                  </li>
-                  <li>
-                    <a href="components.html">Components</a>
-                  </li>
-                  <li>
-                    <a href="widgets.html">Widgets</a>
-                  </li>
-                  <li>
-                    <a href="typo.html">Typography</a>
-                  </li>
-                  <li>
-                    <a href="grid.html">Grid Layout</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-forms"></span>Forms<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="form-components.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Form Components
-                    </p></a>
+</head>
 
-                  </li>
-                  <li>
-                    <a href="form-advanced.html">Advanced Forms</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-tables"></span>Tables<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="tables.html">Basic tables</a>
-                  </li>
-                  <li>
-                    <a href="datatables.html">DataTables</a>
-                  </li>
-                  <li><a href="datatables-editable.html">
-                    <div class="notifications label label-warning">
-                      New
-                    </div>
-                    <p>
-                      Editable DataTables
-                    </p></a>
+<body class="home blog off-canvas-nav-left">
+	<div id="header" class="navbar navbar-default navbar-fixed-top header-01">
+		<div class="container">
+			<h1 class="logo">
+			<a  href="{:url('index/index')}" title="坚果极客"/>
+							<img src="__STATIC__/index/img/20180318.jpg" alt="坚果极客">
+			</a>
+		</h1>
+			<div role="navigation" class="site-nav  primary-menu yincang">
+				<div class="menu-fix-box">
+					<ul id="menu-navigation" class="menu">
+						<li class="current-menu-item"><a href="">首页</a></li>
+						<li><a href="">前端</a></li>
+						<li><a href="">后端</a></li>
+						<li><a href="">移动</a></li>
+						<li><a href="">数据库</a></li>
+						<li><a href="">服务器运维</a></li>
+						<li><a href="">爱分享</a></li>
+						<li><a href="">福利帮</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="right-nav">
+				<div class="js-toggle-message">
+					<button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    	<i class="icon-bell-2"></i>
+                        					</button>
+					<div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+						<ul>
+							<li class="first"><span class="time">18.03.06</span><a target="_blank" href="homepod-more-power-saving.html">App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！</a></li>
+							<li><span class="time">18.02.08</span><a target="_blank" href="https://www.nutgeek.com/ios-source-code-leak/">iOS 9的iBoot源码泄露，将助于实现永久升降级！</a></li>
+							<li><span class="time">18.01.27</span><a target="_blank" href="https://www.nutgeek.com/all-new-iphone-will-use-a-new-l-single-battery-this-year/">今年所有新款 iPhone 都会采用全新 L 型单电池！</a></li>
+							<li><span class="time">18.01.27</span><a target="_blank" href="https://www.nutgeek.com/homepod-more-power-saving/">HomePod 播放音乐时比普通 LED 灯泡还省电！</a></li>
+							<li><span class="time">18.01.26</span><a target="_blank" href="https://www.nutgeek.com/wechat-has-been-updated-add-one-button-to-switch-account/">微信更新啦，增加一键切换账号！</a></li>
+						</ul>
+						<div class="more-messages"><a target="_blank" href="https://www.nutgeek.com/category/news/">更多</a></div>
+					</div>
+				</div>
+				<button class="js-toggle-search"><i class="icon-search"></i></button>
+			</div>
 
-                  </li>
-                </ul>
-              </li>
-              <li><a href="charts.html">
-                <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="chat.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Chat
-                    </p></a>
+			<div class="navbar-header">
+				<button type="button" class="burger-menu navbar-toggle">
+					<span class="menu-top"></span>
+					<span class="menu-bottom"></span>
+				</button>
+			</div>
+			<div class="body-overlay"></div>
 
-                  </li>
-                  <li>
-                    <a href="calendar.html">Calendar</a>
-                  </li>
-                  <li><a href="timeline.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Timeline
-                    </p></a>
+			<div class="nav-menu">
 
-                  </li>
-                  <li><a href="login1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Login 1
-                    </p></a>
 
-                  </li>
-                  <li>
-                    <a href="login2.html">Login 2</a>
-                  </li>
-                  <li><a href="signup1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Sign Up 1
-                    </p></a>
+				<ul id="menu-main-nav" class="main-nav">
+					<li class="current-menu-item"><a href="">首页</a></li>
+					<li><a href="">前端</a></li>
+					<li><a href="">后端</a></li>
+					<li><a href="">移动</a></li>
+					<li><a href="">数据库</a></li>
+					<li><a href="">服务器运维</a></li>
+					<li><a href="">爱分享</a></li>
+					<li><a href="">福利帮</a></li>
+				</ul>
+				<div class="close-nav">
+					<span class="close-top"></span>
+					<span class="close-bottom"></span>
+				</div>
+			</div>
 
-                  </li>
-                  <li>
-                    <a href="signup2.html">Sign Up 2</a>
-                  </li>
-                  <li><a href="invoice.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Invoice
-                    </p></a>
+		</div>
+	</div>
 
-                  </li>
-                  <li><a href="faq.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      FAQ
-                    </p></a>
+	<div id="page-content">
+		<div class="top-content">
+			<div class="container">
+				<div class="row">
+					<div class="owl-carousel top-slide-two wow bounceInDown">
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/you2php-max.png&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">动手做</div>
+									<h2>You2PHP，无需代理也能观看Youtube视频！</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/you2php-watch-youtube-without-proxy/" title="You2PHP，无需代理也能观看Youtube视频！"></a>
 
-                  </li>
-                  <li>
-                    <a href="filters.html">Filter Results</a>
-                  </li>
-                  <li>
-                    <a href="404-page.html">404 Page</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="gallery.html">
-                <span aria-hidden="true" class="se7en-gallery"></span>Gallery</a>
-              </li>
-            </ul> -->
-            <ul class="nav navbar-nav pull-right">
-              <li class="dropdown notifications hidden-xs">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
-                  <div class="sr-only">
-                    Notifications
-                  </div>
-                  <p class="counter">
-                    4
-                  </p>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">
-                    <div class="notifications label label-info">
-                      New
-                    </div>
-                    <p>
-                      New user added: Jane Smith
-                    </p></a>
+						</div>
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/ios_9_ipad_iphone.jpg&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">天下事</div>
+									<h2>iOS 9的iBoot源码泄露，将助于实现永久升降级！</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/ios-source-code-leak/" title="iOS 9的iBoot源码泄露，将助于实现永久升降级！"></a>
 
-                  </li>
-                  <li><a href="#">
-                    <div class="notifications label label-info">
-                      New
-                    </div>
-                    <p>
-                      Sales targets available
-                    </p></a>
+						</div>
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/Picsew.jpg&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">挖APP</div>
+									<h2>Picsew，Iphone截图拼图，有它就够了！</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/picsew-iphone-screenshot-tool/" title="Picsew，Iphone截图拼图，有它就够了！"></a>
 
-                  </li>
-                  <li><a href="#">
-                    <div class="notifications label label-info">
-                      New
-                    </div>
-                    <p>
-                      New performance metric added
-                    </p></a>
+						</div>
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/mac%20wallpaper-1.jpg&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">有想法</div>
+									<h2>拿走不谢，Mac 上最好的壁纸应用都在这里了</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/mac-wallpaper-app/" title="拿走不谢，Mac 上最好的壁纸应用都在这里了"></a>
 
-                  </li>
-                  <li><a href="#">
-                    <div class="notifications label label-info">
-                      New
-                    </div>
-                    <p>
-                      New growth data available
-                    </p></a>
+						</div>
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/Animoji-1.jpg&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">挖APP</div>
+									<h2>羡慕 iPhone X 用户？有了这些 App 你也可以体验 Animoji</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/dont-need-iphone-x-u-can-also-use-animoji/" title="羡慕 iPhone X 用户？有了这些 App 你也可以体验 Animoji"></a>
 
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown messages hidden-xs">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-envelope"></span>
-                  <div class="sr-only">
-                    Messages
-                  </div>
-                  <p class="counter">
-                    3
-                  </p>
-                </a>
-                <ul class="dropdown-menu messages">
-                  <li><a href="#">
-                    <img width="34" height="34" src="__STATIC__/images/avatar-male2.png" />Could we meet today? I wanted...</a>
-                  </li>
-                  <li><a href="#">
-                    <img width="34" height="34" src="__STATIC__/images/avatar-female.png" />Important data needs your analysis...</a>
-                  </li>
-                  <li><a href="#">
-                    <img width="34" height="34" src="__STATIC__/images/avatar-male2.png" />Buy Se7en today, it's a great theme...</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown settings hidden-xs">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
-                  <div class="sr-only">
-                    Settings
-                  </div>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
-                  </li>
-                  <li>
-                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
-                  </li>
-                  <li>
-                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
-                  </li>
-                  <li>
-                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
-                  </li>
-                  <li>
-                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img width="34" height="34" src="__STATIC__/images/avatar-male.jpg" />John Smith<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">
-                    <i class="icon-user"></i>My Account</a>
-                  </li>
-                  <li><a href="#">
-                    <i class="icon-gear"></i>Account Settings</a>
-                  </li>
-                  <li><a href="login1.html">
-                    <i class="icon-signout"></i>Logout</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index-2.html">se7en</a>
-          <form class="navbar-form form-inline col-lg-2 hidden-xs">
-            <input class="form-control" placeholder="Search" type="text">
-          </form>
-        </div>
-        <div class="container-fluid main-nav clearfix">
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li>
-                <a class="current" href="index-2.html"><span aria-hidden="true" class="se7en-home"></span>面板</a>
-              </li>
-              <li><a href="{:url('article/index')}">
-                <span aria-hidden="true" class="se7en-feed"></span>文章管理</a>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-star"></span>评论管理<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="buttons.html">Buttons</a>
-                  </li>
-                  <li>
-                    <a href="fontawesome.html">Font Awesome Icons</a>
-                  </li>
-                  <li><a href="glyphicons.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Glyphicons
-                    </p></a>
+						</div>
+						<div class="item" style="background: url(https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://wx3.sinaimg.cn/crop.0.0.1502.844.1000/005QogLQgy1floli7eif0j315q0nrq6v.jpg&h=500&w=1120); background-repeat: no-repeat;background-size: cover;background-position: center top;">
+							<div class="slider-content">
+								<div class="slider-content-item">
+									<div class="slider-cat clearfix">动手做</div>
+									<h2>电脑、苹果、安卓全系统上P站教程</h2>
+								</div>
+							</div>
+							<a class="read-slider" href="https://www.nutgeek.com/browse-pixiv-net-and-app/" title="电脑、苹果、安卓全系统上P站教程"></a>
 
-                  </li>
-                  <li>
-                    <a href="components.html">Components</a>
-                  </li>
-                  <li>
-                    <a href="widgets.html">Widgets</a>
-                  </li>
-                  <li>
-                    <a href="typo.html">Typography</a>
-                  </li>
-                  <li>
-                    <a href="grid.html">Grid Layout</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-forms"></span>友情链接<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="form-components.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Form Components
-                    </p></a>
+						</div>
+					</div>
+					<div class="hot-articles wow bounceInDown">
+						<div class="hots-content">
+							<div class="hots-headline">捕风捉影</div>
+							<div class="hots-item">
+								<a href="https://www.nutgeek.com/the-secret-of-chrome/" target="_blank">
+									<div class="hots-image" style="background-image:url(https://img.nutgeek.com/Chrome-GAME.png)"></div>
+									<h3><i class="icon-record-outline"></i><span>什么？断网后chrome还能玩游戏？</span></h3>
+								</a>
+							</div>
+							<div class="hots-title">
+								<i class="icon-record-outline"></i><a href="https://www.nutgeek.com/snd-app/" target="_blank">斯诺登做了一个「反监控」App，想让普通人也能保护隐私</a>
+							</div>
+							<div class="hots-title">
+								<i class="icon-record-outline"></i><a href="https://www.nutgeek.com/ssshadowsocks/" target="_blank">全网最全SS/ShadowsocksR科学上网免费帐号分享</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                  </li>
-                  <li>
-                    <a href="form-advanced.html">Advanced Forms</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-tables"></span>资源站<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="tables.html">Basic tables</a>
-                  </li>
-                  <li>
-                    <a href="datatables.html">DataTables</a>
-                  </li>
-                  <li><a href="datatables-editable.html">
-                    <div class="notifications label label-warning">
-                      New
-                    </div>
-                    <p>
-                      Editable DataTables
-                    </p></a>
 
-                  </li>
-                </ul>
-              </li>
-              <li><a href="charts.html">
-                <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="chat.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Chat
-                    </p></a>
+		<div class="recommend-content">
+			<div class="container">
+				<div class="row">
 
-                  </li>
-                  <li>
-                    <a href="calendar.html">Calendar</a>
-                  </li>
-                  <li><a href="timeline.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Timeline
-                    </p></a>
+					<div class="cat">
+						<div class="thumbnail-cat">
+							<div class="image wow zoomIn">
+								<div class="index-cat-box" style="background-image:url(https://img.nutgeek.com/find-app.webp)">
+									<a class="iscat" href="https://www.nutgeek.com/category/app/"></a>
+									<div class="promo-overlay">
+										<h4><span>挖APP</span></h4></div>
+								</div>
+							</div>
+							<div class="image wow zoomIn">
+								<div class="index-cat-box" style="background-image:url(https://img.nutgeek.com/diy.webp)">
+									<a class="iscat" href="https://www.nutgeek.com/category/video-2/"></a>
+									<div class="promo-overlay">
+										<h4><span>看点儿</span></h4></div>
+								</div>
+							</div>
+							<div class="image wow zoomIn">
+								<div class="index-cat-box" style="background-image:url(https://img.nutgeek.com/think.webp)">
+									<a class="iscat" href="https://www.nutgeek.com/category/sight/"></a>
+									<div class="promo-overlay">
+										<h4><span>有想法</span></h4></div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                  </li>
-                  <li><a href="login1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Login 1
-                    </p></a>
 
-                  </li>
-                  <li>
-                    <a href="login2.html">Login 2</a>
-                  </li>
-                  <li><a href="signup1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Sign Up 1
-                    </p></a>
+				</div>
+			</div>
+		</div>
+		<div class="main-content">
+			<div class="container">
+				<div class="row">
+					<div class="blog-posts">
 
-                  </li>
-                  <li>
-                    <a href="signup2.html">Sign Up 2</a>
-                  </li>
-                  <li><a href="invoice.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Invoice
-                    </p></a>
+						<div class="ajax-load-box posts-con">
+							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="homepod-more-power-saving.html" title="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/fake-itunes-store-subscription-email.jpg&h=300&w=764&zc=1" alt="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/%e8%8b%b9%e6%9e%9c/" rel="tag">苹果</a><a href="https://www.nutgeek.com/tag/%e9%92%93%e9%b1%bc%e9%82%ae%e4%bb%b6/" rel="tag">钓鱼邮件</a></div>
+											<h2><a href="https://www.nutgeek.com/fake-itunes-store-subscription-email/" title="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！" >App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！</a></h2>
+										</div>
+										<div class="posts-default-content">
 
-                  </li>
-                  <li><a href="faq.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      FAQ
-                    </p></a>
+											<div class="posts-text">苹果钓鱼邮件一直以来就存在，不少用户误以为真，前阵子就发生多起iOS用户都收到来自App Store的通知取消订阅邮件，邮件内是伪装成官方的订阅App月费邮件通知，就如同是真的由苹果所寄出的风格与排版&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/news/">天下事</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-03-06</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 72</li>
+													<li class="ico-like"><i class="icon-heart"></i> 1</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                  </li>
-                  <li>
-                    <a href="filters.html">Filter Results</a>
-                  </li>
-                  <li>
-                    <a href="404-page.html">404 Page</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="gallery.html">
-                <span aria-hidden="true" class="se7en-gallery"></span>设置</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End Navigation -->
-      <div class="container-fluid main-content">
-        <!-- Statistics -->
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="widget-container stats-container">
-              <div class="col-md-3">
-                <div class="number">
-                  <div class="icon globe"></div>
-                  86<small>%</small>
-                </div>
-                <div class="text">
-                  Overall growth
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="number">
-                  <div class="icon visitors"></div>
-                  613
-                </div>
-                <div class="text">
-                  Unique visitors
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="number">
-                  <div class="icon money"></div>
-                  <small>$</small>924
-                </div>
-                <div class="text">
-                  Sales
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="number">
-                  <div class="icon chat-bubbles"></div>
-                  325
-                </div>
-                <div class="text">
-                  New followers
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Statistics -->
-        <div class="row">
-          <!-- Weather -->
-          <div class="col-md-8">
-            <div class="widget-container weather">
-              <div class="widget-content padded">
-                <div class="row text-center">
-                  <div class="col-sm-6 col-md-6 col-lg-4 today">
-                    <p>
-                      TODAY
-                    </p>
-                    <canvas class="skycons-element" data-skycons="RAIN" height="100" id="rain" width="100"></canvas>
-                    <div class="number">
-                      72<small>&deg;</small>
-                    </div>
-                    <p class="location">
-                      Washington, D.C.
-                    </p>
-                  </div>
-                  <div class="col-sm-2 hidden-xs">
-                    <p>
-                      MON
-                    </p>
-                    <canvas class="skycons-element" data-skycons="CLEAR_DAY" height="60" id="clear-day" width="60"></canvas>
-                    <div class="number">
-                      86<small>&deg;</small>
-                    </div>
-                  </div>
-                  <div class="col-sm-2 hidden-xs">
-                    <p>
-                      TUE
-                    </p>
-                    <canvas class="skycons-element" data-skycons="RAIN" height="60" id="cloudy" width="60"></canvas>
-                    <div class="number">
-                      75<small>&deg;</small>
-                    </div>
-                  </div>
-                  <div class="col-sm-2 hidden-xs">
-                    <p>
-                      WED
-                    </p>
-                    <canvas class="skycons-element" data-skycons="PARTLY_CLOUDY_DAY" height="60" id="partly-cloudy-day" width="60"></canvas>
-                    <div class="number">
-                      82<small>&deg;</small>
-                    </div>
-                  </div>
-                  <div class="col-sm-2 hidden-md hidden-sm hidden-xs">
-                    <p>
-                      THU
-                    </p>
-                    <canvas class="skycons-element" data-skycons="SLEET" height="60" id="sleet" width="60"></canvas>
-                    <div class="number">
-                      64<small>&deg;</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end Weather --><!-- Bar Graph -->
-          <div class="col-md-4">
-            <div class="widget-container small">
-              <div class="heading">
-                <i class="icon-signal"></i>New sign ups<i class="icon-list pull-right"></i><i class="icon-refresh pull-right"></i>
-              </div>
-              <div class="widget-content padded">
-                <div class="bar-chart-widget">
-                  <div class="chart-graph">
-                    <div id="barcharts">
-                      Loading...
-                    </div>
-                    <ul class="chart-text-axis">
-                      <li>
-                        1
-                      </li>
-                      <li>
-                        2
-                      </li>
-                      <li>
-                        3
-                      </li>
-                      <li>
-                        4
-                      </li>
-                      <li>
-                        5
-                      </li>
-                      <li>
-                        6
-                      </li>
-                      <li>
-                        7
-                      </li>
-                      <li>
-                        8
-                      </li>
-                      <li>
-                        9
-                      </li>
-                      <li>
-                        10
-                      </li>
-                      <li>
-                        11
-                      </li>
-                      <li>
-                        12
-                      </li>
-                      <li>
-                        13
-                      </li>
-                      <li>
-                        14
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Bar Graph -->
-        </div>
-        <div class="row">
-          <!-- Area Charts:Morris -->
-          <div class="col-md-6">
-            <div class="widget-container fluid-height">
-              <div class="heading">
-                <i class="icon-bar-chart"></i>Area Chart
-              </div>
-              <div class="widget-content padded text-center">
-                <div class="graph-container">
-                  <div class="caption"></div>
-                  <div class="graph" id="hero-area"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Area Charts:Morris --><!-- Chat -->
-          <div class="col-md-6">
-            <div class="widget-container scrollable chat" style="height: 427px;">
-              <div class="heading">
-                <i class="icon-comments"></i>Chat Widget<i class="icon-smile pull-right"></i>
-              </div>
-              <div class="widget-content padded">
-                <ul>
-                  <li>
-                    <img width="30" height="30" src="__STATIC__/images/avatar-male.jpg" />
-                    <div class="bubble">
-                      <a class="user-name" href="#">John Smith</a>
-                      <p class="message">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-                      </p>
-                      <p class="time">
-                        <strong>Today </strong>3:53 pm
-                      </p>
-                    </div>
-                  </li>
-                  <li class="current-user">
-                    <img width="30" height="30" src="__STATIC__/images/avatar-female.jpg" />
-                    <div class="bubble">
-                      <a class="user-name" href="#">Jane Smith</a>
-                      <p class="message">
-                        Donec odio. Quisque volutpat mattis eros.
-                      </p>
-                      <p class="time">
-                        <strong>Today </strong>3:53 pm
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <img width="30" height="30" src="__STATIC__/images/avatar-male.jpg" />
-                    <div class="bubble">
-                      <a class="user-name" href="#">John Smith</a>
-                      <p class="message">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-                      </p>
-                      <p class="time">
-                        <strong>Today </strong>3:53 pm
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <img width="30" height="30" src="__STATIC__/images/avatar-male.jpg" />
-                    <div class="bubble">
-                      <a class="user-name" href="#">John Smith</a>
-                      <p class="message">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-                      </p>
-                      <p class="time">
-                        <strong>Today </strong>3:53 pm
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="post-message">
-                <input class="form-control" placeholder="Write your message here..." type="text"><input type="submit" value="Send">
-              </div>
-            </div>
-          </div>
-          <!-- End Chat -->
-        </div>
-        <div class="row">
-          <!-- Pie Graph 1 -->
-          <div class="col-lg-5">
-            <div class="widget-container fluid-height">
-              <div class="heading">
-                <i class="icon-bar-chart"></i>Donut Charts
-              </div>
-              <div class="widget-content clearfix">
-                <div class="col-sm-6">
-                  <div class="pie-chart1 pie-chart pie-number" data-percent="87">
-                    87%
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="pie-chart2 pie-chart pie-number" data-percent="26">
-                    26%
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="widget-container fluid-height">
-              <!-- Table -->
-              <table class="table table-filters">
-                <tbody>
-                  <tr>
-                    <td class="filter-category blue">
-                      <div class="arrow-left"></div>
-                      <i class="icon-stethoscope"></i>
-                    </td>
-                    <td>
-                      National Distribution Co.
-                    </td>
-                    <td>
-                      $9204
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        50,55,60,40,30,35,30,20,25,30,40,20,15
-                      </div>
-                    </td>
-                    <td>
-                      <div class="danger">
-                        -4%
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="filter-category green">
-                      <div class="arrow-left"></div>
-                      <i class="icon-coffee"></i>
-                    </td>
-                    <td>
-                      Star Organization Co.
-                    </td>
-                    <td>
-                      $23,890
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        5,10,15,50,80,50,40,30,50,60,70,75,75
-                      </div>
-                    </td>
-                    <td>
-                      <div class="success">
-                        +12%
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="filter-category orange">
-                      <div class="arrow-left"></div>
-                      <i class="icon-gamepad"></i>
-                    </td>
-                    <td>
-                      Companysoft, LLC
-                    </td>
-                    <td>
-                      $10,995
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        100,100,80,70,40,20,20,40,50,60,70
-                      </div>
-                    </td>
-                    <td>
-                      <div class="success">
-                        +5%
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="filter-category red">
-                      <div class="arrow-left"></div>
-                      <i class="icon-gift"></i>
-                    </td>
-                    <td>
-                      Craft Co.
-                    </td>
-                    <td>
-                      $6,790
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        5,10,15,20,30,40,80,100,120,120,140
-                      </div>
-                    </td>
-                    <td>
-                      <div class="success">
-                        +26%
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="filter-category blue">
-                      <div class="arrow-left"></div>
-                      <i class="icon-stethoscope"></i>
-                    </td>
-                    <td>
-                      National Distribution Co.
-                    </td>
-                    <td>
-                      $9204
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        50,55,60,40,30,35,30,20,25,30,40,20,15
-                      </div>
-                    </td>
-                    <td>
-                      <div class="danger">
-                        -4%
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="filter-category magenta">
-                      <div class="arrow-left"></div>
-                      <i class="icon-trophy"></i>
-                    </td>
-                    <td>
-                      Fastnation Co.
-                    </td>
-                    <td>
-                      $22,156
-                    </td>
-                    <td class="hidden-xs">
-                      <div class="sparkslim">
-                        20,40,50,60,70,80,90,95,100,80,70,60
-                      </div>
-                    </td>
-                    <td>
-                      <div class="danger">
-                        -4%
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <!-- End Pie Graph 1 -->
-        </div>
-      </div>
-    </div>
-  </body>
+							<div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/you2php-watch-youtube-without-proxy/" title="You2PHP，无需代理也能观看Youtube视频！">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/you2php-max.png&h=300&w=764&zc=1" alt="You2PHP，无需代理也能观看Youtube视频！" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/you2php/" rel="tag">You2PHP</a><a href="https://www.nutgeek.com/tag/youtube/" rel="tag">youtube</a><a href="https://www.nutgeek.com/tag/%e7%bd%91%e7%ab%99%e4%bb%a3%e7%90%86/" rel="tag">网站代理</a><a href="https://www.nutgeek.com/tag/%e9%95%9c%e5%83%8f/"
+												  rel="tag">镜像</a></div>
+											<h2><a href="https://www.nutgeek.com/you2php-watch-youtube-without-proxy/" title="You2PHP，无需代理也能观看Youtube视频！" >You2PHP，无需代理也能观看Youtube视频！</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">You2PHP 是一款基于PHP开发的Youtube流量代理脚本，用来搭建Youtube视频镜像站、可实现长城之内观看Youtube。 简介 使用You2PHP的成本非常低，只需要一个支持PHP环境的&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/manufacture/">动手做</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-02-12</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 2,580</li>
+													<li class="ico-like"><i class="icon-heart"></i> 5</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/ios-source-code-leak/" title="iOS 9的iBoot源码泄露，将助于实现永久升降级！">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/ios_9_ipad_iphone.jpg&h=300&w=764&zc=1" alt="iOS 9的iBoot源码泄露，将助于实现永久升降级！" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/ios/" rel="tag">IOS</a><a href="https://www.nutgeek.com/tag/iphone/" rel="tag">iphone</a><a href="https://www.nutgeek.com/tag/%e6%ba%90%e7%a0%81/" rel="tag">源码</a><a href="https://www.nutgeek.com/tag/%e7%b3%bb%e7%bb%9f/"
+												  rel="tag">系统</a></div>
+											<h2><a href="https://www.nutgeek.com/ios-source-code-leak/" title="iOS 9的iBoot源码泄露，将助于实现永久升降级！" >iOS 9的iBoot源码泄露，将助于实现永久升降级！</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">近日，iPhone上的iOS 9系统核心iBoot源码被匿名人士公开在GitHub网站上，最初是在去年被一名刚注册的apple_internals网友分享在Reddit论坛上，由于这份资料太少人注意，&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/news/">天下事</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-02-08</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 866</li>
+													<li class="ico-like"><i class="icon-heart"></i> 4</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+							<!-- <div class="ajax-load-con content posts-cjtz">
+								<script type="text/javascript">
+									/*坚果极客首页文章列表*/
+									var cpro_id = "u3181293";
+								</script>
+								<script type="text/javascript" src="js/c.js"></script>
+							</div> -->
+
+							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/bug-delete-your-discuz-x-account/" title="疑似漏洞，永久删除你在任何Discuz! X论坛的帐号！">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/delete-your-discuz-x-account.jpg&h=300&w=764&zc=1" alt="疑似漏洞，永久删除你在任何Discuz! X论坛的帐号！" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/bug/" rel="tag">bug</a><a href="https://www.nutgeek.com/tag/discuz-x/" rel="tag">Discuz! X</a><a href="https://www.nutgeek.com/tag/%e5%88%a0%e9%99%a4%e8%b4%a6%e5%8f%b7/" rel="tag">删除账号</a><a href="https://www.nutgeek.com/tag/%e6%bc%8f%e6%b4%9e/"
+												  rel="tag">漏洞</a></div>
+											<h2><a href="https://www.nutgeek.com/bug-delete-your-discuz-x-account/" title="疑似漏洞，永久删除你在任何Discuz! X论坛的帐号！" >疑似漏洞，永久删除你在任何Discuz! X论坛的帐号！</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">昨天，Twitter网友Coxxs公布了疑似Discuz! X 论坛的漏洞，通过调用网页控制台Console键入特定代码，执行代码后会先删除UCenter 内的帐号，随后UCenter 会通知 Dis&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/manufacture/">动手做</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-02-06</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 894</li>
+													<li class="ico-like"><i class="icon-heart"></i> 8</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+							<div class="ajax-load-con content wow bounceInUp">
+								<div class="content-box posts-gallery-box">
+									<div class="posts-gallery-img">
+										<a href="https://www.nutgeek.com/brook-service-share/" title="Brook代理服务器/账号分享，附带使用教程">
+									<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/brook.png&h=173.98&w=231.98&zc=1" alt="Brook代理服务器/账号分享，附带使用教程" />
+											</a>
+									</div>
+									<div class="posts-gallery-content">
+										<h2><a href="https://www.nutgeek.com/brook-service-share/" title="Brook代理服务器/账号分享，附带使用教程" >Brook代理服务器/账号分享，附带使用教程</a></h2>
+										<div class="posts-gallery-text">Brook是一个由 Go语言编写的跨平台代理软件，支持 Linux/MacOS/Windows/Android/iOS 各个平台。近期有小伙伴发邮件问坚果有没有Brook服务器分享，正好手上有一台没用的洛杉矶CN2线路的服务器空着，于是用逗&hellip;</div>
+										<div class="posts-default-info posts-gallery-info">
+											<ul>
+												<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/fuli/">福利帮</a></li>
+												<li class="ico-time"><i class="icon-clock-1"></i> 2018-02-01</li>
+												<li class="ico-eye"><i class="icon-eye-4"></i> 15,982</li>
+												<li class="ico-like"><i class="icon-heart"></i> 8</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/the-secret-of-chrome/" title="什么？断网后chrome还能玩游戏？">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/Chrome-GAME.png&h=300&w=764&zc=1" alt="什么？断网后chrome还能玩游戏？" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/chrome/" rel="tag">chrome</a><a href="https://www.nutgeek.com/tag/%e5%b0%8f%e6%81%90%e9%be%99/" rel="tag">小恐龙</a><a href="https://www.nutgeek.com/tag/%e6%b5%8f%e8%a7%88%e5%99%a8/" rel="tag">浏览器</a><a href="https://www.nutgeek.com/tag/%e6%b8%b8%e6%88%8f/"
+												  rel="tag">游戏</a></div>
+											<h2><a href="https://www.nutgeek.com/the-secret-of-chrome/" title="什么？断网后chrome还能玩游戏？" >什么？断网后chrome还能玩游戏？</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">今天给大家分享个有趣的东西，很多小伙伴都在用谷歌的Chrome浏览器，当网络连接中断时，Chrome会出现这样一个带有小恐龙提醒的提醒页面！ 这么看也没什么特别，但是一按空格键，你就开启了一扇通往奇妙&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/creativity-product/">新奇特</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-29</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 995</li>
+													<li class="ico-like"><i class="icon-heart"></i> 4</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/all-new-iphone-will-use-a-new-l-single-battery-this-year/" title="今年所有新款 iPhone 都会采用全新 L 型单电池！">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/new%20iphone%20will%20use%20new%20L%20battery.jpg&h=300&w=764&zc=1" alt="今年所有新款 iPhone 都会采用全新 L 型单电池！" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/apple/" rel="tag">apple</a><a href="https://www.nutgeek.com/tag/%e7%94%b5%e6%b1%a0/" rel="tag">电池</a><a href="https://www.nutgeek.com/tag/%e8%8b%b9%e6%9e%9c/" rel="tag">苹果</a></div>
+											<h2><a href="https://www.nutgeek.com/all-new-iphone-will-use-a-new-l-single-battery-this-year/" title="今年所有新款 iPhone 都会采用全新 L 型单电池！" >今年所有新款 iPhone 都会采用全新 L 型单电池！</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">根据韩国新闻网站 The Investor 报告，LG 今年不仅会成为苹果 iPhone OLED 屏幕的供应商，而且可能会为 2018年的新款 iPhone 生产全新的 L 型电池。 报告称，LG &hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/news/">天下事</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-27</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 472</li>
+													<li class="ico-like"><i class="icon-heart"></i> 3</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+							<div class="ajax-load-con content wow bounceInUp">
+								<div class="content-box posts-gallery-box">
+									<div class="posts-gallery-img">
+										<a href="{:url('index/article_details')}" title="HomePod 播放音乐时比普通 LED 灯泡还省电！">
+									<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/homepod.jpeg&h=173.98&w=231.98&zc=1" alt="HomePod 播放音乐时比普通 LED 灯泡还省电！" />
+											</a>
+									</div>
+									<div class="posts-gallery-content">
+										<h2><a href="{:url('index/article_details')}" title="HomePod 播放音乐时比普通 LED 灯泡还省电！" >HomePod 播放音乐时比普通 LED 灯泡还省电！</a></h2>
+										<div class="posts-gallery-text">苹果在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。 这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 H&hellip;</div>
+										<div class="posts-default-info posts-gallery-info">
+											<ul>
+												<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/news/">天下事</a></li>
+												<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-27</li>
+												<li class="ico-eye"><i class="icon-eye-4"></i> 288</li>
+												<li class="ico-like"><i class="icon-heart"></i> 2</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
+								<div class="content-box">
+									<div class="posts-default-img">
+										<a href="https://www.nutgeek.com/ios-12-concept/" title="iOS 12 概念渲染：通知提醒分组、更好用的小组件">
+											<div class="overlay"></div>
+											<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/ios-12-gainianxuanran.jpg&h=300&w=764&zc=1" alt="iOS 12 概念渲染：通知提醒分组、更好用的小组件" />
+										</a>
+									</div>
+									<div class="posts-default-box">
+										<div class="posts-default-title">
+											<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/ios12/" rel="tag">IOS12</a><a href="https://www.nutgeek.com/tag/%e6%a6%82%e5%bf%b5/" rel="tag">概念</a><a href="https://www.nutgeek.com/tag/%e9%80%9a%e7%9f%a5%e7%bb%84/" rel="tag">通知组</a></div>
+											<h2><a href="https://www.nutgeek.com/ios-12-concept/" title="iOS 12 概念渲染：通知提醒分组、更好用的小组件" >iOS 12 概念渲染：通知提醒分组、更好用的小组件</a></h2>
+										</div>
+										<div class="posts-default-content">
+
+											<div class="posts-text">国外的设计师朋友带来了最新的 iOS 12 系统概念渲染，这些渲染中提到了一些新功能，比如通知提醒分组。iOS 可以按照应用分组，或者其他筛选条件，对于每天收到大量通知提醒的用户来说，这个小功能将非常&hellip;</div>
+											<div class="posts-default-info">
+												<ul>
+													<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/sight/">有想法</a></li>
+													<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-26</li>
+													<li class="ico-eye"><i class="icon-eye-4"></i> 403</li>
+													<li class="ico-like"><i class="icon-heart"></i> 1</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+							<div class="ajax-load-con content wow bounceInUp">
+								<div class="content-box posts-gallery-box">
+									<div class="posts-gallery-img">
+										<a href="https://www.nutgeek.com/cpu-dx/" title="你的iPhone被降频了吗？CPU DX帮你实时监控CPU频率！">
+									<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/cpu-dx.png&h=173.98&w=231.98&zc=1" alt="你的iPhone被降频了吗？CPU DX帮你实时监控CPU频率！" />
+											</a>
+									</div>
+									<div class="posts-gallery-content">
+										<h2><a href="https://www.nutgeek.com/cpu-dx/" title="你的iPhone被降频了吗？CPU DX帮你实时监控CPU频率！" >你的iPhone被降频了吗？CPU DX帮你实时监控CPU频率！</a></h2>
+										<div class="posts-gallery-text">你的iPhone有被降频或降速了吗？这个热门问题最近都一直围绕在iPhone上，让不少用户担心，甚至纷纷对进行跑分测试，虽然苹果已经承诺会在iOS 11.3加入性能开关和电池健康状态，但25日发布的Beta版本尚未加入此功能，除了当前最有效&hellip;</div>
+										<div class="posts-default-info posts-gallery-info">
+											<ul>
+												<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/app/">挖APP</a></li>
+												<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-26</li>
+												<li class="ico-eye"><i class="icon-eye-4"></i> 548</li>
+												<li class="ico-like"><i class="icon-heart"></i> 3</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div id="ajax-load-posts">
+							<button id="fa-loadmore" class="button button-more " data-wow-delay="0.3s" data-home="true" data-paged="2" data-action="fa_load_postlist" data-total="11">加载更多</button> </div>
+					</div>
+					<div class="sidebar wow bounceInRight">
+						<div class="widget widget_suxingme_postlist">
+							<h3><span>随便看看</span></h3>
+							<ul class="recent-posts-widget">
+								<li class="one">
+									<div class="recent-posts-one-img">
+										<a href="https://www.nutgeek.com/miui8-5/" title="MIUI8.5功能大猜想：付费会员去广告？手机分身再升级？">
+																	<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/mui.png&h=175&w=315.98&zc=1" alt="MIUI8.5功能大猜想：付费会员去广告？手机分身再升级？" />
+
+
+							</a>
+									</div>
+									<div class="recent-posts-title">
+										<span class="info"><i class="icon-clock-1"></i> 2017-05-16</span>
+										<h4 class="title"><a href="https://www.nutgeek.com/miui8-5/" title="MIUI8.5功能大猜想：付费会员去广告？手机分身再升级？">MIUI8.5功能大猜想：付费会员去广告？手机分身再升级？</a></h4>
+									</div>
+								</li>
+								<li>
+									<div class="recent-posts-img"><a href="https://www.nutgeek.com/new-icloud-rule/" title="iCloud将由国内公司运营，iCloud转区就能保护隐私？">
+															<img src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/icloud%20new%20rule.png&h=75&w=100&zc=1" alt="iCloud将由国内公司运营，iCloud转区就能保护隐私？" class="thumbnail"/>
+
+						</a></div>
+									<div class="recent-posts-title">
+										<h4 class="title"><a href="https://www.nutgeek.com/new-icloud-rule/" title="iCloud将由国内公司运营，iCloud转区就能保护隐私？">iCloud将由国内公司运营，iCloud转区就能保护隐私？</a></h4>
+										<span class="info"><i class="icon-clock-1"></i> 2018-01-10</span>
+
+									</div>
+								</li>
+								<li>
+									<div class="recent-posts-img"><a href="https://www.nutgeek.com/albert-einstein/" title="纪录片:世纪天才-爱因斯坦">
+															<img src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6.jpg&h=75&w=100&zc=1" alt="纪录片:世纪天才-爱因斯坦" class="thumbnail"/>
+
+						</a></div>
+									<div class="recent-posts-title">
+										<h4 class="title"><a href="https://www.nutgeek.com/albert-einstein/" title="纪录片:世纪天才-爱因斯坦">纪录片:世纪天才-爱因斯坦</a></h4>
+										<span class="info"><i class="icon-clock-1"></i> 2017-05-09</span>
+
+									</div>
+								</li>
+								<li>
+									<div class="recent-posts-img"><a href="https://www.nutgeek.com/how-do-we-drink-coffee/" title="被骗了，原来咖啡要在睡前喝！">
+															<img src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/%E5%92%96%E5%95%A1%E5%B7%B2%E7%BB%8F%E6%98%AF%E7%8E%B0%E4%BB%A3%E4%BA%BA%E7%9A%84%E4%B8%80%E7%A7%8D%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F.jpg&h=75&w=100&zc=1" alt="被骗了，原来咖啡要在睡前喝！" class="thumbnail"/>
+
+						</a></div>
+									<div class="recent-posts-title">
+										<h4 class="title"><a href="https://www.nutgeek.com/how-do-we-drink-coffee/" title="被骗了，原来咖啡要在睡前喝！">被骗了，原来咖啡要在睡前喝！</a></h4>
+										<span class="info"><i class="icon-clock-1"></i> 2017-04-22</span>
+
+									</div>
+								</li>
+								<li>
+									<div class="recent-posts-img"><a href="https://www.nutgeek.com/amazon-go-is-coming%ef%bc%81/" title="Amazon Go无人商店开幕！不设收银员，连小偷都要失业了！">
+															<img src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/Amazon%20Go.jpg&h=75&w=100&zc=1" alt="Amazon Go无人商店开幕！不设收银员，连小偷都要失业了！" class="thumbnail"/>
+
+						</a></div>
+									<div class="recent-posts-title">
+										<h4 class="title"><a href="https://www.nutgeek.com/amazon-go-is-coming%ef%bc%81/" title="Amazon Go无人商店开幕！不设收银员，连小偷都要失业了！">Amazon Go无人商店开幕！不设收银员，连小偷都要失业了！</a></h4>
+										<span class="info"><i class="icon-clock-1"></i> 2018-01-22</span>
+
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="widget_text widget widget_custom_html">
+							<h3><span>广告支持</span></h3>
+							<div class="textwidget custom-html-widget">
+								<!-- <script type="text/javascript">
+    /*首页侧栏广告*/
+    var cpro_id = "u3183503";
+</script>
+<script type="text/javascript" src="js/c.js"></script> -->
+
+							</div>
+						</div>
+						<div class="widget widget_suxingme_comment">
+							<h3><span>实时评论</span></h3>
+							<ul class="w_comment">
+								<!-- <li>
+									<div class='message'><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2550" title="发表在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='comment_t'><img src="https://www.nutgeek.com/wp-content/themes/Grace/includes/wp-alu/static/img/icon_mrgreen.gif" alt=":mrgreen:" class="wp-smiley" style="height: 1em; max-height: 1em;" /> 好</a></div>
+									<div
+									  class='clearfix meta'>
+										<div class='avatar'><img alt='' src='https://secure.gravatar.com/avatar/a6413ff824e55059f0bbb12b28b33bce?s=96&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/a6413ff824e55059f0bbb12b28b33bce?s=192&#038;d=retro&#038;r=g 2x' class='avatar avatar-96 photo'
+											  height='96' width='96' /></div><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2550" title=" 在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='link'>rrr 评 全网最全SS/ShadowsocksR科学上网免费帐号分享</a></div>
+						</li>
+						<li>
+							<div class='message'><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2549" title="发表在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='comment_t'>我觉得还行 <img src="https://www.nutgeek.com/wp-content/themes/Grace/includes/wp-alu/static/img/icon_wink.gif" alt=":wink:" class="wp-smiley" style="height: 1em; max-height: 1em;" /></a></div>
+							<div
+							  class='clearfix meta'>
+								<div class='avatar'><img alt='' src='https://secure.gravatar.com/avatar/86959f94e7358308185afd18360a53e5?s=96&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/86959f94e7358308185afd18360a53e5?s=192&#038;d=retro&#038;r=g 2x' class='avatar avatar-96 photo'
+									  height='96' width='96' /></div><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2549" title=" 在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='link'>mixshaw 评 全网最全SS/ShadowsocksR科学上网免费帐号分享</a></div>
+					</li>
+					<li>
+						<div class='message'><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2548" title="发表在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='comment_t'>需要用一下ss账号</a></div>
+						<div class='clearfix meta'>
+							<div class='avatar'><img alt='' src='https://secure.gravatar.com/avatar/2e81d8b260fb3eb00e7fbc42ca4fb271?s=96&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/2e81d8b260fb3eb00e7fbc42ca4fb271?s=192&#038;d=retro&#038;r=g 2x' class='avatar avatar-96 photo'
+								  height='96' width='96' /></div><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2548" title=" 在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='link'>乔克 评 全网最全SS/ShadowsocksR科学上网免费帐号分享</a></div>
+					</li>
+					<li>
+						<div class='message'><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2547" title="发表在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='comment_t'>
+ 						<img src="https://www.nutgeek.com/wp-content/themes/Grace/includes/wp-alu/static/img/icon_mrgreen.gif" alt=":mrgreen:" class="wp-smiley" style="height: 1em; max-height: 1em;" /></a></div>
+						<div class='clearfix meta'>
+							<div class='avatar'><img alt='' src='https://secure.gravatar.com/avatar/4b39bd1c9338095b7d76fc3cc3d55124?s=96&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/4b39bd1c9338095b7d76fc3cc3d55124?s=192&#038;d=retro&#038;r=g 2x' class='avatar avatar-96 photo'
+								  height='96' width='96' /></div><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2547" title=" 在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='link'>dffffffffffff 评 全网最全SS/ShadowsocksR科学上网免费帐号分享</a></div>
+					</li>
+					<li>
+						<div class='message'><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2546" title="发表在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='comment_t'>感谢分享</a></div>
+						<div class='clearfix meta'>
+							<div class='avatar'><img alt='' src='https://secure.gravatar.com/avatar/34a58d7c3572a6e4a29fce7b5af64988?s=96&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/34a58d7c3572a6e4a29fce7b5af64988?s=192&#038;d=retro&#038;r=g 2x' class='avatar avatar-96 photo'
+								  height='96' width='96' /></div><a href="https://www.nutgeek.com/ssshadowsocks/#comment-2546" title=" 在： 全网最全SS/ShadowsocksR科学上网免费帐号分享" class='link'>南宁人 评 全网最全SS/ShadowsocksR科学上网免费帐号分享</a></div>
+					</li> -->
+					</ul>
+				</div>
+				<div class="widget widget_suxingme_hotpost">
+					<h3><span>热评文章</span></h3>
+					<li>
+						<a class="img" href="https://www.nutgeek.com/brook-service-share/" title="Brook代理服务器/账号分享，附带使用教程">
+							<i class="icon-forward"></i>
+															<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/brook.png&h=175&w=315.98&zc=1" alt="Brook代理服务器/账号分享，附带使用教程" />
+
+						</a>
+						<div class="title">
+							<div class="entry-meta"><span><i class="icon-comment-inv-alt2"></i> 27</span><span><i class="icon-clock-1"></i> 2018-02-01</span></div>
+							<h4><a href="https://www.nutgeek.com/brook-service-share/"	title="Brook代理服务器/账号分享，附带使用教程">Brook代理服务器/账号分享，附带使用教程</a></h4>
+						</div>
+
+
+
+
+					</li>
+					<li>
+						<a class="img" href="https://www.nutgeek.com/change-the-locale-of-apple-id/" title="全局代理+原生IP，手机上也能更改Apple ID地区！">
+							<i class="icon-forward"></i>
+															<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/change-the-locale-of-apple-id.jpg&h=175&w=315.98&zc=1" alt="全局代理+原生IP，手机上也能更改Apple ID地区！" />
+
+						</a>
+						<div class="title">
+							<div class="entry-meta"><span><i class="icon-comment-inv-alt2"></i> 12</span><span><i class="icon-clock-1"></i> 2018-01-18</span></div>
+							<h4><a href="https://www.nutgeek.com/change-the-locale-of-apple-id/"	title="全局代理+原生IP，手机上也能更改Apple ID地区！">全局代理+原生IP，手机上也能更改Apple ID地区！</a></h4>
+						</div>
+
+
+
+
+					</li>
+					<li>
+						<a class="img" href="https://www.nutgeek.com/use-your-own-head-image-on-the-wordpress-web-site/" title="Gravatar头像，一次设置，全球通用！">
+							<i class="icon-forward"></i>
+															<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/head-image-new.jpg&h=175&w=315.98&zc=1" alt="Gravatar头像，一次设置，全球通用！" />
+
+						</a>
+						<div class="title">
+							<div class="entry-meta"><span><i class="icon-comment-inv-alt2"></i> 6</span><span><i class="icon-clock-1"></i> 2018-01-21</span></div>
+							<h4><a href="https://www.nutgeek.com/use-your-own-head-image-on-the-wordpress-web-site/"	title="Gravatar头像，一次设置，全球通用！">Gravatar头像，一次设置，全球通用！</a></h4>
+						</div>
+
+
+
+
+					</li>
+					<li>
+						<a class="img" href="https://www.nutgeek.com/you2php-watch-youtube-without-proxy/" title="You2PHP，无需代理也能观看Youtube视频！">
+							<i class="icon-forward"></i>
+															<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/you2php-max.png&h=175&w=315.98&zc=1" alt="You2PHP，无需代理也能观看Youtube视频！" />
+
+						</a>
+						<div class="title">
+							<div class="entry-meta"><span><i class="icon-comment-inv-alt2"></i> 4</span><span><i class="icon-clock-1"></i> 2018-02-12</span></div>
+							<h4><a href="https://www.nutgeek.com/you2php-watch-youtube-without-proxy/"	title="You2PHP，无需代理也能观看Youtube视频！">You2PHP，无需代理也能观看Youtube视频！</a></h4>
+						</div>
+
+
+
+
+					</li>
+					<li>
+						<a class="img" href="https://www.nutgeek.com/omega2-%ef%bc%81/" title="比树莓派轻巧的超迷你电脑 Omega2 ！">
+							<i class="icon-forward"></i>
+															<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/Omega-2.jpg&h=175&w=315.98&zc=1" alt="比树莓派轻巧的超迷你电脑 Omega2 ！" />
+
+						</a>
+						<div class="title">
+							<div class="entry-meta"><span><i class="icon-comment-inv-alt2"></i> 3</span><span><i class="icon-clock-1"></i> 2017-12-15</span></div>
+							<h4><a href="https://www.nutgeek.com/omega2-%ef%bc%81/"	title="比树莓派轻巧的超迷你电脑 Omega2 ！">比树莓派轻巧的超迷你电脑 Omega2 ！</a></h4>
+						</div>
+					</li>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="footer" class="one-s-footer">
+		<div class="container">
+			<div class="row">
+				<div class="social-footer">
+					<a class="ttweiboii" href="https://www.nutgeek.com/links-page/" target="_blank" rel="nofollow" title="友情链接"><i class="icon-link"></i></a>
+					<a class="weiboii" href="" target="_blank" rel="nofollow" title="新浪微博"><i class="icon-weibo"></i></a>
+					<a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=admin@nutgeek.com" target="_blank" title="给松鼠发邮件"><i class="icon-mail-2"></i></a>
+				</div>
+				<div class="footer-copyright">Copyright © 2018 <a class="site-link" href="" title="songshu.com" rel="home">songshu.com</a> <a href="http://icp.chinaz.com/%E8%9C%80ICP%E5%A4%8717006606%E5%8F%B7-2" rel="external nofollow" target="_blank">蜀ICP备888888号-2</a>
+					<!-- <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?77da984c30be15fc84c9343a00a080f0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>			 -->
+					<br/>NutGeek Team · <a href="https://www.nutgeek.cn/server-status/" target="_blank" rel="nofollow">server status</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="search-form">
+		<form method="get" action="https://www.nutgeek.com" role="search">
+			<div class="search-form-inner">
+				<div class="search-form-box">
+					<input class="form-search" type="text" name="s" placeholder="键入搜索关键词">
+					<button type="submit" id="btn-search"><i class="icon-search"></i> </button>
+
+				</div>
+				<div class="search-commend">
+					<h4>大家都在搜</h4>
+					<ul>
+						<li><a href="https://www.nutgeek.com/?s=SS">SS</a></li>
+						<li><a href="https://www.nutgeek.com/?s=potatso">potatso</a></li>
+						<li><a href="https://www.nutgeek.com/?s=教程">教程</a></li>
+						<li><a href="https://www.nutgeek.com/?s=上P站">上P站</a></li>
+						<li><a href="https://www.nutgeek.com/?s=手机">手机</a></li>
+						<li><a href="https://www.nutgeek.com/?s=科普">科普</a></li>
+						<li><a href="https://www.nutgeek.com/?s=福利">福利</a></li>
+						<li><a href="https://www.nutgeek.com/?s=SSR">SSR</a></li>
+						<li><a href="https://www.nutgeek.com/?s=节点">节点</a></li>
+					</ul>
+				</div>
+			</div>
+		</form>
+		<div class="close-search">
+			<span class="close-top"></span>
+			<span class="close-bottom"></span>
+		</div>
+	</div>
+	<div class="f-weixin-dropdown">
+		<div class="tooltip-weixin-inner">
+			<h3>微信公众号</h3>
+			<div class="qcode">
+				<img src="" width="160" height="160" alt="微信公众号">
+			</div>
+		</div>
+		<i class="icon-cancel-1 close_tip"></i>
+	</div>
+	<script type='text/javascript' src='__STATIC__/index/js/jquery.sticky-kit.min.js'></script>
+	<script type='text/javascript' src='__STATIC__/index/js/bootstrap.min.js'></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var suxingme_url = {
+			"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+			"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
+			"roll": "1",
+			"headfixed": "1",
+			"slidestyle": "index_slide_sytle_4",
+			"wow": "1"
+		};
+		/* ]]> */
+	</script>
+	<script type='text/javascript' src='__STATIC__/index/js/suxingme.js'></script>
+	<script type='text/javascript' src='__STATIC__/index/js/wow.min.js'></script>
+	<script type='text/javascript' src='__STATIC__/index/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
+	<script type='text/javascript' src='__STATIC__/index/js/owl.carousel.min.js'></script>
+
+	<script>
+		//判断访问终端
+		var browser = {
+			versions: function() {
+				var u = navigator.userAgent,
+					app = navigator.appVersion;
+				return {
+					trident: u.indexOf('Trident') > -1, //IE内核
+					presto: u.indexOf('Presto') > -1, //opera内核
+					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+					mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+					android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
+					iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+					iPad: u.indexOf('iPad') > -1, //是否iPad
+					webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+					weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+					qq: u.match(/\sQQ/i) == " qq" //是否QQ
+				};
+			}(),
+			language: (navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+		//使用方法：
+		//判断是否IE内核
+		if (browser.versions.trident) {
+			alert("is IE");
+		}
+		//判断是否webKit内核
+		if (browser.versions.webKit) {
+			//$('.').addClass('');
+			//alert("is webKit");
+		}
+		//判断是否iPad
+
+
+		//判断是否移动端
+		if (browser.versions.mobile || browser.versions.android || browser.versions.ios) {
+			var yin = document.getElementsByClassName('hot-articles')[0].style.display = 'none';
+			// $('.hot-articles').hide();
+			//alert("移动端");
+		}
+		if (browser.versions.iPad) {
+			var rr = document.getElementsByClassName('yincang')[0].style.display = 'none';
+		}
+	</script>
+</body>
 
 </html>

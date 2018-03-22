@@ -1,5 +1,5 @@
 <?php
-namespace app\index\controller;
+namespace app\manage\controller;
 use think\Controller;
 
 class Index extends Controller
@@ -8,8 +8,5 @@ class Index extends Controller
     {
         return $this->view->fetch();
     }
-    public function article_details()
-    {
-        return $this->view->fetch();
-    }
+
 }
