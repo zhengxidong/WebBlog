@@ -7,10 +7,10 @@
 	<meta name="keywords" content="apple, homepod, 苹果, 音响, 天下事">
 	<meta name="description" content="苹果在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。    这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 HomePod 音乐播放时，如果输入电源的电压为 115V，那么功耗为 8.74W。音量需要设置在 50%。当然，如果提高音量，功耗会有所增加。    苹果的环境报告还提供了 HomePod 在不">
 	<!-- <link rel="shortcut icon" href="2017042115500841.ico" type="image/x-icon" > -->
-	<link rel="pingback" href="https://www.nutgeek.com/xmlrpc.php" />
+	<!-- <link rel="pingback" href="https://www.nutgeek.com/xmlrpc.php" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
-	<link rel='dns-prefetch' href='https://s.w.org/' />
+	<!-- <link rel='dns-prefetch' href='https://s.w.org/' /> -->
 	<link rel='stylesheet' id='Grace-style-css' href='__STATIC__/index/css/style.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='animate-css' href='__STATIC__/index/css/animate.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-css' href='__STATIC__/index/font-awesome/css/fontello.css' type='text/css' media='all' />
@@ -28,6 +28,10 @@
 	<!-- <link rel="icon" href="cropped-2017042015371982-192x192.png" sizes="192x192" /> -->
 	<!-- <link rel="apple-touch-icon-precomposed" href="cropped-2017042015371982-180x180.png" />
 <meta name="msapplication-TileImage" content="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-270x270.png" /> -->
+
+	<!-- 引入markdown -->
+	<!-- <link rel="stylesheet" href="__STATIC__/manage/editor_md/css/style.css" /> -->
+	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/editormd.preview.css" />
 </head>
 
 <body class="post-template-default single single-post postid-1487 single-format-gallery off-canvas-nav-left">
@@ -119,6 +123,11 @@
 								<span class="postlike"><i class="icon-heart"></i> 2</span> </div>
 						</div>
 						<div class="post-content">
+
+							<!-- html转为为markdown -->
+							<div id="test-editormd-view">
+								<textarea style="display:none;" name="test-editormd-markdown-doc" id="test">{$article_Details}</textarea>
+							</div>
 							<!-- <p><a href="https://www.nutgeek.com/tag/%e8%8b%b9%e6%9e%9c/" title="浏览关于“苹果”的文章" target="_blank" class="tag_link">苹果</a>在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。</p>
 							<div class="post-image"><img alt="HomePod 播放音乐时比普通 LED 灯泡还省电！-坚果极客" class="aligncenter" src="utf-8' 'homepod.jpeg" width="618" height="348" /></div>
 							<p><span style="color: #555555;">这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 HomePod 音乐播放时，如果输入电源的电压为 115V，那么功耗为 8.74W。音量需要设置在 50%。当然，如果提高音量，功耗会有所增加。</span></p>
@@ -173,7 +182,7 @@
 					<div class="related-post sx-box">
 						<h3 class="subtitle"><span>猜你喜欢</span></h3>
 						<ul>
-							<li class="wow zoomIn">
+							<!-- <li class="wow zoomIn">
 								<div class="item">
 									<a class="relatedpostpic" href="fake-itunes-store-subscription-email.html" title="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！">
 										<div class="overlay"></div>
@@ -216,7 +225,7 @@
 										<h4><span>不换ID，不换区，苹果也能无障碍安装SSR工具软件</span></h4>
 									</a>
 								</div>
-							</li>
+							</li> -->
 							<!-- <li class="wow zoomIn">
 								<div class="item">
 									<a class="relatedpostpic" href="https://www.nutgeek.com/five-iphone-tools/" title="原来你的 iPhone 可以这么强大？五个酷炫好玩的配件推荐">
@@ -353,7 +362,7 @@
 									<h4 class="title"><a href="https://www.nutgeek.com/new-app-seeing-ai/" title="微软推出了一款 App 可以帮你读出全世界">微软推出了一款 App 可以帮你读出全世界</a></h4>
 								</div>
 							</li> -->
-							<li>
+							<!-- <li>
 								<div class="recent-posts-img"><a href="https://www.nutgeek.com/five-iphone-tools/" title="原来你的 iPhone 可以这么强大？五个酷炫好玩的配件推荐">
 															<img src="images/suibiankankan1.png" alt="原来你的 iPhone 可以这么强大？五个酷炫好玩的配件推荐" class="thumbnail"/>
 
@@ -385,7 +394,9 @@
 									<span class="info"><i class="icon-clock-1"></i> 2017-04-21</span>
 
 								</div>
-							</li>
+							</li> -->
+
+
 							<!-- <li>
 								<div class="recent-posts-img">
 									<a href="free-online-bitsend.html" title="日本免费网盘 BitSend，快放出你们的小姐姐">
@@ -549,6 +560,77 @@
 		</div>
 		<i class="icon-cancel-1 close_tip"></i>
 	</div>
+	<!-- 引入markdownjs -->
+	<script src="__STATIC__/manage/editor_md/js/jquery.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/marked.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/prettify.min.js"></script>
+
+	<script src="__STATIC__/manage/editor_md/lib/raphael.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/underscore.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/sequence-diagram.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/flowchart.min.js"></script>
+	<script src="__STATIC__/manage/editor_md/lib/jquery.flowchart.min.js"></script>
+
+	<script src="__STATIC__/manage/editor_md/js/editormd.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var testEditormdView, testEditormdView2;
+
+			testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+				markdown: $("#test").text(), //+ "\r\n" + $("#append-test").text(),
+				//htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+				htmlDecode: "style,script,iframe", // you can filter tags decode
+				//toc             : false,
+				tocm: true, // Using [TOCM]
+				//tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+				//gfm             : false,
+				//tocDropdown     : true,
+				// markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+				emoji: true,
+				taskList: true,
+				tex: true, // 默认不解析
+				flowChart: true, // 默认不解析
+				sequenceDiagram: true, // 默认不解析
+			});
+			//      $.get("test.md", function(markdown) {
+			//
+			// testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+			//             markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
+			//             //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+			//             htmlDecode      : "style,script,iframe",  // you can filter tags decode
+			//             //toc             : false,
+			//             tocm            : true,    // Using [TOCM]
+			//             //tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+			//             //gfm             : false,
+			//             //tocDropdown     : true,
+			//             // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+			//             emoji           : true,
+			//             taskList        : true,
+			//             tex             : true,  // 默认不解析
+			//             flowChart       : true,  // 默认不解析
+			//             sequenceDiagram : true,  // 默认不解析
+			//         });
+			//
+			//         //console.log("返回一个 jQuery 实例 =>", testEditormdView);
+			//
+			//         // 获取Markdown源码
+			//         //console.log(testEditormdView.getMarkdown());
+			//
+			//         //alert(testEditormdView.getMarkdown());
+			//     });
+
+			// testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
+			//     htmlDecode      : "style,script,iframe",  // you can filter tags decode
+			//     emoji           : true,
+			//     taskList        : true,
+			//     tex             : true,  // 默认不解析
+			//     flowChart       : true,  // 默认不解析
+			//     sequenceDiagram : true,  // 默认不解析
+			// });
+		});
+	</script>
+
+
 	<script type='text/javascript' src='__STATIC__/index/js/jquery.sticky-kit.min.js'></script>
 	<script type='text/javascript' src='__STATIC__/index/js/bootstrap.min.js'></script>
 	<script type='text/javascript' src='__STATIC__/index/js/jQuery.resizeEnd.js'></script>
@@ -569,6 +651,8 @@
 	<script type='text/javascript' src='__STATIC__/index/js/jquery.bootstrap-autohidingnavbar.min.js'></script>
 	<!-- <script type='text/javascript' src='js/ajax-comment.js'></script> -->
 	<script type='text/javascript' src='__STATIC__/index/js/baidushare.js'></script>
+
+
 </body>
 
 </html>
