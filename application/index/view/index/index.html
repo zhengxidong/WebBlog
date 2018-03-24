@@ -46,7 +46,7 @@
 			<div role="navigation" class="site-nav  primary-menu yincang">
 				<div class="menu-fix-box">
 					<ul id="menu-navigation" class="menu">
-						<li class="current-menu-item"><a href="">首页</a></li>
+						<li class="current-menu-item"><a href="{:url('index/index')}">首页</a></li>
 						<li><a href="">前端</a></li>
 						<li><a href="">后端</a></li>
 						<li><a href="">移动</a></li>
@@ -361,7 +361,7 @@
 								</div>
 							</div> -->
 
-							<div class="ajax-load-con content wow bounceInUp">
+							<!-- <div class="ajax-load-con content wow bounceInUp">
 								<div class="content-box posts-gallery-box">
 									<div class="posts-gallery-img">
 										<a href="https://www.nutgeek.com/brook-service-share/" title="Brook代理服务器/账号分享，附带使用教程">
@@ -381,7 +381,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
 								<div class="content-box">
 									<div class="posts-default-img">
@@ -441,20 +441,22 @@
 								</div>
 							</div> -->
 
+              <!-- 获取所有文章 -->
+							{volist name="articleList" id="vo"}
 							<div class="ajax-load-con content wow bounceInUp">
 								<div class="content-box posts-gallery-box">
 									<div class="posts-gallery-img">
-										<a href="{:url('index/article_details')}" title="HomePod 播放音乐时比普通 LED 灯泡还省电！">
-									<img class="thumbnail" src="https://www.nutgeek.com/wp-content/themes/Grace/timthumb.php?src=https://img.nutgeek.com/homepod.jpeg&h=173.98&w=231.98&zc=1" alt="HomePod 播放音乐时比普通 LED 灯泡还省电！" />
+										<a href="{:url('index/article_details',['id'=>$vo.id])}" title="{$vo.article_title}">
+									<img class="thumbnail" src="" alt="HomePod 播放音乐时比普通 LED 灯泡还省电！" />
 											</a>
 									</div>
 									<div class="posts-gallery-content">
-										<h2><a href="{:url('index/article_details')}" title="HomePod 播放音乐时比普通 LED 灯泡还省电！" >HomePod 播放音乐时比普通 LED 灯泡还省电！</a></h2>
+										<h2><a href="{:url('index/article_details')}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
 										<div class="posts-gallery-text">苹果在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。 这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 H&hellip;</div>
 										<div class="posts-default-info posts-gallery-info">
-											<ul>
-												<li class="ico-cat"><i class="icon-list-2"></i> <a href="https://www.nutgeek.com/category/news/">天下事</a></li>
-												<li class="ico-time"><i class="icon-clock-1"></i> 2018-01-27</li>
+											<ul >
+												<li class="ico-cat"><i class="icon-list-2"></i> <a href="">天下事</a></li>
+												<li class="ico-time"><i class="icon-clock-1"></i> {$vo.article_date}</li>
 												<li class="ico-eye"><i class="icon-eye-4"></i> 288</li>
 												<li class="ico-like"><i class="icon-heart"></i> 2</li>
 											</ul>
@@ -462,6 +464,7 @@
 									</div>
 								</div>
 							</div>
+              {/volist}
 							<!-- <div class="ajax-load-con content posts-default wow bounceInUp">
 								<div class="content-box">
 									<div class="posts-default-img">

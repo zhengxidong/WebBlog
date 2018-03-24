@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>HomePod 播放音乐时比普通 LED 灯泡还省电！ - 坚果极客</title>
+	<title>{$articleInfo.article_title} - 松鼠极客</title>
 	<meta name="keywords" content="apple, homepod, 苹果, 音响, 天下事">
 	<meta name="description" content="苹果在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。    这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 HomePod 音乐播放时，如果输入电源的电压为 115V，那么功耗为 8.74W。音量需要设置在 50%。当然，如果提高音量，功耗会有所增加。    苹果的环境报告还提供了 HomePod 在不">
 	<!-- <link rel="shortcut icon" href="2017042115500841.ico" type="image/x-icon" > -->
@@ -45,14 +45,14 @@
 			<div role="navigation" class="site-nav  primary-menu">
 				<div class="menu-fix-box">
 					<ul id="menu-navigation" class="menu">
-						<li><a href="www_nutgeek_default.html">首页</a></li>
-						<li><a href="creativity-product.html">前端</a></li>
-						<li><a href="manufacture.html">后端</a></li>
-						<li class="current-post-ancestor current-menu-parent"><a href="news.html">移动</a></li>
-						<li class="current-post-ancestor current-menu-parent"><a href="news.html">数据库</a></li>
-						<li class="current-post-ancestor current-menu-parent"><a href="news.html">服务器运维</a></li>
-						<li><a href="share.html">爱分享</a></li>
-						<li><a href="fuli.html">福利帮</a></li>
+						<li><a href="{:url('index/index')}">首页</a></li>
+						<li><a href="">前端</a></li>
+						<li><a href="">后端</a></li>
+						<li class="current-post-ancestor current-menu-parent"><a href="">移动</a></li>
+						<li class="current-post-ancestor current-menu-parent"><a href="">数据库</a></li>
+						<li class="current-post-ancestor current-menu-parent"><a href="">服务器运维</a></li>
+						<li><a href="">爱分享</a></li>
+						<li><a href="">福利帮</a></li>
 					</ul>
 				</div>
 			</div>
@@ -108,16 +108,16 @@
 			<div class="row">
 
 				<div class="blog-post">
-					<div class="breadcrumbs"><span itemprop="itemListElement"><a href="www_nutgeek_default.html" itemprop="item" class="home"><span itemprop="name"><i class="icon-location-2"></i>首页</span></a>
+					<div class="breadcrumbs"><span itemprop="itemListElement"><a href="{:url('index/index')}" itemprop="item" class="home"><span itemprop="name"><i class="icon-location-2"></i>首页</span></a>
 						</span> <span class="sep">›</span> <span itemprop="itemListElement"><a href="news.html" itemprop="item"><span itemprop="name">天下事</span></a>
-						</span> <span class="sep">›</span> <span class="current">HomePod 播放音乐时比普通 LED 灯泡还省电！</span></div>
+					</span> <span class="sep">›</span> <span class="current">{$articleInfo.article_title}</span></div>
 					<div class="post">
 						<div class="post-title">
-							<div class="post-entry-categories"><a href="https://www.nutgeek.com/tag/apple/" rel="tag">apple</a><a href="homepod.html" rel="tag">homepod</a><a href="https://www.nutgeek.com/tag/%e8%8b%b9%e6%9e%9c/" rel="tag">苹果</a><a href="-e9-9f-b3-e5-93-8d.html" rel="tag">音响</a></div>
-							<h1 class="title">HomePod 播放音乐时比普通 LED 灯泡还省电！</h1>
+							<div class="post-entry-categories"><a href="" rel="tag">apple</a><a href="homepod.html" rel="tag">homepod</a><a href="" rel="tag">苹果</a><a href="" rel="tag">音响</a></div>
+							<h1 class="title">{$articleInfo.article_title}</h1>
 							<div class="post_icon">
 								<span class="postcat"><i class=" icon-list-2"></i> <a href="news.html">天下事</a></span>
-								<span class="postclock"><i class="icon-clock-1"></i> 2018-01-27</span>
+								<span class="postclock"><i class="icon-clock-1"></i> {$articleInfo.article_date}</span>
 								<span class="posteye"><i class="icon-eye-4"></i> 321</span>
 								<span class="postcomment"><i class="icon-comment-4"></i> <a href="homepod-more-power-saving.html" title="评论"><a href="homepod-more-power-saving.html#respond">0</a></a></span>
 								<span class="postlike"><i class="icon-heart"></i> 2</span> </div>
@@ -127,7 +127,7 @@
               <div id="layout">
 								<!-- html转为为markdown -->
 								<div id="test-editormd-view">
-									<textarea style="display:none;" name="test-editormd-markdown-doc" id="test">{$article_Details}</textarea>
+									<textarea style="display:none;" name="test-editormd-markdown-doc" id="test">{$articleInfo.article_content}</textarea>
 								</div>
               </div>
 
@@ -255,9 +255,19 @@
 					</div>
 
 					<div class="clear"></div>
+					{if condition="$isOpen == 1"}
 					<div id="comments" class="clearfix">
+						<div id="respond" class="respond-box">
+								<h3 class="comments-title">暂时关闭评论
+									<span id="cancel-comment-reply">
+										<a rel="nofollow" id="cancel-comment-reply-link" href="homepod-more-power-saving.html#respond" style="display:none;">暂时关闭评论</a>
+									</span>
+								</h3>
+						</div>
 
-
+					</div>
+					{else /}
+					<div id="comments" class="clearfix">
 
 						<div id="respond" class="respond-box">
 							<h3 class="comments-title">发表评论 <span id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="homepod-more-power-saving.html#respond" style="display:none;">点击这里取消回复。</a></span></h3>
@@ -346,7 +356,7 @@
 							</form>
 						</div>
 					</div>
-
+          {/if}
 				</div>
 				<div class="sidebar wow bounceInRight">
 					<div class="widget widget_suxingme_postlist">
@@ -526,7 +536,7 @@
 	</div>
 
 	<div class="search-form">
-		<form method="get" action="www_nutgeek_default.html" role="search">
+		<form method="get" action="" role="search">
 			<div class="search-form-inner">
 				<div class="search-form-box">
 					<input class="form-search" type="text" name="s" placeholder="键入搜索关键词">
@@ -536,15 +546,15 @@
 				<div class="search-commend">
 					<h4>大家都在搜</h4>
 					<ul>
-						<li><a href="https://www.nutgeek.com/?s=SS">SS</a></li>
-						<li><a href="https://www.nutgeek.com/?s=potatso">potatso</a></li>
-						<li><a href="https://www.nutgeek.com/?s=教程">教程</a></li>
-						<li><a href="https://www.nutgeek.com/?s=上P站">上P站</a></li>
-						<li><a href="https://www.nutgeek.com/?s=手机">手机</a></li>
-						<li><a href="https://www.nutgeek.com/?s=科普">科普</a></li>
-						<li><a href="https://www.nutgeek.com/?s=福利">福利</a></li>
-						<li><a href="https://www.nutgeek.com/?s=SSR">SSR</a></li>
-						<li><a href="https://www.nutgeek.com/?s=节点">节点</a></li>
+						<li><a href="">SS</a></li>
+						<li><a href="">potatso</a></li>
+						<li><a href="">教程</a></li>
+						<li><a href="">上P站</a></li>
+						<li><a href="">手机</a></li>
+						<li><a href="">科普</a></li>
+						<li><a href="">福利</a></li>
+						<li><a href="">SSR</a></li>
+						<li><a href="">节点</a></li>
 					</ul>
 				</div>
 			</div>

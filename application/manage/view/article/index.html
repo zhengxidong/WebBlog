@@ -155,24 +155,24 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>蓝色</a>
                   </li>
                   <li>
-                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>绿色</a>
                   </li>
                   <li>
-                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>橙色</a>
                   </li>
                   <li>
-                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>紫色</a>
                   </li>
                   <li>
-                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>灰色</a>
                   </li>
                 </ul>
               </li>
               <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img width="34" height="34" src="__STATIC__/manage/images/avatar-male.jpg" />John Smith<b class="caret"></b></a>
+                <img width="34" height="34" src="__STATIC__/manage/images/avatar-male.jpg" />{:session('admin_info.admin_user')}<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">
                     <i class="icon-user"></i>个人信息</a>
@@ -180,7 +180,7 @@
                   <li><a href="#">
                     <i class="icon-gear"></i>个人设置</a>
                   </li>
-                  <li><a href="login1.html">
+                  <li><a href="{:url('admin/logout')}">
                     <i class="icon-signout"></i>注销</a>
                   </li>
                 </ul>
@@ -196,7 +196,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li>
-                <a href="index-2.html"><span aria-hidden="true" class="se7en-home"></span>面板</a>
+                <a href="{:url('index/index')}"><span aria-hidden="true" class="se7en-home"></span>面板</a>
               </li>
               <li><a href="{:url('article/index')}"  class="current">
                 <span aria-hidden="true" class="se7en-feed"></span>文章管理</a>
@@ -247,7 +247,7 @@
                 </ul>
               </li>
               <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-tables"></span>Tables<b class="caret"></b></a>
+                <span aria-hidden="true" class="se7en-tables"></span>资源站<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li>
                     <a href="tables.html">Basic tables</a>
@@ -267,72 +267,10 @@
                 </ul>
               </li>
               <li><a href="charts.html">
-                <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
-              </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="chat.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Chat
-                    </p></a>
-
-                  </li>
-                  <li>
-                    <a href="calendar.html">Calendar</a>
-                  </li>
-                  <li><a href="timeline.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Timeline
-                    </p></a>
-
-                  </li>
-                  <li><a href="login1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Login 1
-                    </p></a>
-
-                  </li>
-                  <li>
-                    <a href="login2.html">Login 2</a>
-                  </li>
-                  <li><a href="signup1.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Sign Up 1
-                    </p></a>
-
-                  </li>
-                  <li>
-                    <a href="signup2.html">Sign Up 2</a>
-                  </li>
-                  <li><a href="invoice.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      Invoice
-                    </p></a>
-
-                  </li>
-                  <li><a href="faq.html">
-                    <span class="notifications label label-warning">New</span>
-                    <p>
-                      FAQ
-                    </p></a>
-
-                  </li>
-                  <li>
-                    <a href="filters.html">Filter Results</a>
-                  </li>
-                  <li>
-                    <a href="404-page.html">404 Page</a>
-                  </li>
-                </ul>
+                <span aria-hidden="true" class="se7en-gallery"></span>相册</a>
               </li>
               <li><a href="gallery.html">
-                <span aria-hidden="true" class="se7en-gallery"></span>设置</a>
+                <span aria-hidden="true" class="se7en-gear"></span>设置</a>
               </li>
             </ul>
           </div>
@@ -396,343 +334,19 @@
                         {$vo.article_date}
                       </td>
                       <td class="hidden-xs">
+                        {if condition="$vo.article_status == 'open'"}
                         <span class="label label-success">{$vo.article_status}</span>
+                        {else/}
+                        <span class="label label-danger">close</span>
+                        {/if}
                       </td>
                       <td class="actions">
                         <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
+                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="{:url('Article/edit',['id'=>$vo.id])}"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
                         </div>
                       </td>
                     </tr>
                     {/volist}
-
-
-
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        John
-                      </td>
-                      <td>
-                        Dorian
-                      </td>
-                      <td class="hidden-xs">
-                        john@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-warning">Pending</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Olivia
-                      </td>
-                      <td>
-                        Benson
-                      </td>
-                      <td class="hidden-xs">
-                        olivia@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Elliot
-                      </td>
-                      <td>
-                        Stabler
-                      </td>
-                      <td class="hidden-xs">
-                        elliot@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Maggie
-                      </td>
-                      <td>
-                        Smith
-                      </td>
-                      <td class="hidden-xs">
-                        maggie@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-warning">Pending</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Sara
-                      </td>
-                      <td>
-                        Johnson
-                      </td>
-                      <td class="hidden-xs">
-                        sara@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-danger">Rejected</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Michael
-                      </td>
-                      <td>
-                        Gold
-                      </td>
-                      <td class="hidden-xs">
-                        michael@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Rita
-                      </td>
-                      <td>
-                        Johnson
-                      </td>
-                      <td class="hidden-xs">
-                        rita@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Dexter
-                      </td>
-                      <td>
-                        Morgan
-                      </td>
-                      <td class="hidden-xs">
-                        dexter@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Ben
-                      </td>
-                      <td>
-                        Miller
-                      </td>
-                      <td class="hidden-xs">
-                        ben@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-warning">Pending</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Barbara
-                      </td>
-                      <td>
-                        Fisk
-                      </td>
-                      <td class="hidden-xs">
-                        barbara@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-warning">Pending</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Jack
-                      </td>
-                      <td>
-                        McCoy
-                      </td>
-                      <td class="hidden-xs">
-                        jack@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-danger">Rejected</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Karen
-                      </td>
-                      <td>
-                        Fuller
-                      </td>
-                      <td class="hidden-xs">
-                        karen@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        Denise
-                      </td>
-                      <td>
-                        Compton
-                      </td>
-                      <td class="hidden-xs">
-                        denise@gmail.com
-                      </td>
-                      <td class="hidden-xs">
-                        8-15-2013
-                      </td>
-                      <td class="hidden-xs">
-                        <span class="label label-success">Approved</span>
-                      </td>
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="#"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
