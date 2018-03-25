@@ -11,7 +11,9 @@ class Index extends Controller
       //获取所有文章数据
       //$articleData = Db::table('bg_article')->select();
 
-      $articleList = ArticleModel::all();
+      $article = new ArticleModel();
+      $articleList = $article->order('id','desc')->select();
+      //$articleList = ArticleModel::all();
 
       $this->assign('articleList',$articleList);
 
