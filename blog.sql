@@ -11,14 +11,14 @@ CREATE TABLE `bg_article`(
   `article_status` varchar(20) NOT NULL DEFAULT 'open' COMMENT '文章状态，open为公开，close不公开',
   `article_password` varchar(255) NOT NULL DEFAULT '' COMMENT '文章密码',
   `article_name` varchar(200) NOT NULL DEFAULT '' COMMENT '文章缩略名',
-  `article_modified_on` datetime NOT NULL COMMENT '修改时间',
+  `article_modified_on` datetime NULL DEFAULT NULL COMMENT '修改时间',
   `comment_count` bigint(20) NOT NULL DEFAULT '0' COMMENT '评论总数',
   `comment_status` varchar(20) NOT NULL DEFAULT 'open' COMMENT '评论状态',
   PRIMARY KEY (`id`),
   KEY `idx_name` (`article_name`(191)),
   KEY `idx_date` (`article_status`,`article_date`,`id`),
   KEY `idx_author` (`article_author`)
-)ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=UTF8 COMMENT='文章表';
+)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='文章表';
 
 -- 管理员表
 CREATE TABLE `bg_admin`(
@@ -28,8 +28,8 @@ CREATE TABLE `bg_admin`(
   `admin_email` varchar(255) NOT NULL COMMENT '邮箱',
   `admin_date` datetime NOT NULL COMMENT '创建时间',
   `admin_status` varchar(20) NOT NULL DEFAULT 'open' COMMENT '管理员状态，open为公开，close不公开',
-  `admin_modified_on` datetime NULL COMMENT '修改时间',
+  `admin_modified_on` datetime NULL DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`),
   KEY `idx_user` (`admin_user`(99)),
   KEY `idx_date` (`admin_status`,`admin_date`,`id`)
-)ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=UTF8 COMMENT='管理员表';
+)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='管理员表';
