@@ -88,7 +88,7 @@
 
 
 				<ul id="menu-main-nav" class="main-nav">
-					<li class="current-menu-item"><a href="">首页</a></li>
+					<li class="current-menu-item"><a href="{:url('index/index')}">首页</a></li>
 					<li><a href="">前端</a></li>
 					<li><a href="">后端</a></li>
 					<li><a href="">移动</a></li>
@@ -246,7 +246,7 @@
 											</a>
 									</div>
 									<div class="posts-gallery-content">
-										<h2><a href="{:url('index/article_details')}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
+										<h2><a href="{:url('index/article_details',['id'=>$vo.id])}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
 										<div class="posts-gallery-text" style="text-overflow: -o-ellipsis-lastline;
 overflow: hidden;
 text-overflow: ellipsis;
