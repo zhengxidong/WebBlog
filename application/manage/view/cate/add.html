@@ -296,17 +296,7 @@
           <button class="btn btn-primary" style="float:right;" type="submit">发布</button>
       </div>
       <div class="widget-content padded">
-          <div class="form-group">
-            <label class="control-label col-md-2">分类</label>
-            <div class="col-md-7">
-              <select class="form-control" name="cate_id">
-                <option value="Category 1">选择栏目</option>
-                {volist name="cateList" id="vo"}
-                <option value="{$vo.cate_id}">{$vo.cate_name}</option>
-                {/volist}
-              </select>
-            </div>
-          </div>
+
           <div class="form-group">
             <label class="control-label col-md-2">文章标题</label>
             <div class="col-md-7">

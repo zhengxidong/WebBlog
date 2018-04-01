@@ -290,58 +290,58 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="widget-container fluid-height clearfix">
-      <form action="{:url('article/add')}" method="post" class="form-horizontal">
+      <form action="{:url('article/edit')}" method="post" class="form-horizontal">
       <div class="heading">
         <i class="icon-reorder"></i>发布文章
-          <button class="btn btn-primary" style="float:right;" type="submit">发布</button>
+          <button class="btn btn-primary" style="float:right;" type="submit">更新</button>
       </div>
       <div class="widget-content padded">
-          <div class="form-group">
-            <label class="control-label col-md-2">分类</label>
-            <div class="col-md-7">
-              <select class="form-control" name="cate_id">
-                <option value="Category 1">选择栏目</option>
-                {volist name="cateList" id="vo"}
-                <option value="{$vo.cate_id}">{$vo.cate_name}</option>
-                {/volist}
-              </select>
-            </div>
-          </div>
+          <input class="form-control" type="hidden" name="id" value="{$articleInfo.id}">
           <div class="form-group">
             <label class="control-label col-md-2">文章标题</label>
             <div class="col-md-7">
-              <input class="form-control" placeholder="" type="text" name="title">
+              <input class="form-control" placeholder="" type="text" name="title" value="{$articleInfo.article_title}">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-2">摘录</label>
             <div class="col-md-7">
-              <input class="form-control" placeholder="" type="text" name="excerpt">
+              <input class="form-control" placeholder="" type="text" name="excerpt" value="{$articleInfo.article_excerpt}">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-2">状态</label>
             <div class="col-md-7">
-              <label class="checkbox-inline"><input type="checkbox" checked name="status"><span>公开</span></label>
-              <label class="checkbox-inline"><input type="checkbox" name="status"><span>不公开</span></label>
+              {if condition="$articleInfo.article_status == 'open'"}
+              <!-- <label class="checkbox-inline"><input type="checkbox" checked name="status"><span>公开</span></label>
+              <label class="checkbox-inline"><input type="checkbox"><span>不公开</span></label> -->
+
+              <div class="toggle-switch" data-off="info" data-on="primary" >
+                <input checked="" type="checkbox" name="status">
+              </div>
+              {else/}
+              <div class="toggle-switch" data-off="danger" data-on="primary" >
+                <input type="checkbox" name="status">
+              </div>
+              {/if}
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-2">密码</label>
             <div class="col-md-7">
-              <input class="form-control" placeholder="默认空" type="text" name="password">
+              <input class="form-control" placeholder="默认空" type="text" name="password" value="{$articleInfo.article_password}">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-2">文章缩略名</label>
             <div class="col-md-7">
-              <input class="form-control" placeholder="默认空" type="text" name="name">
+              <input class="form-control" placeholder="" type="text" name="name" value="{$articleInfo.article_name}">
             </div>
           </div>
           <div class="form-group" >
             <label class="control-label col-md-2"></label>
             <div style="padding:0 0;" class="col-md-7" id="test-editormd">
-              <textarea class="form-control" rows="3"></textarea>
+              <textarea class="form-control" rows="3" class="editormd-markdown-textarea" name="test-editormd-markdown-doc" id="editormd">{$articleInfo.article_content}</textarea>
             </div>
           </div>
 
@@ -777,7 +777,6 @@
 
         $(function() {
 
-
           testEditor = editormd("test-editormd", {
               width: "100%",
               height: 740,
@@ -807,7 +806,7 @@
               //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
               imageUpload : true,
               imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-              imageUploadURL : "./php/upload.php",
+              imageUploadURL : "__STATIC__/manage/editor_md/php/upload.php",
               onload : function() {
                   console.log('onload', this);
                   //this.fullscreen();
