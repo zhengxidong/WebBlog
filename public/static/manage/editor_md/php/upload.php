@@ -19,33 +19,17 @@
 
     error_reporting(E_ALL & ~E_NOTICE);
 
-	$path     = __DIR__ . DIRECTORY_SEPARATOR;
-	//$url      = dirname($_SERVER['PHP_SELF']) . '/';
-  if($_SERVER['SERVER_PORT'] == 80)
-  {
-    $url = 'http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/';
-  }
-  else
-  {
-    $url = 'https://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/';
-  }
+    $path     = __DIR__ . DIRECTORY_SEPARATOR;
+    $url      = dirname($_SERVER['PHP_SELF']) . '/';
+    //$savePath = realpath($path . '../uploads/') . DIRECTORY_SEPARATOR;
+    //$saveURL  = $url . '../uploads/';
 
-	$savePath = realpath($path . '../uploads/') . DIRECTORY_SEPARATOR.date('Y-m-d');    //保存本地的路径
-  $saveURL  = $url . '../uploads/'.date('Y-m-d').'/';                                      //保存URL路径
+    $savePath = dirname(dirname(dirname(realpath($path)))) . DIRECTORY_SEPARATOR.'/uploads/'.date("Y-m-d");
 
-  //$savePath = dirname(dirname(dirname(__DIR__))).'/uploads';
-	//$saveURL  = dirname(dirname(dirname(__DIR__))).'/uploads';
+    $saveURL  = dirname(dirname(dirname($url))).'/uploads/'.date("Y-m-d");   //显示文件的路径
 
-  //$URL = dirname(dirname(dirname(__DIR__)));
-  //$saveURL=str_replace('/','\\',$saveURL);
 
-//   $handle=fopen('bug.txt',"w+");
-// fwrite($handle,"---------------------------------------------------------------------------------\r\n");
-// fwrite($handle,"$savePath\r\n");        //保存在根目录
-// fwrite($handle,"---------------------------------------------------------------------------------\r\n");
-// fwrite($handle,"$saveURL\r\n");         //最终保存路径
-
-	$formats  = array(
+$formats  = array(
 		'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp')
 	);
 
@@ -58,6 +42,7 @@
     {
 
         $savePath .= '/';
+        $saveURL .= '/';
         $imageUploader = new EditorMdUploader($savePath, $saveURL, $formats['image'], 2,25);  // Ymdhis表示按日期生成文件名，利用date()函数
 
         $imageUploader->config(array(
