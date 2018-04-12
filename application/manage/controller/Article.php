@@ -15,7 +15,7 @@ class Article extends Base
         //$articleData = Db::table('bg_article')->select();
         $article = new ArticleModel();
 
-        $articleData = $article->order('id','desc')->select();
+        $articleData = $article->order('article_modified_on','desc')->select();
         $this->assign('articleData',$articleData);
 
         return $this->view->fetch();
