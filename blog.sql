@@ -8,6 +8,7 @@ CREATE TABLE `bg_article`(
   `article_date` datetime NOT NULL COMMENT '新增时间',
   `article_excerpt` text NOT NULL COMMENT '摘录',
   `article_content` longtext NOT NULL COMMENT '文章内容',
+  `cate_id` int(11) NOT NULL DEFAULT NULL COMMENT '栏目ID',
   `article_status` varchar(20) NOT NULL DEFAULT 'open' COMMENT '文章状态，open为公开，close不公开',
   `article_password` varchar(255) NOT NULL DEFAULT '' COMMENT '文章密码',
   `article_name` varchar(200) NOT NULL DEFAULT '' COMMENT '文章缩略名',
@@ -67,7 +68,17 @@ CREATE TABLE `bg_cate`(
   KEY `idx_cate_parent_id` (`cate_parent_id`)
 )ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='栏目表';
 
-
--- 文章表增加字段及索引
-alter TABLE `bg_article` add cate_id int(11) NOT NULL COMMENT '栏目ID';
-ALTER TABLE `bg_article` add INDEX idx_cate_id (`cate_id`);
+-- 访问记录表
+CREATE TABLE `bg_cate`(
+  `cate_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `cate_name` varchar(200) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `cate_slug` varchar(200) NOT NULL DEFAULT '' COMMENT '缩略名',
+  `cate_parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '所属父分类ID',
+  `cate_create_on` datetime NULL COMMENT '添加时间',
+  `cate_update_on` datetime NULL COMMENT '更新时间',
+  PRIMARY KEY (`cate_id`),
+  KEY `idx_cate_id` (`cate_id`),
+  KEY `idx_cate_name` (`cate_name`(191)),
+  KEY `idx_cate_slug` (`cate_slug`(191)),
+  KEY `idx_cate_parent_id` (`cate_parent_id`)
+)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='栏目表';

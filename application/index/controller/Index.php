@@ -21,7 +21,8 @@ class Index extends Controller
         $articleList = Db::table('bg_article')
           ->alias('a')
           ->join('bg_cate c','c.cate_id = a.cate_id')
-            ->order('id','desc')
+          ->where('a.article_status'='open')
+          ->order('id','desc')
           ->select();
       //var_dump($articleList);
       //exit;
