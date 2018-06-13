@@ -48,18 +48,21 @@ class Admin extends Base
         //Session保存管理员信息
         Session::set('admin_id',$adminInfo->id);
         Session::set('admin_info',$adminInfo->getData());
-        $this->success('登录成功!','index/index');
+        $this->redirect('index/index');
+        //$this->success('登录成功!','index/index');
       }
     }
     else
     {
-      $this->error('管理员不存在,请重新登录！','admin/index');
+      $this->redirect('admin/index');
+      //$this->error('管理员不存在,请重新登录！','admin/index');
     }
   }
   public function logout()
   {
     Session::delete('admin_id');
     Session::delete('admin_info');
-    $this->success('注销成功!','admin/index');
+    $this->redirect('admin/index');
+    //$this->success('注销成功!','admin/index');
   }
 }

@@ -96,8 +96,8 @@ class Article extends Base
           //$termsForArticle = new TermsForArticleModel();
           //$termsForArticle->data($termData);
           //$termsForArticle->save();
-
-          $this->success('发布成功','article/index');
+          $this->redirect('article/index');
+          //$this->success('发布成功','article/index');
         }
 
     }
@@ -122,7 +122,8 @@ class Article extends Base
 
         if(empty($articleInfo))
         {
-          $this->success('没有此文章信息！','article/index');
+          $this->redirect('article/index');
+          //$this->success('没有此文章信息！','article/index');
         }
         // var_dump($articleInfo);
         // exit;
@@ -159,8 +160,8 @@ class Article extends Base
         $article->article_modified_on = date('Y-m-d H:i:s');
         $article->cate_id = $data['cate_id'];
         $article->save();
-
-        $this->success('更新成功！','article/index');
+        $this->redirect('article/index');
+        //$this->success('更新成功！','article/index');
       }
       else
       {
