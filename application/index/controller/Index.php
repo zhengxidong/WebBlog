@@ -29,9 +29,9 @@ class Index extends Controller
       $this->assign('articleList',$articleList);
 
       //获取栏目
-        //$cate = new CateModel();
-        //$cateList = $cate->order('id','desc')->select();
-        //$this->assign('cateList',$cateList);
+      $cate = new CateModel();
+      $cateList = $cate->order('cate_id','asc')->select();
+      $this->assign('cateList',$cateList);
       return $this->view->fetch();
     }
     public function article_details($id)

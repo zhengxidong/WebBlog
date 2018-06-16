@@ -30,7 +30,7 @@ class Article extends Base
         {
           //获取所有栏目
           $cate = new CateModel();
-          $cateList = $cate->select();
+          $cateList = $cate->where('cate_id != 1')->select();
           $this->assign('cateList',$cateList);
 
           return $this->view->fetch();
@@ -130,7 +130,7 @@ class Article extends Base
          $this->assign('articleInfo',$articleInfo);
          //获取所有栏目
          $cate = new CateModel();
-         $cateList = $cate->select();
+         $cateList = $cate->where('cate_id != 1')->select();
 
          $this->assign('cateList',$cateList);
 
