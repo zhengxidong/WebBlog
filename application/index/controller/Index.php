@@ -36,6 +36,10 @@ class Index extends Controller
     }
     public function article_details($id)
     {
+      //获取栏目列表
+      $cate = new CateModel();
+      $cateList = $cate->order('cate_id','asc')->select();
+      $this->assign('cateList',$cateList);
 
        $articleInfo = ArticleModel::get($id);
 
