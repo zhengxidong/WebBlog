@@ -11,6 +11,9 @@ class Index extends Controller
 {
     public function index()
     {
+
+        //测试获取地理位置
+        //print_r(getCity("123.125.71.73"));
         //获取所有文章数据
         //$articleData = Db::table('bg_article')->select();
 
@@ -20,19 +23,20 @@ class Index extends Controller
         //$articleList = ArticleModel::all();
         //存储访问记录ip地址
         $request = Request::instance();
-        if(!empty($request->ip()))
+        $ip = $request->ip(0,true);
+        if(!empty($ip))
         {
-          $ipInfo = getIpLookup($request->ip());
+          $ipInfo = getSinaAddress($ip);
 
           if($ipInfo)
           {
             $accessRecords = new AccessRecordsModel;
-            $accessRecords->ip            = $request->ip();
+            $accessRecords->ip            = $ip;
             $accessRecords->article_id    = null;
-            $accessRecords->country_name  = $ipInfo->country;
-            $accessRecords->province_name = $ipInfo->province;
-            $accessRecords->city_name     = $ipInfo->city;
-            $accessRecords->area_name     = $ipInfo->district;
+            $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
+            $accessRecords->province_name = (!empty($ipInfo->province)) ? $ipInfo->province : null;
+            $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
+            $accessRecords->area_name     = (!empty($ipInfo->district)) ? $ipInfo->district : null;
             $accessRecords->access_time   = date("Y-m-d H:i:s");
             $accessRecords->access_date   = date("Y-m-d");
             $accessRecords->save();
@@ -85,6 +89,8 @@ class Index extends Controller
           $articleInfo->article_views = $articleInfo->article_views + 1;
           $articleInfo->save();
         }
+
+        //访问记录
 
         $this->assign('articleId',$id);
         $this->assign('articleLike',$articleInfo->article_like);
