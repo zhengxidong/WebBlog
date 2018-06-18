@@ -67,12 +67,7 @@ class Index extends Controller
 
        $cateInfo = CateModel::get($articleInfo->cate_id);
        $this->assign('cate_name',$cateInfo->cate_name);
-       //var_dump($articleInfo);
-       //exit;
-      //获取文章数据
-        //$article_Details = Db::table('bg_article')->select();
-        //var_dump($article_Details);
-        //exit;
+
         $this->assign('articleInfo',$articleInfo);
 
         //文章访问量
@@ -81,24 +76,17 @@ class Index extends Controller
         $expire = 24 * 60 * 60;
         $ip = str_replace('.','_',$request->ip());
         $name = $ip.'_'.$id;
-        //$name = '127_0_0_1'.'_'.$id;
-        //var_dump($_COOKIE);
-//Cookie::init(['prefix'=>'think_','expire'=>$expire,'path'=>'/']);
-        //var_dump(Cookie::get($name,'views_'));
+
         if(!Cookie::has($name,'views_'))
         {
           //没有访问量过，则数据库文章访问量加1
-          //var_dump(Cookie::set($name,$name,$expire));
-          //Cookie::set($name,$name,$expire);
           Cookie::set($name,$name,['prefix'=>'views_','expire'=>$expire]);
-          //setcookie($name,$name,$expire);
+
           $articleInfo->article_views = $articleInfo->article_views + 1;
           $articleInfo->save();
         }
 
         $this->assign('articleId',$id);
-        //$test = 0;
-        //$articleInfo->article_like
         $this->assign('articleLike',$articleInfo->article_like);
         //关闭评论
         $this->assign('isOpen',1);

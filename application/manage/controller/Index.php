@@ -15,8 +15,19 @@ class Index extends Base
         }
         else {
           //获取访问量
-          $accessRecords = AccessRecordsModel::count();
-          $this->assign('accessRecordsCount',$accessRecords);
+          $yesTerDay = date("Y-m-d",strtotime("-1 day"));
+          $nowDate = date("Y-m-d");
+          $accessRecords = new AccessRecordsModel;
+          $yesTerDayAccessList = $accessRecords->where("access_date = '{$yesTerDay}'")->count();
+
+          $nowDateAccessList = $accessRecords->where("access_date = '{$nowDate}'")->count();
+
+          $allAccessList = $accessRecords->count();
+          //计算增长率(天)
+          $accessRecordsCount = (($nowDateAccessList - $yesTerDayAccessList) / $yesTerDayAccessList) / 100;
+    
+          $this->assign('accessRecordsCount',$accessRecordsCount);
+          $this->assign('allAccessRecords',$allAccessList);
           return $this->view->fetch();
         }
 
