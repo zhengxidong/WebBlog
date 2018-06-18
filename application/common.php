@@ -36,7 +36,7 @@ use think\Controller;
 function getAddress($ip)
 {
    $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
-   print_r(file_get_contents($url));
+   //print_r(file_get_contents($url));
    $ipinfo=json_decode(file_get_contents($url));
    if($ipinfo->code=='1'){
        return false;
