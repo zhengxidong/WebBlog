@@ -303,9 +303,6 @@
                     <th class="hidden-xs">
                       访问时间
                     </th>
-                    <th class="hidden-xs">
-                      操作
-                    </th>
                   </thead>
                   <tbody>
 
@@ -332,14 +329,6 @@
                       </td>
                       <td class="hidden-xs">
                         {$vo.access_time}
-                      </td>
-
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a>
-                          <a class="table-actions" href="{:url('Article/edit',['id'=>$vo.id])}"><i class="icon-pencil"></i></a>
-                          <a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
                       </td>
                     </tr>
                     {/volist}
