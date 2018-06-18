@@ -24,8 +24,17 @@ class Index extends Base
 
           $allAccessList = $accessRecords->count();
           //计算增长率(天)
-          $accessRecordsCount = (($nowDateAccessList - $yesTerDayAccessList) / $yesTerDayAccessList) / 100;
-    
+          if(!empty($yesTerDayAccessList) && !empty($nowDateAccessList) && !empty($allAccessList))
+          {
+            $accessRecordsCount = (($nowDateAccessList - $yesTerDayAccessList) / $yesTerDayAccessList) / 100;
+
+            $accessRecordsCount = $accessRecordsCount;
+            $allAccessList = $allAccessList;
+          }
+          else {
+            $accessRecordsCount = 0;
+            $allAccessList = 0;
+          }
           $this->assign('accessRecordsCount',$accessRecordsCount);
           $this->assign('allAccessRecords',$allAccessList);
           return $this->view->fetch();
