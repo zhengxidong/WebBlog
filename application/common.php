@@ -43,5 +43,5 @@ function getAddress($ip)
        return false;
    }
    //$city = $ipinfo->data->region.$ipinfo->data->city;
-   return $ipinfo;
+   return $ipinfo->data;
 }

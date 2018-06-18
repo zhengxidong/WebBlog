@@ -14,7 +14,7 @@ class Index extends Controller
 
         //测试获取地理位置
         //print_r(getCity("123.125.71.73"));
-        //var_dump(getCity('223.211.94.217'));
+        //var_dump(getAddress('223.211.94.217'));
         //获取所有文章数据
         //$articleData = Db::table('bg_article')->select();
 
