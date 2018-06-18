@@ -99,7 +99,6 @@ class Cookie
             array_walk_recursive($value, 'self::jsonFormatProtect', 'encode');
             $value = 'think:' . json_encode($value);
         }
-
         $expire = !empty($config['expire']) ?
         $_SERVER['REQUEST_TIME'] + intval($config['expire']) :
         0;
@@ -158,6 +157,7 @@ class Cookie
      */
     public static function get($name = '', $prefix = null)
     {
+
         !isset(self::$init) && self::init();
 
         $prefix = !is_null($prefix) ? $prefix : self::$config['prefix'];

@@ -69,16 +69,37 @@ CREATE TABLE `bg_cate`(
 )ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='栏目表';
 
 -- 访问记录表
-CREATE TABLE `bg_cate`(
-  `cate_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `cate_name` varchar(200) NOT NULL DEFAULT '' COMMENT '分类名称',
-  `cate_slug` varchar(200) NOT NULL DEFAULT '' COMMENT '缩略名',
-  `cate_parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '所属父分类ID',
-  `cate_create_on` datetime NULL COMMENT '添加时间',
-  `cate_update_on` datetime NULL COMMENT '更新时间',
-  PRIMARY KEY (`cate_id`),
-  KEY `idx_cate_id` (`cate_id`),
-  KEY `idx_cate_name` (`cate_name`(191)),
-  KEY `idx_cate_slug` (`cate_slug`(191)),
-  KEY `idx_cate_parent_id` (`cate_parent_id`)
-)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='栏目表';
+CREATE TABLE `bg_access_records`(
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `ip` varchar(15) DEFAULT NULL COMMENT 'ip地址',
+  `article_id` int(11) DEFAULT NULL COMMENT '访问文章',
+  `country_name` varchar(50) DEFAULT NULL COMMENT '国家名称',
+  `province_name` varchar(50) DEFAULT NULL COMMENT '省名称',
+  `city_name` varchar(50) DEFAULT NULL COMMENT '市名称',
+  `area_name` varchar(50) DEFAULT NULL COMMENT '区/县名称',
+  `access_time` datetime NOT NULL COMMENT '访问时间',
+  `access_date` date NOT NULL COMMENT '访问日期',
+  PRIMARY KEY (`id`),
+  KEY `idx_article_id` (`article_id`),
+  KEY `idx_country_name` (`country_name`),
+  KEY `idx_province_name` (`province_name`),
+  KEY `idx_city_name` (`city_name`),
+  KEY `idx_area_name` (`area_name`),
+  KEY `idx_access_date` (`access_date`)
+)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='访问记录表';
+
+
+
+
+-- 添加访问量字段
+ALTER TABLE `bg_article` add article_views int(11) DEFAULT '0' COMMENT '访问量';
+
+-- 给访问量字段加索引
+ALTER TABLE `bg_article` add INDEX idx_article_views (article_views);
+
+
+-- 添加赞字段
+ALTER TABLE `bg_article` add article_like int(11) DEFAULT '0' COMMENT '赞';
+
+-- 给赞字段加索引
+ALTER TABLE `bg_article` add INDEX idx_article_like (article_like);

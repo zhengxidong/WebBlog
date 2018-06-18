@@ -17,6 +17,7 @@
 	<link rel='stylesheet' id='animation-css' href='__STATIC__/index/font-awesome/css/animation.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-ie7-css' href='__STATIC__/index/font-awesome/css/fontello-ie7.css' type='text/css' media='all' />
 	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery.js'></script>
+	<!-- <script src="__STATIC__/manage/editor_md/js/jquery.min.js"></script> -->
 	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery-migrate.min.js'></script>
 	<!--[if lt IE 9]>
 <script type='text/javascript' src='__STATIC__/index/js/html5shiv.js'></script>
@@ -81,9 +82,20 @@
 
 						<div class="shareBox  clearfix">
 							<p>
-								<a href="javascript:;" data-action="ding" data-id="1487" id="Addlike" class="action sharebtn like" title="喜欢">
-								<span class="icon s-like"><i class="icon-heart"></i><i class="icon-heart-filled"></i> 喜欢 </span>
-								(<span class="count num">2</span>)
+								<a href="javascript:;" data-action="ding" data-id="{$articleId}" id="Addlike" class="action sharebtn like" title="喜欢">
+								<span class="icon s-like">
+									<i class="icon-heart"></i>
+									<i class="icon-heart-filled"></i> 喜欢
+								</span>
+								{if condition="$articleLike eq 0"}
+								(<span class="count num">
+									0
+								</span>)
+								{else /}
+								(<span class="count num">
+									{$articleLike}
+								</span>)
+								{/if}
 							</a>
 
 								<a href="javascript:;" class="sharebtn J_showAllShareBtn"><i class="icon-forward"></i> 分享</a>
@@ -583,8 +595,16 @@
 	<script type='text/javascript' src='__STATIC__/index/js/jQuery.resizeEnd.js'></script>
 	<script type='text/javascript'>
 		/* <![CDATA[ */
+		// var suxingme_url = {
+		// 	"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+		// 	"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
+		// 	"roll": "1",
+		// 	"headfixed": "1",
+		// 	"slidestyle": "index_no_slide",
+		// 	"wow": "1"
+		// };
 		var suxingme_url = {
-			"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+			"url_ajax": "{:url('index/index/like')}",
 			"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
 			"roll": "1",
 			"headfixed": "1",

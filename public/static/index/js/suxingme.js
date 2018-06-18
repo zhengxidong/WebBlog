@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
         });
         wow.init();
     }
-    
+
 
     if( suxingme_url.headfixed ){
         $("div.navbar-fixed-top").autoHidingNavbar();
@@ -28,14 +28,14 @@ jQuery(document).ready(function($) {
 
     switch( suxingme_url.slidestyle ){
         case 'index_slide_sytle_1' :
-            var owl = $('.top-slide'); 
+            var owl = $('.top-slide');
             owl.owlCarousel({
                 items: 1,
                 loop:true,
                 animateOut: 'fadeOut',
                 autoplay:true,
                 autoplayTimeout:3000,
-                responsive:{    
+                responsive:{
                     768:{
                       items:1
                     }
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
             });
             break;
         case 'index_slide_sytle_2' :
-            var owl = $('.top-slide-two'); 
+            var owl = $('.top-slide-two');
             owl.owlCarousel({
                 items: 1,
                 loop:true,
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
                 autoplayTimeout:3000,
                 nav : true,
                 navText:'',
-                responsive:{    
+                responsive:{
                     768:{
                       items:1
                     }
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
             });
             break;
         case 'index_slide_sytle_3' :
-            var owl = $('.top-slide-three'); 
+            var owl = $('.top-slide-three');
             owl.owlCarousel({
                 items:1,
                 loop:true,
@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
             });
             break;
         case 'index_slide_sytle_4' :
-            var owl = $('.top-slide-two'); 
+            var owl = $('.top-slide-two');
             owl.owlCarousel({
                 items: 1,
                 loop:true,
@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
                 autoplayTimeout:3000,
                 nav : true,
                 navText:'',
-                responsive:{    
+                responsive:{
                     768:{
                       items:1
                     }
@@ -160,29 +160,46 @@ jQuery(document).ready(function($) {
     */
 
 	$.fn.postLike = function() {
-	 if ($(this).hasClass('current')) {
-     alert("您已经赞过啦:-)");
-	 return false;
-	 } else {
-	 $(this).addClass('current');
-	 var id = $(this).data("id"),
-	 action = $(this).data('action'),
-	 rateHolder = $(this).children('.count');
-	 var ajax_data = {
-	 action: "suxing_like",
-	 um_id: id,
-	 um_action: action
-	 };
-	 $.post(suxingme_url.url_ajax, ajax_data,
-	 function(data) {
-	 $(rateHolder).html(data);
-	 });
-	 return false;
-	 }
+	 // if ($(this).hasClass('current')) {
+   //   alert("您已经赞过啦:-)");
+	 // return false;
+	 // }
+   // else
+   // {
+  	 $(this).addClass('current');
+  	 var id = $(this).data("id"),
+  	 action = $(this).data('action'),
+  	 rateHolder = $(this).children('.count');
+  	 var ajax_data =
+     {
+    	 action: "suxing_like",
+    	 um_id: id,
+    	 um_action: action
+  	 };
+     //console.log(suxingme_url.url_ajax);
+  	 $.post(suxingme_url.url_ajax, ajax_data,
+  	 function(data)
+     {
+        //如果一天内已经赞过
+        if(data.error == 1)
+        {
+          alert("您已经赞过啦:-)");
+        }
+        else {
+          console.log(data);
+    	    $(rateHolder).html(data);
+        }
+
+  	 });
+  	 return false;
+	 //}
 	};
+
+
 	$(document).on("click", "#Addlike",
-	function() {
-	 $(this).postLike();
+	function()
+  {
+	   $(this).postLike();
 	});
 
     /*
@@ -193,7 +210,7 @@ jQuery(document).ready(function($) {
 
     $('.js-toggle-search').on('click', function () {
         $('.search-form').toggleClass('is-visible');
-        $("html").addClass("overflow-hidden");   
+        $("html").addClass("overflow-hidden");
     });
     $('.close-search').click(function(){
         $(".search-form").removeClass("is-visible");
@@ -218,7 +235,7 @@ jQuery(document).ready(function($) {
     });
     $('.f-weixin-dropdown').click(function(){
         $(this).removeClass("is-visible");
-      
+
     });
 
 
@@ -348,7 +365,7 @@ jQuery(document).on("click", "#fa-loadmore", function($) {
                     _postlistWrap.append(data.postlist);
                     if( jQuery.isFunction(jQuery.fn.lazyload) ){
                         jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
-                    } 
+                    }
                     if (data.next) {
                         if( suxingme_url.wow ){
                             var btn = new WOW({
@@ -416,7 +433,7 @@ jQuery(document).on("click", ".post-nav span", function($) {
                         }
                         _button.data("paged", data.next).html('加载更多');
                         if( _self.hasClass("new-post") ){
-                           _button.data("home", true); 
+                           _button.data("home", true);
                         } else {
                             _button.removeAttr("data-home");
                             _button.data("category",_self.data("category"));

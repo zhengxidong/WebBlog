@@ -247,12 +247,12 @@
                 <span aria-hidden="true" class="se7en-forms"></span>友情链接</a>
               </li>
               <li class="dropdown"><a data-toggle="dropdown" href="#">
-                <span aria-hidden="true" class="se7en-tables"></span>资源站<b class="caret"></b></a>
-                <!-- <ul class="dropdown-menu">
+                <span aria-hidden="true" class="se7en-tables"></span>其它<b class="caret"></b></a>
+                <ul class="dropdown-menu">
                   <li>
-                    <a href="tables.html">Basic tables</a>
+                    <a href="{:url('accessRecords/index')}">访问记录</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="datatables.html">DataTables</a>
                   </li>
                   <li><a href="datatables-editable.html">
@@ -263,8 +263,8 @@
                       Editable DataTables
                     </p></a>
 
-                  </li>
-                </ul> -->
+                  </li> -->
+                </ul>
               </li>
               <li><a href="charts.html">
                 <span aria-hidden="true" class="se7en-gallery"></span>相册</a>
@@ -285,16 +285,16 @@
               <div class="col-md-3">
                 <div class="number">
                   <div class="icon globe"></div>
-                  86<small>%</small>
+                  <small>%</small>
                 </div>
                 <div class="text">
-                  访问量增长
+                  访问量
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="number">
                   <div class="icon visitors"></div>
-                  613
+                  {$accessRecordsCount}
                 </div>
                 <div class="text">
                   访客数
