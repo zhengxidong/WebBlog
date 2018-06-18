@@ -43,7 +43,7 @@ function getIpLookup($ip)
 * 1)IP：不传入ip值时默认为本机ip，也可以指定特定的ip地址；
 * 2)format：返回给客户端的数据格式有js和json格式：
 */
-public function getSinaAddress($ip){
+function getSinaAddress($ip){
    $ipContent   = file_get_contents("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip={$ip}");
    $jsonData = explode("=",$ipContent);
    $jsonAddress = substr($jsonData[1], 0, -1);
