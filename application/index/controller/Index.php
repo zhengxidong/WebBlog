@@ -14,6 +14,7 @@ class Index extends Controller
 
         //测试获取地理位置
         //print_r(getCity("123.125.71.73"));
+        //var_dump(getCity('223.211.94.217'));
         //获取所有文章数据
         //$articleData = Db::table('bg_article')->select();
 
@@ -26,17 +27,25 @@ class Index extends Controller
         $ip = $request->ip(0,true);
         if(!empty($ip))
         {
-          $ipInfo = getSinaAddress($ip);
+          $ipInfo = getAddress($ip);
 
           if($ipInfo)
           {
+            if(!empty($ipInfo->area))
+            {
+              $area = $ipInfo->area; //区
+            }
+            if(!empty($ipInfo->county))
+            {
+                $area = $ipInfo->county;   //县
+            }
             $accessRecords = new AccessRecordsModel;
             $accessRecords->ip            = $ip;
             $accessRecords->article_id    = null;
             $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
-            $accessRecords->province_name = (!empty($ipInfo->province)) ? $ipInfo->province : null;
+            $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
             $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
-            $accessRecords->area_name     = (!empty($ipInfo->district)) ? $ipInfo->district : null;
+            $accessRecords->area_name     = (!empty($area)) ? $area : null;
             $accessRecords->access_time   = date("Y-m-d H:i:s");
             $accessRecords->access_date   = date("Y-m-d");
             $accessRecords->save();

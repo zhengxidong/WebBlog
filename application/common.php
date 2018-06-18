@@ -14,25 +14,6 @@ use think\Request;
 use think\Session;
 use think\Controller;
 
-function getIpLookup($ip)
-{
-  if(empty($ip)){
-        $ip = GetIp();
-    }
-    $res = @file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' . $ip);
-    if(empty($res)){ return false; }
-    $jsonMatches = array();
-    preg_match('#\{.+?\}#', $res, $jsonMatches);
-    if(!isset($jsonMatches[0])){ return false; }
-    $json = json_decode($jsonMatches[0], true);
-    if(isset($json['ret']) && $json['ret'] == 1){
-        $json['ip'] = $ip;
-        unset($json['ret']);
-    }else{
-        return false;
-    }
-    return $json;
-}
 
 /*
 * 新浪通过IP地址获取当前地理位置（省份）的接口
@@ -45,11 +26,14 @@ function getIpLookup($ip)
 */
 function getSinaAddress($ip){
    $ipContent   = file_get_contents("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip={$ip}");
+   var_dump($ipContent);
+   exit;
    $jsonData = explode("=",$ipContent);
+
    $jsonAddress = substr($jsonData[1], 0, -1);
    return $jsonAddress;
 }
-function getCity($ip)
+function getAddress($ip)
 {
    $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
    print_r(file_get_contents($url));
