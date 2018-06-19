@@ -19,7 +19,7 @@ return [
 //'hostname'        => '120.79.220.206',  //aliyun数据库
 
     // 数据库名
-    'database'        => 'blog',
+    'database'        => 'blog_test',
     // 用户名
     'username'        => 'root',
     // 密码
