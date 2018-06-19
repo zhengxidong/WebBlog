@@ -76,36 +76,73 @@ class Index extends Controller
       $cateList = $cate->order('cate_id','asc')->select();
       $this->assign('cateList',$cateList);
 
-       $articleInfo = ArticleModel::get($id);
+      $articleInfo = ArticleModel::get($id);
 
-       $cateInfo = CateModel::get($articleInfo->cate_id);
-       $this->assign('cate_name',$cateInfo->cate_name);
+      $cateInfo = CateModel::get($articleInfo->cate_id);
+      $this->assign('cate_name',$cateInfo->cate_name);
 
-        $this->assign('articleInfo',$articleInfo);
+      $this->assign('articleInfo',$articleInfo);
 
-        //文章访问量
-        $request = Request::instance();
-        $request->ip();
-        $expire = 24 * 60 * 60;
-        $ip = str_replace('.','_',$request->ip());
-        $name = $ip.'_'.$id;
+      //文章访问量
+      $request = Request::instance();
+      $expire = 24 * 60 * 60;
+      $ip = $request->ip(0,true);
+      $newIp = str_replace('.','_',$ip);
+      $name = $newIp.'_'.$id;
 
-        if(!Cookie::has($name,'views_'))
+      if(!Cookie::has($name,'views_'))
+      {
+        //没有访问量过，则数据库文章访问量加1
+        $articleViews = $articleInfo->article_views + 1;
+        $value = $articleViews;
+        Cookie::set($name,$value,['prefix'=>'views_','expire'=>$expire]);
+
+        $articleInfo->article_views = $articleViews;
+        $articleInfo->save();
+        //浏览量
+        $this->assign('articleViews',$articleViews);
+      }
+      else
+      {
+        $value = Cookie::get($name,'views_');
+        $this->assign('articleViews',$value);
+      }
+
+      //访问记录
+      if(!empty($ip))
+      {
+        $ipInfo = getAddress($ip);
+        if($ipInfo)
         {
-          //没有访问量过，则数据库文章访问量加1
-          Cookie::set($name,$name,['prefix'=>'views_','expire'=>$expire]);
-
-          $articleInfo->article_views = $articleInfo->article_views + 1;
-          $articleInfo->save();
+          if(!empty($ipInfo->area))
+          {
+            $area = $ipInfo->area; //区
+          }
+          if(!empty($ipInfo->county))
+          {
+              $area = $ipInfo->county;   //县
+          }
+          $accessRecords = new AccessRecordsModel;
+          $accessRecords->ip            = $ip;
+          $accessRecords->article_id    = $id;
+          $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
+          $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
+          $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
+          $accessRecords->area_name     = (!empty($area)) ? $area : null;
+          $accessRecords->access_time   = date("Y-m-d H:i:s");
+          $accessRecords->access_date   = date("Y-m-d");
+          $accessRecords->save();
         }
+      }
 
-        //访问记录
-
-        $this->assign('articleId',$id);
-        $this->assign('articleLike',$articleInfo->article_like);
-        //关闭评论
-        $this->assign('isOpen',1);
-        return $this->view->fetch();
+      $this->assign('articleId',$id);
+      //点赞
+      $this->assign('articleLike',$articleInfo->article_like);
+      //评论
+      $this->assign('commentCount',$articleInfo->comment_count);
+      //关闭评论
+      $this->assign('isOpen',1);
+      return $this->view->fetch();
     }
     //文章点赞
     public function like()
