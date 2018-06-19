@@ -16,11 +16,14 @@ return [
     'hostname'        => '127.0.0.1',        //本地数据库
     //'hostname'        => '192.168.0.171',  //虚拟机数据库
     //'hostname'        => '192.168.1.154',  //aliyun数据库
+//'hostname'        => '120.79.220.206',  //aliyun数据库
+
     // 数据库名
     'database'        => 'blog',
     // 用户名
     'username'        => 'root',
     // 密码
+    //'password'        => 'zxd123.13',
     'password'        => 'root',
     // 端口
     'hostport'        => '3306',

@@ -9,8 +9,8 @@ class Base extends Controller
   {
     parent::_initialize();//继承父类中的初始化操作
 
-    $expire = 3 * 60 * 60;   //session过期时间
-    //$expire = 60;   //session过期时间
+    //$expire = 3 * 60 * 60;   //session过期时间
+    $expire = 60;   //session过期时间
     if(time() - Session::get('session_start_time') > $expire)
     {
       //销毁所有信息
