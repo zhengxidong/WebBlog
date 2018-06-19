@@ -240,10 +240,10 @@
                   <li>
                     <a href="{:url('accessRecords/index')}" class="current">访问记录</a>
                   </li>
-                  <!-- <li>
-                    <a class="current" href="datatables.html">DataTables</a>
+                  <li>
+                    <a class="current" href="{:url('url/index')}">资料地址</a>
                   </li>
-                  <li><a href="datatables-editable.html">
+                  <!-- <li><a href="datatables-editable.html">
                     <div class="notifications label label-warning">
                       New
                     </div>
@@ -330,7 +330,9 @@
                       </td>
                       <td class="actions">
                         <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="{:url('Article/edit',['id'=>$vo.id])}"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
+                          <!-- <a class="table-actions" href="#"><i class="icon-eye-open"></i></a> -->
+                          <a class="table-actions" href="{:url('Article/edit',['id'=>$vo.id])}"><i class="icon-pencil"></i></a>
+                          <!-- <a class="table-actions" href="#"><i class="icon-trash"></i></a> -->
                         </div>
                       </td>
                     </tr>

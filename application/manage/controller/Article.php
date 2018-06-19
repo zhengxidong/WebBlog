@@ -58,12 +58,12 @@ class Article extends Base
           $article = new ArticleModel;
           $cateId = $data['cate_id'];
 
-          $articleTitle = $data['title'];
+          $articleTitle   = $data['title'];
           $articleExcerpt = $data['excerpt'];
           $articleContent = $data['test-editormd-markdown-doc'];
-          $articleStatus = $data['status'];
+          $articleStatus  = $data['status'];
           $articlePassword = $data['password'];
-          $articleName = $data['name'];
+          $articleName     = $data['name'];
 
           $articleData = [
 

@@ -103,3 +103,20 @@ ALTER TABLE `bg_article` add article_like int(11) DEFAULT '0' COMMENT '赞';
 
 -- 给赞字段加索引
 ALTER TABLE `bg_article` add INDEX idx_article_like (article_like);
+
+-- 资料地址表
+CREATE TABLE `bg_url`(
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL COMMENT 'url地址',
+  `url_title` varchar(50) DEFAULT NULL COMMENT 'url标题',
+  `url_content` varchar(255) DEFAULT NULL COMMENT 'url内容',
+  `cate_id` int(11) DEFAULT NULL COMMENT '资料分类ID',
+  `created_by` varchar(15) NOT NULL COMMENT '创建人',
+  `created_on` datetime NOT NULL COMMENT '创建时间',
+  `modify_by` varchar(15) NOT NULL COMMENT '创建人',
+  `modify_on` datetime DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_url_title` (`url_title`),
+  KEY `idx_cate_id` (`cate_id`),
+  KEY `idx_created_on` (`created_on`)
+)ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='资料地址表';

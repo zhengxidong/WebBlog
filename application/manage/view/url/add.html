@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>
-      管理平台-友链列表
+    管理平台-添加URL地址
     </title>
     <!--<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" type="text/css" />-->
 	<link href="__STATIC__/manage/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -41,12 +40,12 @@
   <script src="__STATIC__/manage/javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/fullcalendar.min.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/gcal.js" type="text/javascript"></script>
-  <script src="__STATIC__/manage/javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
-  <script src="__STATIC__/manage/javascripts/datatable-editable.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="__STATIC__/manage/javascripts/datatable-editable.js" type="text/javascript"></script> -->
   <script src="__STATIC__/manage/javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/excanvas.min.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/jquery.isotope.min.js" type="text/javascript"></script>
-  <script src="__STATIC__/manage/javascripts/isotope_extras.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/isotope_extras.js" type="text/javascript"></script> -->
   <script src="__STATIC__/manage/javascripts/modernizr.custom.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/select2.js" type="text/javascript"></script>
@@ -67,8 +66,9 @@
   <script src="__STATIC__/manage/javascripts/skycons.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/fitvids.js" type="text/javascript"></script>
   <script src="__STATIC__/manage/javascripts/jquery.sparkline.min.js" type="text/javascript"></script>
-  <script src="__STATIC__/manage/javascripts/main.js" type="text/javascript"></script>
+  <!-- <script src="__STATIC__/manage/javascripts/main.js" type="text/javascript"></script> -->
   <script src="__STATIC__/manage/javascripts/respond.js" type="text/javascript"></script>
+
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   </head>
   <body>
@@ -76,6 +76,7 @@
       <!-- Navigation -->
       <div class="navbar navbar-fixed-top scroll-hide">
         <div class="container-fluid top-bar">
+
           <div class="pull-right">
             <ul class="nav navbar-nav pull-right">
               <li class="dropdown notifications hidden-xs">
@@ -198,7 +199,7 @@
               <li>
                 <a href="{:url('index/index')}"><span aria-hidden="true" class="se7en-home"></span>面板</a>
               </li>
-              <li><a href="{:url('article/index')}">
+              <li><a href="{:url('article/index')}" >
                 <span aria-hidden="true" class="se7en-feed"></span>文章管理</a>
               </li>
               <li class="dropdown"><a data-toggle="dropdown" href="#">
@@ -238,12 +239,12 @@
                 <span aria-hidden="true" class="se7en-tables"></span>其它<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="{:url('accessRecords/index')}">访问记录</a>
+                    <a href="{:url('accessRecords/index')}" class="current">访问记录</a>
                   </li>
-                  <li>
-                    <a href="{:url('url/index')}">资料地址</a>
+                   <li>
+                    <a class="current" href="{:url('url/index')}">资料地址</a>
                   </li>
-                  <!-- <li><a href="datatables-editable.html">
+                  <!--<li><a href="datatables-editable.html">
                     <div class="notifications label label-warning">
                       New
                     </div>
@@ -258,81 +259,66 @@
                 <span aria-hidden="true" class="se7en-gallery"></span>相册</a>
               </li>
               <li><a href="gallery.html">
-                <span aria-hidden="true" class="se7en-gear"></span>设置</a>
+                <span aria-hidden="true" class="se7en-gear"></span>系统设置</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <!-- End Navigation -->
-      <div class="container-fluid main-content">
-        <div class="page-title">
-          <h1>
-            友情链接
-          </h1>
-        </div>
-        <!-- DataTables Example -->
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="widget-container fluid-height clearfix">
-              <div class="heading">
-                <i class="icon-table"></i>链接列表<a class="btn btn-sm btn-primary-outline pull-right" href="{:url('links/add')}"><i class="icon-plus"></i>添加友链</a>
-              </div>
-              <div class="widget-content padded clearfix">
-                <table class="table table-bordered table-striped" id="dataTable1">
-                  <thead>
-                    <th class="check-header hidden-xs">
-                      <label><input id="checkAll" name="checkAll" type="checkbox"><span></span></label>
-                    </th>
-                    <th>
-                      链接
-                    </th>
-                    <th>
-                      名称
-                    </th>
-                    <!-- <th class="hidden-xs">
-                      内容
-                    </th>
-                    <th class="hidden-xs">
-                      发布时间
-                    </th> -->
-                    <th class="hidden-xs">
-                      时间
-                    </th>
-                    <th></th>
-                  </thead>
-                  <tbody>
+      <div class="container-fluid main-content"><div class="page-title">
+  <!-- <h1>
+    文章
+  </h1> -->
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <form action="{:url('url/add')}" method="post" class="form-horizontal">
+      <div class="heading">
+        <i class="icon-reorder"></i>添加地址
+          <button class="btn btn-primary" style="float:right;" type="submit">新增</button>
+      </div>
+      <div class="widget-content padded">
 
-
-                    {volist name="linksList" id="vo"}
-                    <tr>
-                      <td class="check hidden-xs">
-                        <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
-                      </td>
-                      <td>
-                        {$vo.link_url}
-                      </td>
-                      <td>
-                        {$vo.link_name}
-                      </td>
-                      <td class="hidden-xs">
-                        {$vo.link_create}
-                      </td>
-
-                      <td class="actions">
-                        <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="{:url('links/edit',['link_id'=>$vo.link_id])}"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    {/volist}
-                  </tbody>
-                </table>
-              </div>
+          <div class="form-group">
+            <label class="control-label col-md-2">地址</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="" type="text" name="url">
             </div>
           </div>
-        </div>
-        <!-- end DataTables Example -->
+          <div class="form-group">
+            <label class="control-label col-md-2">标题</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="" type="text" name="url_title">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-md-2">分类</label>
+            <div class="col-md-7">
+              <select class="form-control" name="cate_id">
+                <option value="Category 1">选择栏目</option>
+                {volist name="cateList" id="vo"}
+                <option value="{$vo.cate_id}">{$vo.cate_name}</option>
+                {/volist}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-md-2">链接内容</label>
+            <div class="col-md-7">
+              <input class="form-control" placeholder="" type="text" name="url_content">
+            </div>
+          </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </body>

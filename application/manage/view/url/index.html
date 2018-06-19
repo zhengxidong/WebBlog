@@ -3,7 +3,7 @@
 
 <head>
     <title>
-      管理平台-友链列表
+      管理平台-资料列表
     </title>
     <!--<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" type="text/css" />-->
 	<link href="__STATIC__/manage/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -78,7 +78,7 @@
         <div class="container-fluid top-bar">
           <div class="pull-right">
             <ul class="nav navbar-nav pull-right">
-              <li class="dropdown notifications hidden-xs">
+              <!-- <li class="dropdown notifications hidden-xs">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
                   <div class="sr-only">
                     Notifications
@@ -146,7 +146,7 @@
                     <img width="34" height="34" src="__STATIC__/manage/images/avatar-male2.png" />Buy Se7en today, it's a great theme...</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <li class="dropdown settings hidden-xs">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
                   <div class="sr-only">
@@ -231,7 +231,7 @@
                   </li>
                 </ul> -->
               </li>
-              <li class="dropdown"><a href="{:url('links/index')}" class="current">
+              <li class="dropdown"><a href="{:url('links/index')}">
                 <span aria-hidden="true" class="se7en-forms"></span>友情链接</a>
               </li>
               <li class="dropdown"><a data-toggle="dropdown" href="#">
@@ -240,10 +240,10 @@
                   <li>
                     <a href="{:url('accessRecords/index')}">访问记录</a>
                   </li>
-                  <li>
-                    <a href="{:url('url/index')}">资料地址</a>
+                   <li>
+                    <a class="current" href="{:url('url/index')}">资料地址</a>
                   </li>
-                  <!-- <li><a href="datatables-editable.html">
+                  <!--<li><a href="datatables-editable.html">
                     <div class="notifications label label-warning">
                       New
                     </div>
@@ -268,7 +268,7 @@
       <div class="container-fluid main-content">
         <div class="page-title">
           <h1>
-            友情链接
+            资料地址
           </h1>
         </div>
         <!-- DataTables Example -->
@@ -276,7 +276,7 @@
           <div class="col-lg-12">
             <div class="widget-container fluid-height clearfix">
               <div class="heading">
-                <i class="icon-table"></i>链接列表<a class="btn btn-sm btn-primary-outline pull-right" href="{:url('links/add')}"><i class="icon-plus"></i>添加友链</a>
+                <i class="icon-table"></i>资料地址列表<a class="btn btn-sm btn-primary-outline pull-right" href="{:url('url/add')}"><i class="icon-plus"></i>添加地址</a>
               </div>
               <div class="widget-content padded clearfix">
                 <table class="table table-bordered table-striped" id="dataTable1">
@@ -288,40 +288,47 @@
                       链接
                     </th>
                     <th>
-                      名称
+                      标题
                     </th>
-                    <!-- <th class="hidden-xs">
+                    <th class="hidden-xs">
                       内容
                     </th>
                     <th class="hidden-xs">
-                      发布时间
-                    </th> -->
+                      资料分类
+                    </th>
                     <th class="hidden-xs">
-                      时间
+                      新增时间
                     </th>
                     <th></th>
                   </thead>
                   <tbody>
 
 
-                    {volist name="linksList" id="vo"}
+                    {volist name="urlList" id="vo"}
                     <tr>
                       <td class="check hidden-xs">
                         <label><input name="optionsRadios1" type="checkbox" value="option1"><span></span></label>
                       </td>
-                      <td>
-                        {$vo.link_url}
+                      <td class="hidden-xs">
+                        <a href="{$vo.url}" target="_blank">{$vo.url}</a>
                       </td>
                       <td>
-                        {$vo.link_name}
+                        {$vo.url_title}
                       </td>
                       <td class="hidden-xs">
-                        {$vo.link_create}
+                        {$vo.url_content}
                       </td>
-
+                      <td class="hidden-xs">
+                        {$vo.cate_name}
+                      </td>
+                      <td class="hidden-xs">
+                        {$vo.created_on}
+                      </td>
                       <td class="actions">
                         <div class="action-buttons">
-                          <a class="table-actions" href="#"><i class="icon-eye-open"></i></a><a class="table-actions" href="{:url('links/edit',['link_id'=>$vo.link_id])}"><i class="icon-pencil"></i></a><a class="table-actions" href="#"><i class="icon-trash"></i></a>
+                          <!-- <a class="table-actions" href="#"><i class="icon-eye-open"></i></a> -->
+                          <a class="table-actions" href="{:url('url/edit',['id'=>$vo.id])}"><i class="icon-pencil"></i></a>
+                          <!-- <a class="table-actions" href="#"><i class="icon-trash"></i></a> -->
                         </div>
                       </td>
                     </tr>

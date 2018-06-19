@@ -30,31 +30,31 @@ class Links extends Base
         //模型操作
         $links = new LinksModel;
 
-        $linkUrl = $data['link_url'];
-        $linkName = $data['link_name'];
-        $linkImage = $data['link_image'];
-        $linkTarget = $data['link_target'];
+        $linkUrl         = $data['link_url'];
+        $linkName        = $data['link_name'];
+        $linkImage       = $data['link_image'];
+        $linkTarget      = $data['link_target'];
         $linkDescription = $data['link_description'];
         $linkVisible = $data['link_visible'];
         $linkRss = $data['link_rss'];
 
         $linksData = [
 
-          'link_url'   => $linkUrl,
-          'link_name'  => $linkName,
-          'link_image' => $linkImage,
-          'link_target' => $linkTarget,
-          'link_description'  => $linkDescription,
-          'link_visible'=> $linkVisible,
-          'link_rss'    => $linkRss,
-          'link_create'    => date('Y-m-d H:i:s'),
+          'link_url'        => $linkUrl,
+          'link_name'       => $linkName,
+          'link_image'      => $linkImage,
+          'link_target'     => $linkTarget,
+          'link_description'=> $linkDescription,
+          'link_visible'    => $linkVisible,
+          'link_rss'        => $linkRss,
+          'link_create'     => date('Y-m-d H:i:s'),
         ];
 
         $links->data($linksData);
 
         $links->save();
-
-        $this->success('添加成功','links/index');
+        $this->redirect('links/index');
+        //$this->success('添加成功','links/index');
       }
 
   }
@@ -71,7 +71,8 @@ class Links extends Base
 
       if(empty($linksInfo))
       {
-        $this->success('没有此友链信息！','links/index');
+        $this->redirect('links/index');
+        //$this->success('没有此友链信息！','links/index');
       }
        $this->assign('linksInfo',$linksInfo);
 
@@ -83,17 +84,17 @@ class Links extends Base
       $data = $request->post();
 
       $links = linksModel::get($data['link_id']);
-      $links->link_url    = $data['link_url'];
-      $links->link_name  = $data['link_name'];
-      $links->link_image  = $data['link_image'];
-      $links->link_target   = $data['link_target'];
+      $links->link_url         = $data['link_url'];
+      $links->link_name        = $data['link_name'];
+      $links->link_image       = $data['link_image'];
+      $links->link_target      = $data['link_target'];
       $links->link_description = $data['link_description'];
       $links->link_visible     = $data['link_visible'];
-      $links->link_rss     = $data['link_rss'];
-      $links->link_updated = date('Y-m-d H:i:s');
+      $links->link_rss         = $data['link_rss'];
+      $links->link_updated     = date('Y-m-d H:i:s');
       $links->save();
-
-      $this->success('更新成功！','links/index');
+      $this->redirect('links/index');
+      //$this->success('更新成功！','links/index');
     }
     else
     {
