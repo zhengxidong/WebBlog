@@ -115,7 +115,6 @@ class Article extends Base
       //$request->param('id');
       $request = Request::instance();
       if(Request::instance()->isGet())
-      //if(!empty($id))
       {
          $articleId = $request->param('id');
          $articleInfo = ArticleModel::get($articleId);
@@ -125,31 +124,18 @@ class Article extends Base
           $this->redirect('article/index');
           //$this->success('没有此文章信息！','article/index');
         }
-        // var_dump($articleInfo);
-        // exit;
          $this->assign('articleInfo',$articleInfo);
          //获取所有栏目
          $cate = new CateModel();
          $cateList = $cate->where('cate_id != 1')->select();
 
          $this->assign('cateList',$cateList);
-
-         //获取对应文章分类
-         //$termsForArticle = new TermsForArticleModel();
-         //$termsForArticle = $termsForArticle->get(['article_id'=>$articleId]);
-         //var_dump($termsForArticle->term_id);
-         //exit;
-         //$this->assign('termId',$termsForArticle->term_id);
-
         return $this->view->fetch();
       }
       else if(Request::instance()->isPost())
-      //else if(!empty($data))
       {
 
         $data = $request->post();
-        //var_dump($data);
-        //exit;
         $article = ArticleModel::get($data['id']);
         $article->article_title    = $data['title'];
         $article->article_excerpt  = $data['excerpt'];
@@ -168,5 +154,29 @@ class Article extends Base
         return $this->view->fetch();
       }
 
+    }
+
+    public function changeState()
+    {
+      $request = Request::instance()->post();
+      if(!empty($request))
+      {
+        if($request['status'] == 'open')
+        {
+          $status = 'close';
+        }
+        else {
+          $status = 'open';
+        }
+        $article = ArticleModel::get($request['articleId']);
+        if(!empty($article))
+        {
+          $article->article_status = $status;
+          $article->save();
+        }
+
+        return json($status);
+      }
+      return json(['error'=>0]);
     }
 }

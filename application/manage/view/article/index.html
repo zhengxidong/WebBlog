@@ -229,7 +229,7 @@
                   <li>
                     <a href="grid.html">Grid Layout</a>
                   </li>
-                </ul> 
+                </ul>
               </li> -->
               <li class="dropdown"><a href="{:url('links/index')}" >
                 <span aria-hidden="true" class="se7en-forms"></span>友情链接</a>
@@ -322,10 +322,11 @@
                         {$vo.article_date}
                       </td>
                       <td class="hidden-xs">
+
                         {if condition="$vo.article_status == 'open'"}
-                        <span class="label label-success">{$vo.article_status}</span>
+                        <span class="label label-success"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">{$vo.article_status}</a></span>
                         {else/}
-                        <span class="label label-danger">close</span>
+                        <span class="label label-danger"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">close</a></span>
                         {/if}
                       </td>
                       <td class="actions">
@@ -346,6 +347,49 @@
         <!-- end DataTables Example -->
       </div>
     </div>
+    <script type="text/javascript">
+      (function(){
+        // function click(){
+        //   var val = $("#article_status").val();
+        //   aletr(val);
+        // }
+        $(".article_status").click(function(){
+          var articleId = $(this).attr('value');
+          var status = $(this).text();
+
+          console.log(articleId);
+          console.log(status);
+          //alert(val);
+          $.post(
+            "{:url('article/changeState')}",
+            {articleId:articleId,status:status},
+          function(data){
+            if(data.error == 0)
+            {
+              alert('网络错误!');
+            }
+            else
+            {
+              console.log(data);
+              if(data == 'open')
+              {
+                $("#"+articleId).parent('span').addClass('label-success');
+                $("#"+articleId).parent('span').removeClass('label-danger');
+                $("#"+articleId).html(data);
+              }
+              else {
+                $("#"+articleId).parent('span').removeClass('label-success');
+                $("#"+articleId).parent('span').addClass('label-danger');
+                $("#"+articleId).html(data);
+              }
+
+              //$("#article_status").html('close');
+            }
+          })
+
+        })
+      })();
+    </script>
   </body>
 
 </html>
