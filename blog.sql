@@ -120,3 +120,10 @@ CREATE TABLE `bg_url`(
   KEY `idx_cate_id` (`cate_id`),
   KEY `idx_created_on` (`created_on`)
 )ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=UTF8 COMMENT='资料地址表';
+
+
+-- 添加文章名称字段
+ALTER TABLE `bg_access_records` add article_name varchar(150) DEFAULT '' COMMENT '文章名称';
+
+-- 给访问记录表文章名称字段加索引
+ALTER TABLE `bg_access_records` add INDEX idx_article_name (article_name);

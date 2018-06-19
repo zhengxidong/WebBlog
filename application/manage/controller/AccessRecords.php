@@ -9,13 +9,13 @@ class AccessRecords extends Base
 {
     public function index()
     {
-      //$accessRecords = AccessRecordsModel::select();
+      $accessRecords = AccessRecordsModel::select();
 
-      $accessRecords = Db::table('bg_access_records')
-      ->alias('ar')
-      ->join('bg_article a','a.id = ar.article_id')
-      ->order('ar.id','desc')
-      ->select();
+      // $accessRecords = Db::table('bg_access_records')
+      // ->alias('ar')
+      // ->join('bg_article a','a.id = ar.article_id')
+      // ->order('ar.id','desc')
+      // ->select();
 
       $this->assign('accessRecordsList',$accessRecords);
       return $this->view->fetch();

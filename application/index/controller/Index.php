@@ -124,7 +124,8 @@ class Index extends Controller
           }
           $accessRecords = new AccessRecordsModel;
           $accessRecords->ip            = $ip;
-          $accessRecords->article_id    = $id;
+          $accessRecords->article_id    = $articleInfo->id;
+          $accessRecords->article_name  = $articleInfo->article_name;
           $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
           $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
           $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
