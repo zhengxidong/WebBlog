@@ -155,7 +155,7 @@ class Article extends Base
       }
 
     }
-
+    //点击改变文章状态
     public function changeState()
     {
       $request = Request::instance()->post();
