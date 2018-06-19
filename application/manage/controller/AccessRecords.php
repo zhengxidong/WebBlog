@@ -9,7 +9,7 @@ class AccessRecords extends Base
 {
     public function index()
     {
-      $accessRecords = AccessRecordsModel::select();
+      $accessRecords = AccessRecordsModel::->where('access_time','desc')->select();
 
       // $accessRecords = Db::table('bg_access_records')
       // ->alias('ar')
