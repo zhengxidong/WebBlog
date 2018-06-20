@@ -112,7 +112,7 @@ class Index extends Controller
       if(!empty($ip))
       {
         $ipInfo = getAddress($ip);
-        var_dump($ipInfo);
+        //var_dump($ipInfo);
         if($ipInfo)
         {
           if(!empty($ipInfo->area))
@@ -126,7 +126,7 @@ class Index extends Controller
           $accessRecords = new AccessRecordsModel;
           $accessRecords->ip            = $ip;
           $accessRecords->article_id    = $articleInfo->id;
-          $accessRecords->article_name  = $articleInfo->article_name;
+          $accessRecords->article_name  = $articleInfo->article_title;
           $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
           $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
           $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
