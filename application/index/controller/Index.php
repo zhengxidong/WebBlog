@@ -112,6 +112,7 @@ class Index extends Controller
       if(!empty($ip))
       {
         $ipInfo = getAddress($ip);
+        var_dump($ipInfo);
         if($ipInfo)
         {
           if(!empty($ipInfo->area))
