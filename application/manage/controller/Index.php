@@ -26,7 +26,7 @@ class Index extends Base
           //计算增长率(天)
           if(!empty($yesTerDayAccessList) && !empty($nowDateAccessList) && !empty($allAccessList))
           {
-            $accessRecordsCount = (($nowDateAccessList - $yesTerDayAccessList) / $yesTerDayAccessList) / 100;
+            $accessRecordsCount = ceil((($nowDateAccessList - $yesTerDayAccessList) / $yesTerDayAccessList) / 100);
 
             $accessRecordsCount = $accessRecordsCount;
             $allAccessList = $allAccessList;
