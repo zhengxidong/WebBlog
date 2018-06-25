@@ -32,7 +32,14 @@
 	<!-- <link rel="icon" href="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-192x192.png" sizes="192x192" /> -->
 	<!-- <link rel="apple-touch-icon-precomposed" href="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-180x180.png" />
 	<meta name="msapplication-TileImage" content="https://www.nutgeek.com/wp-content/uploads/2017/04/cropped-2017042015371982-270x270.png" /> -->
-
+	<style media="screen">
+		.main-content .posts-gallery-content .posts-gallery-text{
+			text-overflow: -o-ellipsis-lastline;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+		}
+	</style>
 </head>
 
 <body class="home blog off-canvas-nav-left">
@@ -180,18 +187,13 @@
 									</div>
 									<div class="posts-gallery-content">
 										<h2><a href="{:url('index/article_details',['id'=>$vo.id])}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
-										<div class="posts-gallery-text" style="text-overflow: -o-ellipsis-lastline;
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 1;
--webkit-box-orient: vertical;">{$vo.article_content}&hellip;</div>
+										<div class="posts-gallery-text">{$vo.article_content|mbSubStr} &hellip;</div>
 										<div class="posts-default-info posts-gallery-info">
 											<ul >
 												<li class="ico-cat"><i class="icon-list-2"></i> <a href="">{$vo.cate_name}</a></li>
 												<li class="ico-time"><i class="icon-clock-1"></i> {$vo.article_date}</li>
-												<li class="ico-eye"><i class="icon-eye-4"></i> 288</li>
-												<li class="ico-like"><i class="icon-heart"></i> 2</li>
+												<li class="ico-eye"><i class="icon-eye-4"></i> {$vo.article_views}</li>
+												<li class="ico-like"><i class="icon-heart"></i> {$vo.article_like}</li>
 											</ul>
 										</div>
 									</div>
@@ -272,15 +274,14 @@ display: -webkit-box;
 							</ul>
 						</div> -->
 
-						<div class="widget_text widget widget_custom_html">
-							<h3><span>广告支持</span></h3>
-							<div class="textwidget custom-html-widget">
-								<!-- <script type="text/javascript">
-    /*首页侧栏广告*/
-    var cpro_id = "u3183503";
-</script>
-<script type="text/javascript" src="js/c.js"></script> -->
-
+						<div class="widget suxingme_tag">
+							<h3><span>热门标签</span></h3>
+							<div class="widge_tags">
+								<div class="tag-items">
+									{volist name="tagList" id="vo"}
+									<a href="" class="tag-item" title="浏览和{$vo.tag_name}有关的文章">{$vo.tag_name}</a>
+									{/volist}
+									</div>
 							</div>
 						</div>
 						<div class="widget widget_suxingme_comment">

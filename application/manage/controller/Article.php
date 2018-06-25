@@ -7,6 +7,8 @@ use think\Request;
 use app\manage\model\Article as ArticleModel;
 use app\manage\model\Cate as CateModel;
 use app\manage\model\TermsForArticle as TermsForArticleModel;
+use app\manage\model\Tag as TagModel;
+use app\manage\model\ArticleForTag as ArticleForTagModel;
 class Article extends Base
 {
     public function index()
@@ -32,6 +34,11 @@ class Article extends Base
           $cate = new CateModel();
           $cateList = $cate->where('cate_id != 1')->select();
           $this->assign('cateList',$cateList);
+
+          //获取所有标签
+          $tag = new TagModel;
+          $tagList = $tag->select();
+          $this->assign('tagList',$tagList);
 
           return $this->view->fetch();
         }
@@ -85,17 +92,20 @@ class Article extends Base
 
           $article->save();
 
-          //添加分类与文章关系表
-          // $termData = [
-          //   'term_id' => $termId,
-          //   'article_id' => $article->id,
-          //   'create_by' => 1,
-          //   'create_on' => date("Y-m-d H:i:s")
-          // ];
+          if(isset($data['tagId']) && !empty($data['tagId']))
+          {
+            foreach ($data['tagId'] as $key => $id) {
+              //保存标签
+              $articleForTag = new ArticleForTagModel;
+              $articleForTag->article_id = $article->id;
+              $articleForTag->tag_id = $id;
+              $articleForTag->created_by = 'system';
+              $articleForTag->created_on = date("Y-m-d H:i:s");
+              $articleForTag->save();
+            }
 
-          //$termsForArticle = new TermsForArticleModel();
-          //$termsForArticle->data($termData);
-          //$termsForArticle->save();
+          }
+
           $this->redirect('article/index');
           //$this->success('发布成功','article/index');
         }
@@ -119,6 +129,8 @@ class Article extends Base
          $articleId = $request->param('id');
          $articleInfo = ArticleModel::get($articleId);
 
+         $tag = new TagModel;
+         $tagList = $tag->select();
         if(empty($articleInfo))
         {
           $this->redirect('article/index');
@@ -130,13 +142,23 @@ class Article extends Base
          $cateList = $cate->where('cate_id != 1')->select();
 
          $this->assign('cateList',$cateList);
+
+         //获取所有标签
+         $this->assign('tagList',$tagList);
+
+         //获取当前文章所有标签
+         $articleForTag = new ArticleForTagModel;
+         $articleForTagList = $articleForTag->where("article_id = $articleId")->select();
+         $this->assign('articleForTagList',$articleForTagList);
+
         return $this->view->fetch();
       }
       else if(Request::instance()->isPost())
       {
 
         $data = $request->post();
-        $article = ArticleModel::get($data['id']);
+        $articleId = $data['id'];
+        $article = ArticleModel::get($articleId);
         $article->article_title    = $data['title'];
         $article->article_excerpt  = $data['excerpt'];
         $article->article_content  = $data['test-editormd-markdown-doc'];
@@ -146,8 +168,45 @@ class Article extends Base
         $article->article_modified_on = date('Y-m-d H:i:s');
         $article->cate_id = $data['cate_id'];
         $article->save();
+
+        //更新标签
+        //获取当前文章所有标签
+        if(isset($data['tagId']) && !empty($data['tagId']))
+        {
+          $articleForTag = new ArticleForTagModel;
+          $articleForTagList = $articleForTag->where("article_id = $articleId")->select();
+          $tagId = [];
+          foreach ($articleForTagList as $value) {
+            $tagId[$value->id] = $value->tag_id;
+          }
+
+          //多则加
+          $add = array_diff($data['tagId'],$tagId);
+
+          //少则减
+          $delete = array_diff($tagId,$data['tagId']);
+
+          if(!empty($add))
+          {
+            foreach ($add as $id) {
+              $articleForTag->article_id = $articleId;
+              $articleForTag->tag_id = $id;
+              $articleForTag->created_by = 'system';
+              $articleForTag->created_on = date("Y-m-d H:i:s");
+              $articleForTag->save();
+            }
+          }
+          if(!empty($delete))
+          {
+            $tagId = array_keys($delete);
+            foreach ($tagId as $id) {
+              $articleForTag = ArticleForTagModel::get($id);
+              $articleForTag->delete();
+            }
+          }
+        }
         $this->redirect('article/index');
-        //$this->success('更新成功！','article/index');
+
       }
       else
       {

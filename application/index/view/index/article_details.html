@@ -48,7 +48,11 @@
 					</span> <span class="sep">›</span> <span class="current">{$articleInfo.article_title}</span></div>
 					<div class="post">
 						<div class="post-title">
-							<div class="post-entry-categories"><a href="" rel="tag">apple</a><a href="homepod.html" rel="tag">homepod</a><a href="" rel="tag">苹果</a><a href="" rel="tag">音响</a></div>
+							<div class="post-entry-categories">
+								{volist name="articleTagList" id="vo"}
+								<a href="" rel="tag" style="background-color:{$vo.color}">{$vo.tag_name}</a>
+								{/volist}
+							</div>
 							<h1 class="title">{$articleInfo.article_title}</h1>
 							<div class="post_icon">
 								<span class="postcat"><i class=" icon-list-2"></i> <a href="">{$cate_name}</a></span>
@@ -373,11 +377,10 @@
 					<div class="widget suxingme_tag">
 						<h3><span>热门标签</span></h3>
 						<div class="widge_tags">
-							<div class="tag-items"><a href="-e9-bb-91-e6-b4-9e.html" class="tag-item" title="浏览和黑洞有关的文章">黑洞</a><a href="-e9-bb-91-e5-ae-a2.html" class="tag-item" title="浏览和黑客有关的文章">黑客</a><a href="-e9-bb-84-e5-8f-b6-e7-97-85.html" class="tag-item" title="浏览和黄叶病有关的文章">黄叶病</a><a href="-e9-ba-bb-e7-9c-81-e7-90-86-e5-b7-a5-e5-ad-a6-e9-99-a2.html"
-								  class="tag-item" title="浏览和麻省理工学院有关的文章">麻省理工学院</a><a href="-e9-ba-a6-e5-bd-93-e5-8a-b3.html" class="tag-item" title="浏览和麦当劳有关的文章">麦当劳</a><a href="-e9-ab-98-e8-b7-9f-e9-9e-8b.html" class="tag-item" title="浏览和高跟鞋有关的文章">高跟鞋</a><a href="-e9-a6-99-e8-95-89.html"
-								  class="tag-item" title="浏览和香蕉有关的文章">香蕉</a><a href="-e9-a5-ae-e9-a3-9f.html" class="tag-item" title="浏览和饮食有关的文章">饮食</a><a href="-e9-a3-9e-e8-88-b9.html" class="tag-item" title="浏览和飞船有关的文章">飞船</a><a href="-e9-a2-91-e7-8e-87-e7-9b-91-e6-8e-a7.html"
-								  class="tag-item" title="浏览和频率监控有关的文章">频率监控</a><a href="-e9-9f-b3-e5-93-8d.html" class="tag-item" title="浏览和音响有关的文章">音响</a><a href="-e9-9f-b3-e4-b9-90.html" class="tag-item" title="浏览和音乐有关的文章">音乐</a><a href="-e9-9a-90-e7-a7-81.html" class="tag-item"
-								  title="浏览和隐私有关的文章">隐私</a><a href="-e9-99-90-e5-88-b6.html" class="tag-item" title="浏览和限制有关的文章">限制</a><a href="-e9-99-8d-e9-a2-91.html" class="tag-item" title="浏览和降频有关的文章">降频</a><a href="-e9-98-b4-e9-98-b3-e5-b8-88.html" class="tag-item" title="浏览和阴阳师有关的文章">阴阳师</a>
+							<div class="tag-items">
+								{volist name="tagList" id="vo"}
+								<a href="" class="tag-item" title="浏览和{$vo.tag_name}有关的文章">{$vo.tag_name}</a>
+								{/volist}
 								</div>
 						</div>
 					</div>

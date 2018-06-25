@@ -7,6 +7,7 @@ use think\Cookie;
 use app\index\model\Article as ArticleModel;
 use app\index\model\Cate as CateModel;
 use app\manage\model\AccessRecords as AccessRecordsModel;
+use app\index\model\Tag as TagModel;
 class Index extends Controller
 {
     public function index()
@@ -67,6 +68,12 @@ class Index extends Controller
       $cate = new CateModel();
       $cateList = $cate->order('cate_id','asc')->select();
       $this->assign('cateList',$cateList);
+
+      //获取所有标签
+      $tag = new TagModel;
+      $tagList = $tag->where('status = 1')->select();
+      $this->assign('tagList',$tagList);
+
       return $this->view->fetch();
     }
     public function article_details($id)
@@ -76,11 +83,24 @@ class Index extends Controller
       $cateList = $cate->order('cate_id','asc')->select();
       $this->assign('cateList',$cateList);
 
+      $articleTagList = Db::table('bg_article_for_tag')
+      ->alias('aft')
+      ->join('bg_tag t','aft.tag_id = t.id')
+      ->where("aft.article_id = $id")
+      ->where('t.status = 1')
+      ->select();
+      $this->assign('articleTagList',$articleTagList);
+
       $articleInfo = ArticleModel::get($id);
 
       $cateInfo = CateModel::get($articleInfo->cate_id);
       $this->assign('cate_name',$cateInfo->cate_name);
 
+      //获取所有标签
+      $tag = new TagModel;
+      $tagList = $tag->where('status = 1')->select();
+      $this->assign('tagList',$tagList);
+      
       $this->assign('articleInfo',$articleInfo);
 
       //文章访问量

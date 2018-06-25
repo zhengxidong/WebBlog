@@ -4,6 +4,7 @@ use think\Controller;
 use think\Db;
 use app\index\model\Article as ArticleModel;
 use app\index\model\Cate as CateModel;
+use app\index\model\Tag as TagModel;
 class Header extends controller
 {
   public function header()
@@ -22,6 +23,10 @@ class Header extends controller
     $cateList = $cate->order('cate_id','asc')->select();
     $this->assign('cateList',$cateList);
 
+    //获取所有标签
+    $tag = new TagModel;
+    $tagList = $tag->where('status = 1')->select();
+    $this->assign('tagList',$tagList);
     //$articleInfoList = ArticleModel::all(['cate_id'=>$id]);
 
     $cateId = ($id == 1) ? '' : "and a.cate_id={$id}";
