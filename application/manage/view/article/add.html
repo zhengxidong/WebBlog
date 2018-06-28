@@ -272,71 +272,112 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="widget-container fluid-height clearfix">
-      <form action="{:url('article/add')}" method="post" class="form-horizontal">
-      <div class="heading">
-        <i class="icon-reorder"></i>发布文章
-          <button class="btn btn-primary" style="float:right;" type="submit">发布</button>
+      <!-- 选项卡 -->
+      <div class="heading tabs">
+        <i class="icon-sitemap"></i>发布文章
+        <ul class="nav nav-tabs pull-right" data-tabs="tabs" id="tabs">
+          <li class="active">
+            <a data-toggle="tab" href="#tab1"><i class="icon-book"></i><span>文章</span></a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#tab2"><i class="icon-bookmark"></i><span>标签</span></a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#tab3"><i class="icon-globe"></i><span>SEO</span></a>
+          </li>
+        </ul>
       </div>
-      <div class="widget-content padded">
-          <div class="form-group">
-            <label class="control-label col-md-2">分类</label>
-            <div class="col-md-7">
-              <select class="form-control" name="cate_id">
-                <option value="Category 1">选择栏目</option>
-                {volist name="cateList" id="vo"}
-                <option value="{$vo.cate_id}">{$vo.cate_name}</option>
-                {/volist}
-              </select>
-            </div>
+      <div class="tab-content padded" id="my-tab-content">
+        <!-- 文章 -->
+        <div class="tab-pane active" id="tab1">
+          <form action="{:url('article/add')}" method="post" class="form-horizontal">
+          <div class="heading">
+            <!-- <i class="icon-reorder"></i>发布文章 -->
+              <button class="btn btn-primary" style="float:right;" type="submit">发布</button>
           </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">文章标题</label>
-            <div class="col-md-7">
-              <input class="form-control" placeholder="" type="text" name="title">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">摘录</label>
-            <div class="col-md-7">
-              <input class="form-control" placeholder="" type="text" name="excerpt">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">状态</label>
-            <div class="col-md-7">
-              <label class="checkbox-inline"><input type="checkbox" checked name="status"><span>公开</span></label>
-              <label class="checkbox-inline"><input type="checkbox" name="status"><span>不公开</span></label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">标签</label>
-            <div class="col-md-7">
-              {volist name="tagList" id="vo"}
-              <label class="checkbox-inline"><input type="checkbox" name="tagId[]" value="{$vo.id}"><span>{$vo.tag_name}</span></label>
-              {/volist}
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">密码</label>
-            <div class="col-md-7">
-              <input class="form-control" placeholder="默认空" type="text" name="password">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-md-2">文章缩略名</label>
-            <div class="col-md-7">
-              <input class="form-control" placeholder="默认空" type="text" name="name">
-            </div>
-          </div>
-          <div class="form-group" >
-            <label class="control-label col-md-2"></label>
-            <div style="padding:0 0;z-index:9999" class="col-md-7" id="test-editormd">
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
+          <div class="widget-content padded">
+              <div class="form-group">
+                <label class="control-label col-md-2">分类</label>
+                <div class="col-md-7">
+                  <select class="form-control" name="cate_id">
+                    <option value="Category 1">选择栏目</option>
+                    {volist name="cateList" id="vo"}
+                    <option value="{$vo.cate_id}">{$vo.cate_name}</option>
+                    {/volist}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">文章标题</label>
+                <div class="col-md-7">
+                  <input class="form-control" placeholder="" type="text" name="title">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">摘录</label>
+                <div class="col-md-7">
+                  <input class="form-control" placeholder="" type="text" name="excerpt">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">状态</label>
+                <div class="col-md-7">
+                  <label class="checkbox-inline"><input type="checkbox" checked name="status"><span>公开</span></label>
+                  <label class="checkbox-inline"><input type="checkbox" name="status"><span>不公开</span></label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">标签</label>
+                <div class="col-md-7">
+                  {volist name="tagList" id="vo"}
+                  <label class="checkbox-inline"><input type="checkbox" name="tagId[]" value="{$vo.id}"><span>{$vo.tag_name}</span></label>
+                  {/volist}
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">密码</label>
+                <div class="col-md-7">
+                  <input class="form-control" placeholder="默认空" type="text" name="password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">文章缩略名</label>
+                <div class="col-md-7">
+                  <input class="form-control" placeholder="默认空" type="text" name="name">
+                </div>
+              </div>
+              <div class="form-group" >
+                <label class="control-label col-md-2"></label>
+                <div style="padding:0 0;z-index:9999" class="col-md-7" id="test-editormd">
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+              </div>
 
+          </div>
+          </form>
+        </div>
+        <!-- 标签 -->
+        <div class="tab-pane" id="tab2">
+          <h3>
+            Profile
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+          </p>
+        </div>
+        <!-- SEO -->
+        <div class="tab-pane" id="tab3">
+          <h3>
+            Attachments
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+          </p>
+        </div>
       </div>
-      </form>
+
+
+
     </div>
   </div>
 </div>
