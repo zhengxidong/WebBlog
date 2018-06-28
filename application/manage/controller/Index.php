@@ -33,7 +33,6 @@ class Index extends Base
           }
           else {
             $accessRecordsCount = 0;
-            $allAccessList = 0;
           }
           $this->assign('accessRecordsCount',$accessRecordsCount);
           $this->assign('allAccessRecords',$allAccessList);
