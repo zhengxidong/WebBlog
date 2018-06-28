@@ -36,7 +36,7 @@ class Tag extends Base
         //模型操作
         $tag = new TagModel;
 
-        //$color = RGBToHex($data['color']);
+        $color = RGBToHex($data['color']);
 
         //$tagNmae = 'coker';
         //$color = '#fff501';
