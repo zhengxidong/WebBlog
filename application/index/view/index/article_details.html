@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>{$articleInfo.article_title} - 松鼠极客</title>
+	<title>{$articleInfo.article_title} - 未知世界</title>
 	<meta name="keywords" content="apple, homepod, 苹果, 音响, 天下事">
 	<meta name="description" content="苹果在最新的环境报告中给出了 HomePod 的能耗数据。苹果表示，HomePod 播放音乐时能耗比正常的 ENERGY STAR 认证的 LED 家用灯泡还要低。    这种对比是真实的，普通的 A 系列 LED 灯泡功耗为 9-10W，而 HomePod 音乐播放时，如果输入电源的电压为 115V，那么功耗为 8.74W。音量需要设置在 50%。当然，如果提高音量，功耗会有所增加。    苹果的环境报告还提供了 HomePod 在不">
 	<!-- <link rel="shortcut icon" href="2017042115500841.ico" type="image/x-icon" > -->
@@ -379,7 +379,7 @@
 						<div class="widge_tags">
 							<div class="tag-items">
 								{volist name="tagList" id="vo"}
-								<a href="" class="tag-item" title="浏览和{$vo.tag_name}有关的文章">{$vo.tag_name}</a>
+								<a href="{:url('index/tag_search_list',['searchTagId'=>$vo.id])}" class="tag-item" title="浏览和{$vo.tag_name}有关的文章">{$vo.tag_name}</a>
 								{/volist}
 								</div>
 						</div>

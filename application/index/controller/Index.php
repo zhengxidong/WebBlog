@@ -74,6 +74,11 @@ class Index extends Controller
       $tagList = $tag->where('status = 1')->select();
       $this->assign('tagList',$tagList);
 
+      //获取最新添加的前5条文章
+      $article = new ArticleModel;
+      $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+      $this->assign('articleListMsg',$articleListMsg);
+
       return $this->view->fetch();
     }
     public function article_details($id)
@@ -100,8 +105,13 @@ class Index extends Controller
       $tag = new TagModel;
       $tagList = $tag->where('status = 1')->select();
       $this->assign('tagList',$tagList);
-      
+
       $this->assign('articleInfo',$articleInfo);
+
+      //获取最新添加的前5条文章
+      $article = new ArticleModel;
+      $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+      $this->assign('articleListMsg',$articleListMsg);
 
       //文章访问量
       $request = Request::instance();
@@ -201,5 +211,90 @@ class Index extends Controller
 
       }
 
+    }
+
+    //搜索
+    public function search_list()
+    {
+      $request = Request::instance();
+
+      $searchName = $request->get('search_name');
+
+      // $article = new ArticleModel;
+      // $articleList = $article->where('article_title&article_content','like',"%$searchName%")
+      // ->order('id','desc')
+      // ->select();
+      // var_dump($articleList);
+      // $this->assign('articleList',$articleList);
+
+      //链式操作联合查询
+      $articleList = Db::table('bg_article')
+        ->alias('a')
+        ->join('bg_cate c','c.cate_id = a.cate_id')
+        ->where("a.article_status ='open' and (a.article_title like '%{$searchName}%')")
+        ->order('id','desc')
+        ->select();
+
+      $this->assign('articleList',$articleList);
+      //获取栏目
+      $cate = new CateModel();
+      $cateList = $cate->order('cate_id','asc')->select();
+      $this->assign('cateList',$cateList);
+
+      //获取所有标签
+      $tag = new TagModel;
+      $tagList = $tag->where('status = 1')->select();
+      $this->assign('tagList',$tagList);
+
+      //获取最新添加的前5条文章
+      $article = new ArticleModel;
+      $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+      $this->assign('articleListMsg',$articleListMsg);
+
+      return $this->view->fetch();
+    }
+
+    //通过标签搜索
+    public function tag_search_list($searchTagId)
+    {
+      // $request = Request::instance();
+      //
+      // $searchName = $request->get('searchTag');
+
+      // $article = new ArticleModel;
+      // $articleList = $article->where('article_title&article_content','like',"%$searchName%")
+      // ->order('id','desc')
+      // ->select();
+      // var_dump($articleList);
+      // $this->assign('articleList',$articleList);
+
+      //链式操作联合查询
+      $articleList = Db::table('bg_article')
+        ->alias('a')
+        ->join('bg_cate c','c.cate_id = a.cate_id')
+        ->join('bg_article_for_tag aft','aft.article_id = a.id')
+        ->join('bg_tag t','t.id = aft.tag_id')
+        ->where("a.article_status ='open' and t.id = '{$searchTagId}'")
+        ->order('t.id','desc')
+        ->select();
+        // var_dump($articleList);
+
+      $this->assign('articleList',$articleList);
+      //获取栏目
+      $cate = new CateModel();
+      $cateList = $cate->order('cate_id','asc')->select();
+      $this->assign('cateList',$cateList);
+
+      //获取所有标签
+      $tag = new TagModel;
+      $tagList = $tag->where('status = 1')->select();
+      $this->assign('tagList',$tagList);
+
+      //获取最新添加的前5条文章
+      $article = new ArticleModel;
+      $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+      $this->assign('articleListMsg',$articleListMsg);
+
+      return $this->view->fetch();
     }
 }

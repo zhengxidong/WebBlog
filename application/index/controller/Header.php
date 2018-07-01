@@ -13,6 +13,14 @@ class Header extends controller
     $cate = new CateModel();
     $cateList = $cate->order('cate_id','asc')->select();
     $this->assign('cateList',$cateList);
+
+    //获取最新添加的前5条文章
+    $article = new ArticleModel;
+    $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+    var_dump($articleListMsg);
+    //exit;
+    $this->assign('articleListMsg',$articleListMsg);
+
     return $this->view->fetch();
   }
 
@@ -29,6 +37,11 @@ class Header extends controller
     $this->assign('tagList',$tagList);
     //$articleInfoList = ArticleModel::all(['cate_id'=>$id]);
 
+    //获取最新添加的前5条文章
+    $article = new ArticleModel;
+    $articleListMsg = $article->where("article_status = 'open'")->order('id','desc')->limit(5)->select();
+    $this->assign('articleListMsg',$articleListMsg);
+    
     $cateId = ($id == 1) ? '' : "and a.cate_id={$id}";
     $articleList = Db::table('bg_article')
       ->alias('a')

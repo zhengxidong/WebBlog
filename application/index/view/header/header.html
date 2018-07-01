@@ -26,17 +26,21 @@
       <div class="js-toggle-message">
         <button id="sitemessage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="icon-bell-2"></i>
-                                </button>
-        <!-- <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
+        </button>
+        <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
           <ul>
-            <li class="first"><span class="time">18.03.06</span><a target="_blank" href="">App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！</a></li>
-            <li><span class="time">18.02.08</span><a target="_blank" href="">iOS 9的iBoot源码泄露，将助于实现永久升降级！</a></li>
+            {volist name="articleListMsg" id="vo"}
+            <li class="first"><span class="time">{$vo.article_date|date="Y-m-d",strtotime(###)}</span>
+              <a target="_blank" href="{:url('index/article_details',['id'=>$vo.id])}">{$vo.article_title}</a>
+            </li>
+            {/volist}
+            <!-- <li><span class="time">18.02.08</span><a target="_blank" href="">iOS 9的iBoot源码泄露，将助于实现永久升降级！</a></li>
             <li><span class="time">18.01.27</span><a target="_blank" href="">今年所有新款 iPhone 都会采用全新 L 型单电池！</a></li>
             <li><span class="time">18.01.27</span><a target="_blank" href="">HomePod 播放音乐时比普通 LED 灯泡还省电！</a></li>
-            <li><span class="time">18.01.26</span><a target="_blank" href="">微信更新啦，增加一键切换账号！</a></li>
+            <li><span class="time">18.01.26</span><a target="_blank" href="">微信更新啦，增加一键切换账号！</a></li> -->
           </ul>
           <div class="more-messages"><a target="_blank" href="">更多</a></div>
-        </div> -->
+        </div>
       </div>
       <button class="js-toggle-search"><i class="icon-search"></i></button>
     </div>
