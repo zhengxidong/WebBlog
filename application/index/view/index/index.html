@@ -187,7 +187,8 @@
 									</div>
 									<div class="posts-gallery-content">
 										<h2><a href="{:url('index/article_details',['id'=>$vo.id])}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
-										<div class="posts-gallery-text">{$vo.article_content|mbSubStr} &hellip;</div>
+
+										<div class="posts-gallery-text">{$vo.article_content|mb_substr=0,175|str_replace=['#','<pre>','>'],'',###} &hellip;</div>
 										<div class="posts-default-info posts-gallery-info">
 											<ul >
 												<li class="ico-cat"><i class="icon-list-2"></i> <a href="">{$vo.cate_name}</a></li>
