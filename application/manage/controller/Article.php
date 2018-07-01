@@ -28,6 +28,7 @@ class Article extends Base
     {
         $request = Request::instance();
         $data = $request->post();
+
         if(empty($data))
         {
           //获取所有栏目
@@ -61,6 +62,11 @@ class Article extends Base
 
           //var_dump($data);
           //exit;
+          if(!isset($data['cate_id']) && !empty($data['cate_id'])
+          && !isset($data['title']) && !empty($data['title']))
+          {
+            $this->error('请填写完整','article/index');
+          }
           //模型操作
           $article = new ArticleModel;
           $cateId = $data['cate_id'];
@@ -90,7 +96,10 @@ class Article extends Base
 
           $article->data($articleData);
 
-          $article->save();
+          if(!$article->save())
+          {
+            $this->error('网络错误,文章添加失败！','article/index');
+          }
 
           if(isset($data['tagId']) && !empty($data['tagId']))
           {
@@ -101,7 +110,10 @@ class Article extends Base
               $articleForTag->tag_id = $id;
               $articleForTag->created_by = 'system';
               $articleForTag->created_on = date("Y-m-d H:i:s");
-              $articleForTag->save();
+              if(!$articleForTag->save())
+              {
+                $this->error('网络错误,标签添加失败！','article/index');
+              }
             }
 
           }
