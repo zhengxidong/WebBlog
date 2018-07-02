@@ -28,7 +28,8 @@
             <i class="icon-bell-2"></i>
         </button>
         <div class="dropdown-menu" role="menu" aria-labelledby="sitemessage">
-          <ul>
+          <!-- 修改手机端添加text-align: left -->
+          <ul style="text-align: left">
             {volist name="articleListMsg" id="vo"}
             <li class="first"><span class="time">{$vo.article_date|date="Y-m-d",strtotime(###)}</span>
               <a target="_blank" href="{:url('index/article_details',['id'=>$vo.id])}">{$vo.article_title}</a>
