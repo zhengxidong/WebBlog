@@ -105,7 +105,7 @@ select{border:1px solid #efefef;background:url(img/select-arrow.png) right cente
 .dropdown-menu,.dropup-menu{position:absolute;margin-top:-24px;background:#FFF;z-index:-100;display:none}
 .dropdown-menu.user-dropdown::before,.dropup-menu.user-dropdown::before{right:10px}
 .open .dropdown-menu{margin-top:-1px;z-index:10;display:block}
-#header{position:relative;width:100%;background:#FFF;box-shadow:0 0 1px rgba(0,0,0,.21);padding:15px 0}
+#header{position:relative;width:100%;background:#FFF;box-shadow:0 0 1px rgba(0,0,0,.21);padding:10px 0}
 #header .container{position:relative}
 #header.navbar-fixed-top{position:fixed;right:0;left:0;z-index: 10;}
 #header .logo{position:relative;float:left;margin-right:20px}
