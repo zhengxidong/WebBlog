@@ -36,9 +36,7 @@
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/style.css" />
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/editormd.preview.css" />
 	<style media="screen">
-	#toc #nav-exp .editormd-markdown-toc ul{
-		padding-left:2em;
-	}
+	
 	</style>
 </head>
 
@@ -404,8 +402,8 @@
 					<!-- <nav id="nav-exp" >
 					</nav> -->
 					<div class="widget widget_suxingme_postlist" id="toc">
-						<nav id="nav-exp" >
-						</nav>
+						<!-- <nav id="nav-exp" >
+						</nav> -->
 						<!-- <h3><span>最新文章</span></h3>
 						<ul class="recent-posts-widget">
 							<li class="one">
@@ -626,7 +624,7 @@
 		$(document).ready(function(){
 			var toc = $(".editormd-markdown-toc").prop("outerHTML"); //获得元素，包含当前的html
 			//var toc = $(".editormd-markdown-toc").html(); //获得元素，包含当前的html
-			$("#toc #nav-exp").html(toc);   //将元素添加到右边导航
+			$("#toc").html(toc);   //将元素添加到右边导航
 			$("#test-editormd-view").children(".editormd-markdown-toc").css("display","none");
 			// $("#toc #nav-exp ul").addClass("nav-pills flex-column");
 			// $("#toc #nav-exp ul li a:eq(0)").addClass("active");
