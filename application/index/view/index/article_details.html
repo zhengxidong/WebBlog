@@ -16,6 +16,8 @@
 	<link rel='stylesheet' id='fontello-css' href='__STATIC__/index/font-awesome/css/fontello.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='animation-css' href='__STATIC__/index/font-awesome/css/animation.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-ie7-css' href='__STATIC__/index/font-awesome/css/fontello-ie7.css' type='text/css' media='all' />
+
+
 	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery.js'></script>
 	<!-- <script src="__STATIC__/manage/editor_md/js/jquery.min.js"></script> -->
 	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery-migrate.min.js'></script>
@@ -33,6 +35,9 @@
 	<!-- 引入markdown -->
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/style.css" />
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/editormd.preview.css" />
+<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
+<!-- <script type='text/javascript' src='__STATIC__/index/js/scrollspy.js'></script> -->
+
 </head>
 
 <body class="post-template-default single single-post postid-1487 single-format-gallery off-canvas-nav-left">
@@ -309,10 +314,11 @@
           {/if}
 				</div>
 				<div class="sidebar wow bounceInRight">
-					<div class="widget widget_suxingme_postlist">
+					<!-- <div class="widget widget_suxingme_postlist">
+
 						<h3><span>随便看看</span></h3>
 						<ul class="recent-posts-widget">
-							<!-- <li class="one">
+							<li class="one">
 								<div class="recent-posts-one-img">
 									<a href="https://www.nutgeek.com/new-app-seeing-ai/" title="微软推出了一款 App 可以帮你读出全世界">
 																	<img class="thumbnail" src="timthumb_58.jpg" alt="微软推出了一款 App 可以帮你读出全世界" />
@@ -324,8 +330,8 @@
 									<span class="info"><i class="icon-clock-1"></i> 2017-08-12</span>
 									<h4 class="title"><a href="https://www.nutgeek.com/new-app-seeing-ai/" title="微软推出了一款 App 可以帮你读出全世界">微软推出了一款 App 可以帮你读出全世界</a></h4>
 								</div>
-							</li> -->
-							<!-- <li>
+							</li>
+							 <li>
 								<div class="recent-posts-img"><a href="https://www.nutgeek.com/five-iphone-tools/" title="原来你的 iPhone 可以这么强大？五个酷炫好玩的配件推荐">
 															<img src="images/suibiankankan1.png" alt="原来你的 iPhone 可以这么强大？五个酷炫好玩的配件推荐" class="thumbnail"/>
 
@@ -357,10 +363,10 @@
 									<span class="info"><i class="icon-clock-1"></i> 2017-04-21</span>
 
 								</div>
-							</li> -->
+							</li>
 
 
-							<!-- <li>
+							<li>
 								<div class="recent-posts-img">
 									<a href="free-online-bitsend.html" title="日本免费网盘 BitSend，快放出你们的小姐姐">
 										<img src="timthumb_33.jpg" alt="日本免费网盘 BitSend，快放出你们的小姐姐" class="thumbnail"/>
@@ -371,9 +377,9 @@
 									<span class="info"><i class="icon-clock-1"></i> 2017-08-13</span>
 
 								</div>
-							</li> -->
+							</li>
 						</ul>
-					</div>
+					</div> -->
 					<div class="widget suxingme_tag">
 						<h3><span>热门标签</span></h3>
 						<div class="widge_tags">
@@ -393,10 +399,14 @@
 							</div>
 						</div>
 					</div> -->
-					<div class="widget widget_suxingme_postlist">
-						<h3><span>最新文章</span></h3>
+					<!-- <nav id="nav-exp" >
+					</nav> -->
+					<div class="widget widget_suxingme_postlist" id="toc">
+						<nav id="nav-exp" >
+						</nav>
+						<!-- <h3><span>最新文章</span></h3>
 						<ul class="recent-posts-widget">
-							<!-- <li class="one">
+							<li class="one">
 								<div class="recent-posts-one-img">
 									<a href="fake-itunes-store-subscription-email.html" title="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！">
 																	<img class="thumbnail" src="timthumb_62.jpg" alt="App Store 订阅钓鱼邮件来袭，苹果推出防骗辨识真伪技巧！" />
@@ -452,8 +462,8 @@
 									<span class="info"><i class="icon-clock-1"></i> 2018-02-01</span>
 
 								</div>
-							</li> -->
-						</ul>
+							</li>
+						</ul> -->
 					</div>
 				</div>
 			</div>
@@ -554,6 +564,26 @@
 				flowChart: true, // 默认不解析
 				sequenceDiagram: true, // 默认不解析
 			});
+
+			// testEditormdView.config({
+			// 		//tocContainer : "#custom-toc-container",
+			// 		tocContainer : "#testTOC",
+			// 		tocDropdown   : false
+			// });
+
+
+			//页面加载完后
+			// window.onload = function(){
+			//
+			// 	//var nei = $(".editormd-markdown-toc").html();
+			// 	var nei = $(".editormd-markdown-toc").prop("outerHTML"); //获得元素，包含当前的html
+			// 	$("#testTOC").html(nei);   //将元素添加到右边导航
+			// 	//$("#test-editormd-view").children(".editormd-markdown-toc").css("display","none");
+			// 	//$(".editormd-markdown-toc").css("display","none");
+			// 	//$("#testTOC").css("display","block");
+			// 	//alert(nei);
+			// }
+			//$(".editormd-markdown-toc").remove();   //删除元素
 			//      $.get("test.md", function(markdown) {
 			//
 			// testEditormdView = editormd.markdownToHTML("test-editormd-view", {
@@ -589,6 +619,27 @@
 			//     flowChart       : true,  // 默认不解析
 			//     sequenceDiagram : true,  // 默认不解析
 			// });
+		});
+
+		$(document).ready(function(){
+			//var toc = $(".editormd-markdown-toc").prop("outerHTML"); //获得元素，包含当前的html
+			// var toc = $(".editormd-markdown-toc").html(); //获得元素，包含当前的html
+			// $("#toc #nav-exp").html(toc);   //将元素添加到右边导航
+			// $("#test-editormd-view").children(".editormd-markdown-toc").css("display","none");
+			// $("#toc #nav-exp ul").addClass("nav-pills flex-column");
+			// $("#toc #nav-exp ul li a:eq(0)").addClass("active");
+			// $("#toc #nav-exp ul").removeClass("markdown-toc-list");
+
+
+			var toc = $(".editormd-markdown-toc").html(); //获得元素，包含当前的html
+			$("#nav-exp").html(toc);   //将元素添加到右边导航
+			$("#test-editormd-view").children(".editormd-markdown-toc").css("display","none");
+			//$("#nav-exp ul").addClass("nav-pills flex-column");
+			//$("#nav-exp ul").addClass("nav-pills nav-stacked");
+
+			//$("#nav-exp ul li a:eq(0)").addClass("active");
+			//$("#nav-exp ul").removeClass("markdown-toc-list");
+
 		});
 	</script>
 

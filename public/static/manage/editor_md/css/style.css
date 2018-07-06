@@ -27,9 +27,12 @@ img {
 }
 
 ul, ol {
+
     /*list-style: none;*/
 }
-
+#toc ul{
+  padding-left:2em;
+}
 .clear {
     *zoom: 1;           /* for IE 6/7 */
 }
