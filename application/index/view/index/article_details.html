@@ -36,6 +36,9 @@
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/style.css" />
 	<link rel="stylesheet" href="__STATIC__/manage/editor_md/css/editormd.preview.css" />
 	<style media="screen">
+	 .top{
+		 margin-top:5em;
+	}
 	#toc ul{
 	  padding-left:2em;
 		list-style-type: none;
@@ -51,11 +54,11 @@
 		color: #009a61;
 		background: #f3f3f3
 	}
-	/* .active{
+	.active{
 		border-left:2px solid #009A61;
 		color: #009a61;
 		background: #f3f3f3
-	} */
+	}
 	</style>
 </head>
 
@@ -644,16 +647,47 @@
 			var toc = $(".editormd-markdown-toc").prop("outerHTML"); //获得元素，包含当前的html
 			//var toc = $(".editormd-markdown-toc").html(); //获得元素，包含当前的html
 			$("#toc").html(toc);   //将元素添加到右边导航
+			$("#toc ul li a:eq(0)").addClass('active');
 			$("#test-editormd-view").children(".editormd-markdown-toc").css("display","none");
+
 			// $("#toc #nav-exp ul").addClass("nav-pills flex-column");
 			// $("#toc #nav-exp ul li a:eq(0)").addClass("active");
 			// $("#toc #nav-exp ul").removeClass("markdown-toc-list");
 
+
+			// $("#toc ul li a").click(function(){
+			// 	//var a = $(this).attr('class');    //   获取class
+			// 	var a = $(this).text();
+			//
+			// 	var youClass = $(this).attr('class');
+			// 	var temp = youClass;    //保存当前class名
+			// 	var tt = youClass;
+			// 	if(youClass == temp)
+			// 	{
+			// 		$(this).addClass('active');
+			// 	}
+			// 	else {
+			// 		$("."+youClass).removeClass('active');
+			// 	}
+			// 	//var aClass = $("a[name="+"'"+a+"'"+"]").attr('class');
+			// 	//$("."+aClass).parent().addClass('top');
+			// });
+
+		// 	$("#toc ul li").each(funciton(index){
+		// 		$(this).click(function(){
+	  //      $("li").removeClass("active");
+	  //      $("li").eq(index).addClass("active");
+		// 	})
+		// })
+		$("#toc a").each(function(index){
+       $(this).click(function(){
+				 //alert(index)
+       $("#toc a").removeClass("active");
+       $("#toc a").eq(index).addClass("active");
+       });
+     });
 		});
-		// $("#toc ul li a").click(function(){
-		// 	$a = $(this).attr('class');    //
-		// 	$("#"+$a).addClass('');
-		// }
+
 	</script>
 
 
