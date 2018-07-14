@@ -99,7 +99,7 @@ class Index extends Controller
       $articleInfo = ArticleModel::get($id);
 
       $cateInfo = CateModel::get($articleInfo->cate_id);
-      $this->assign('cate_name',$cateInfo->cate_name);
+      $this->assign('cateInfo',$cateInfo);
 
       //获取所有标签
       $tag = new TagModel;
