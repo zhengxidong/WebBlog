@@ -1230,3 +1230,22 @@ h6{font-size:12px}
 }
 .sticky-bottom{top:auto!important}
 hr{background-color:#d1d1d1;border:0;height:1px;margin:0 0 1.75em}
+/* 底线部分 */
+.box {
+
+  height: 40px;
+  /* background-color: #748594; */
+  font-size: 17px;
+  color: #404040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.line {
+  height: 2px;
+  flex-grow: 1;
+  background-color: #748594;
+}
+.text {
+  margin: 0 5px;
+}

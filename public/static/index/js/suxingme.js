@@ -347,42 +347,83 @@ jQuery(document).on("click", "#fa-loadmore", function($) {
         _postlistWrap = jQuery('.posts-con'),
         _button = jQuery('#fa-loadmore'),
         _data = _self.data();
+        console.log(_postlistWrap)
     if (_self.hasClass('is-loading')) {
         return false
     } else {
         _button.html('<i class="icon-spin6 animate-spin"></i> 加载中...');
         _self.addClass('is-loading');
+        var but = document.getElementById("fa-loadmore");
         jQuery.ajax({
             url: suxingme_url.url_ajax,
             data: _data,
             type: 'post',
             dataType: 'json',
             success: function(data) {
+
                 if (data.code == 500) {
+                  //console.log(data.code)
                     _button.data("paged", data.next).html('加载更多');
                     alert('服务器正在努力找回自我  o(∩_∩)o')
-                } else if (data.code == 200) {
-                    _postlistWrap.append(data.postlist);
-                    if( jQuery.isFunction(jQuery.fn.lazyload) ){
-                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
-                    }
-                    if (data.next) {
-                        if( suxingme_url.wow ){
-                            var btn = new WOW({
-                                boxClass: 'button-more',
-                                animateClass: 'animated',
-                                offset: 0,
-                                mobile: true,
-                                live: true
-                            });
-                            btn.init();
-                        }
-                        _button.data("paged", data.next).html('加载更多')
-                    } else {
-                        _button.hide()
-                    }
                 }
-                _self.removeClass('is-loading')
+                else if (data.code == 200) {
+
+                  //判断是否为空数据
+                  console.log(data.postlist);
+                  if(data.postlist == 0)
+                  {
+                    but.style.display = "none";
+                    var footer = document.getElementById('box');
+                    footer.style.display="block";
+                    //删除button
+                    //var child=document.getElementById("fa-loadmore");
+                    //child.parentNode.removeChild(child);
+                    //添加div
+                    //var node=document.createTextNode('');
+                    //para.appendChild(node);
+
+                    //but.innerHTML = '我是有底线的！！';
+                  }
+                  else {
+                        //console.log(data.code)
+                          console.log(data);
+                          _postlistWrap.append(data.postlist);
+                          if( jQuery.isFunction(jQuery.fn.lazyload) ){
+                              jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
+                          }
+
+                          //console.log(div);
+                          var paged = but.dataset.paged;//获取data-appid的值
+                          var total = but.dataset.total;//获取data-myname的值
+                          but.dataset.paged = data.next;
+                          but.dataset.total = data.total;
+
+                          if (data.next) {
+                              if( suxingme_url.wow ){
+                                  var btn = new WOW({
+                                      boxClass: 'button-more',
+                                      animateClass: 'animated',
+                                      offset: 0,
+                                      mobile: true,
+                                      live: true
+                                  });
+                                  btn.init();
+                              }
+                              //_button.data('paged',data.next);
+                              //_button.data('total',data.total);
+                              _button.data("paged", data.next).html('加载更多')
+                          } else {
+                              _button.hide()
+                      }
+
+                      //改变data-paged的值
+                      //$("#fa-loadmore").data("data-paged",data.next);
+                      //改变data-total的值
+                      //$("#fa-loadmore").data("data-total",data.total);
+                  }
+                  _self.removeClass('is-loading')
+                  }
+
             },
             error:function(data){
                 console.log(data.responseText);
@@ -393,62 +434,62 @@ jQuery(document).on("click", "#fa-loadmore", function($) {
 });
 
 
-jQuery(document).on("click", ".post-nav span", function($) {
-    var _self = jQuery(this),
-        _postlistWrap = jQuery('.posts-con'),
-        _button = jQuery('#fa-loadmore'),
-        _data = _self.data();
-    if (_self.hasClass('is-loading')) {
-        return false
-    } else {
-        _postlistWrap.html('<div class="wait-tips"><i class="icon-spin6 animate-spin"></i> 加载中...</div>');
-        _self.addClass('is-loading');
-        _self.addClass("current").siblings().removeClass("current");
-        _button.hide();
-        jQuery.ajax({
-            url: suxingme_url.url_ajax,
-            data: _data,
-            type: 'post',
-            dataType: 'json',
-            success: function(data) {
-                if (data.code == 500) {
-                    _button.data("paged", data.next).html('加载更多');
-                    alert('服务器正在努力找回自我  o(∩_∩)o')
-                } else if (data.code == 200) {
-                    _postlistWrap.html(data.postlist);
-                    if( jQuery.isFunction(jQuery.fn.lazyload) ){
-                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
-                    }
-                    if (data.next && _self.data("total") > 1) {
-                        _button.show();
-                        if( suxingme_url.wow ){
-                            var btn = new WOW({
-                                boxClass: 'button-more',
-                                animateClass: 'animated',
-                                offset: 0,
-                                mobile: true,
-                                live: true
-                            });
-                            btn.init();
-                        }
-                        _button.data("paged", data.next).html('加载更多');
-                        if( _self.hasClass("new-post") ){
-                           _button.data("home", true);
-                        } else {
-                            _button.removeAttr("data-home");
-                            _button.data("category",_self.data("category"));
-                            _button.data("total",_self.data("total"));
-                        }
-                    } else {
-                        _button.hide()
-                    }
-                }
-                _self.removeClass('is-loading')
-            },
-            error:function(data){
-                console.log(data.responseText);
-                console.log(data);
-            }
-        })
-    }
-});
+// jQuery(document).on("click", ".post-nav span", function($) {
+//     var _self = jQuery(this),
+//         _postlistWrap = jQuery('.posts-con'),
+//         _button = jQuery('#fa-loadmore'),
+//         _data = _self.data();
+//     if (_self.hasClass('is-loading')) {
+//         return false
+//     } else {
+//         _postlistWrap.html('<div class="wait-tips"><i class="icon-spin6 animate-spin"></i> 加载中...</div>');
+//         _self.addClass('is-loading');
+//         _self.addClass("current").siblings().removeClass("current");
+//         _button.hide();
+//         jQuery.ajax({
+//             url: suxingme_url.url_ajax,
+//             data: _data,
+//             type: 'post',
+//             dataType: 'json',
+//             success: function(data) {
+//                 if (data.code == 500) {
+//                     _button.data("paged", data.next).html('加载更多');
+//                     alert('服务器正在努力找回自我  o(∩_∩)o')
+//                 } else if (data.code == 200) {
+//                     _postlistWrap.html(data.postlist);
+//                     if( jQuery.isFunction(jQuery.fn.lazyload) ){
+//                         jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
+//                     }
+//                     if (data.next && _self.data("total") > 1) {
+//                         _button.show();
+//                         if( suxingme_url.wow ){
+//                             var btn = new WOW({
+//                                 boxClass: 'button-more',
+//                                 animateClass: 'animated',
+//                                 offset: 0,
+//                                 mobile: true,
+//                                 live: true
+//                             });
+//                             btn.init();
+//                         }
+//                         _button.data("paged", data.next).html('加载更多');
+//                         if( _self.hasClass("new-post") ){
+//                            _button.data("home", true);
+//                         } else {
+//                             _button.removeAttr("data-home");
+//                             _button.data("category",_self.data("category"));
+//                             _button.data("total",_self.data("total"));
+//                         }
+//                     } else {
+//                         _button.hide()
+//                     }
+//                 }
+//                 _self.removeClass('is-loading')
+//             },
+//             error:function(data){
+//                 console.log(data.responseText);
+//                 console.log(data);
+//             }
+//         })
+//     }
+// });

@@ -20,7 +20,8 @@
 
 	<link rel='stylesheet' id='carousel-css' href='__STATIC__/index/css/owl.carousel.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='carousel-theme-css' href='__STATIC__/index/css/owl.theme.css' type='text/css' media='all' />
-	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery.js'></script>
+	<!-- <script type='text/javascript' src='__STATIC__/index/js/jquery/jquery.js'></script> -->
+	<script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.min.js"></script>
 	<script type='text/javascript' src='__STATIC__/index/js/jquery/jquery-migrate.min.js'></script>
 	<!--[if lt IE 9]>
 <script type='text/javascript' src='__STATIC__/index/js/html5shiv.js'></script>
@@ -117,7 +118,19 @@
 						</div>
 						<div class="clearfix"></div>
 						<div id="ajax-load-posts">
-							<button id="fa-loadmore" class="button button-more " data-wow-delay="0.3s" data-home="true" data-paged="2" data-action="fa_load_postlist" data-total="11">加载更多</button> </div>
+							<button id="fa-loadmore" class="button button-more " data-wow-delay="0.3s" data-home="true" data-paged="1" data-action="search_load_postlist" data-total="{$dataTotal}" data-search-name="{$serachName}" >加载更多</button>
+							<div id="box" style="display:none">
+								<div  class="box" >
+
+								  <span class="line"></span>
+
+								  <span class="text">我是有底线的!!!</span>
+
+								  <span class="line"></span>
+
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="sidebar wow bounceInRight">
 						<!-- <div class="widget widget_suxingme_postlist">
@@ -343,7 +356,7 @@
 	<script type='text/javascript'>
 		/* <![CDATA[ */
 		var suxingme_url = {
-			"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+			"url_ajax": "{:url('index/more_search_list')}",
 			"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
 			"roll": "1",
 			"headfixed": "1",

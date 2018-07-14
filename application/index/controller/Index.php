@@ -59,9 +59,13 @@ class Index extends Controller
           ->alias('a')
           ->join('bg_cate c','c.cate_id = a.cate_id')
           ->where("a.article_status ='open'")
-          ->order('id','desc')
+          ->order('a.id','desc')
+          ->limit(20)
           ->select();
-
+          //var_dump($articleList);
+          //exit;
+          //$dataTotal = count($articleList);
+          $this->assign('dataTotal',20);
       $this->assign('articleList',$articleList);
 
       //获取栏目
@@ -81,6 +85,92 @@ class Index extends Controller
 
       return $this->view->fetch();
     }
+
+    //加载更多文章
+    public function moreArticleList()
+    {
+
+      $data = Request::instance()->post();
+      if($data)
+      {
+        $size = $data['total'];
+        $page = $data['paged'];
+
+            //2   =  1 * 2
+        $offset = $page * $size;
+        //获取更多文章列表
+        $articleList = Db::table('bg_article')
+          ->alias('a')
+          ->join('bg_cate c','c.cate_id = a.cate_id')
+          ->where("a.article_status ='open'")
+          ->order('a.id','desc')
+          ->limit($offset,$size)
+          ->select();
+
+        //echo   Db::getLastSql();
+        //var_dump($articleList);
+        //exit;
+        if(!empty($articleList))
+        {
+          $articleListText = '';
+          foreach ($articleList as $key => $value) {
+
+
+            //内容截取
+            $articleContent = mb_substr($value['article_content'],0,175);
+            //var_dump($articleContent);
+            //exit;
+            $action = 'index/article_list';
+            $id = 'id';
+            //内容过滤
+            $articleContent = str_replace(['#','<pre>','<pre'],'',$articleContent);
+            $articleId = $value['id'];
+
+            //$article_details_url =  "{:url('{$action}',['{$id}'=>{$articleId}])}";
+            $article_details_url =  "index/index/article_details/id$articleId.html";
+            //echo $article_details_url;
+            //exit;
+            $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+      								<div class="content-box posts-gallery-box">
+      									<div class="posts-gallery-img">
+      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
+      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
+      											'</a>
+      									</div>
+      									<div class="posts-gallery-content"> '.
+      										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
+
+      										'<div class="posts-gallery-text">'.$articleContent.'</div>
+      										<div class="posts-default-info posts-gallery-info">
+      											<ul> '.
+      												"<li class='ico-cat'><i class='icon-list-2'></i> <a href=''>{$value['cate_name']}</a></li>
+      												<li class='ico-time'><i class='icon-clock-1'></i> {$value['article_date']}</li>
+      												<li class='ico-eye'><i class='icon-eye-4'></i>{$value['article_views']}</li>
+      												<li class='ico-like'><i class='icon-heart'></i> {$value['article_like']}</li> ".
+      											'</ul>
+      										</div>
+      									</div>
+      								</div>
+      							</div>';
+                    //echo $text;
+                    //exit;
+          }
+        }
+        else {
+          $articleListText = 0;
+        }
+      }
+      $articleData = [
+        'code'=>200,
+        'msg' =>'成功',
+        'next' => $page + 1,
+        'total' => $offset + 2,
+        'postlist' => $articleListText
+
+      ];
+      return json($articleData);
+    }
+
     public function article_details($id)
     {
       //获取栏目列表
@@ -233,8 +323,11 @@ class Index extends Controller
         ->join('bg_cate c','c.cate_id = a.cate_id')
         ->where("a.article_status ='open' and (a.article_title like '%{$searchName}%')")
         ->order('id','desc')
+        ->limit(20)
         ->select();
 
+      $this->assign('serachName',$searchName);
+      $this->assign('dataTotal',20);  //默认搜索20条
       $this->assign('articleList',$articleList);
       //获取栏目
       $cate = new CateModel();
@@ -253,7 +346,90 @@ class Index extends Controller
 
       return $this->view->fetch();
     }
+    //加载更多搜索文章
+    public function more_search_list()
+    {
+      $data = Request::instance()->post();
+      if($data)
+      {
+        //var_dump($data);
+        //exit;
+        $size = $data['total'];
+        $page = $data['paged'];
+        $searchName = $data['searchName'];
+        $offset = $page * $size;
+        //获取更多文章列表
+        $articleList = Db::table('bg_article')
+          ->alias('a')
+          ->join('bg_cate c','c.cate_id = a.cate_id')
+          ->where("a.article_status ='open' and (a.article_title like '%{$searchName}%')")
+          ->order('id','desc')
+          ->limit($offset,$size)
+          ->select();
 
+        //echo   Db::getLastSql();
+        //var_dump($articleList);
+        //exit;
+        if(!empty($articleList))
+        {
+          $articleListText = '';
+          foreach ($articleList as $key => $value) {
+
+
+            //内容截取
+            $articleContent = mb_substr($value['article_content'],0,175);
+            //var_dump($articleContent);
+            //exit;
+            $action = 'index/article_list';
+            $id = 'id';
+            //内容过滤
+            $articleContent = str_replace(['#','<pre>','<pre'],'',$articleContent);
+            $articleId = $value['id'];
+
+            //$article_details_url =  "{:url('{$action}',['{$id}'=>{$articleId}])}";
+            $article_details_url =  "index/index/article_details/id$articleId.html";
+            //echo $article_details_url;
+            //exit;
+            $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+      								<div class="content-box posts-gallery-box">
+      									<div class="posts-gallery-img">
+      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
+      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
+      											'</a>
+      									</div>
+      									<div class="posts-gallery-content"> '.
+      										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
+
+      										'<div class="posts-gallery-text">'.$articleContent.'</div>
+      										<div class="posts-default-info posts-gallery-info">
+      											<ul> '.
+      												"<li class='ico-cat'><i class='icon-list-2'></i> <a href=''>{$value['cate_name']}</a></li>
+      												<li class='ico-time'><i class='icon-clock-1'></i> {$value['article_date']}</li>
+      												<li class='ico-eye'><i class='icon-eye-4'></i>{$value['article_views']}</li>
+      												<li class='ico-like'><i class='icon-heart'></i> {$value['article_like']}</li> ".
+      											'</ul>
+      										</div>
+      									</div>
+      								</div>
+      							</div>';
+                    //echo $text;
+                    //exit;
+          }
+        }
+        else {
+          $articleListText = 0;
+        }
+      }
+      $articleData = [
+        'code'=>200,
+        'msg' =>'成功',
+        'next' => $page + 1,
+        'total' => $offset + 2,
+        'postlist' => $articleListText
+
+      ];
+      return json($articleData);
+    }
     //通过标签搜索
     public function tag_search_list($searchTagId)
     {
@@ -276,9 +452,11 @@ class Index extends Controller
         ->join('bg_tag t','t.id = aft.tag_id')
         ->where("a.article_status ='open' and t.id = '{$searchTagId}'")
         ->order('t.id','desc')
+        ->limit(20)
         ->select();
         // var_dump($articleList);
-
+      $this->assign('tagId',$searchTagId);
+      $this->assign('dataTotal',20);  //默认搜索20条
       $this->assign('articleList',$articleList);
       //获取栏目
       $cate = new CateModel();
@@ -296,5 +474,92 @@ class Index extends Controller
       $this->assign('articleListMsg',$articleListMsg);
 
       return $this->view->fetch();
+    }
+
+    //加载更多标签搜索文章
+    public function more_tag_search_list()
+    {
+      $data = Request::instance()->post();
+      if($data)
+      {
+        //var_dump($data);
+        //exit;
+        $size = $data['total'];
+        $page = $data['paged'];
+        $searchTagId = $data['tagId'];
+        $offset = $page * $size;
+        //获取更多文章列表
+        $articleList = Db::table('bg_article')
+          ->alias('a')
+          ->join('bg_cate c','c.cate_id = a.cate_id')
+          ->join('bg_article_for_tag aft','aft.article_id = a.id')
+          ->join('bg_tag t','t.id = aft.tag_id')
+          ->where("a.article_status ='open' and t.id = '{$searchTagId}'")
+          ->order('t.id','desc')
+          ->limit($offset,$size)
+          ->select();
+
+        //echo   Db::getLastSql();
+        //var_dump($articleList);
+        //exit;
+        if(!empty($articleList))
+        {
+          $articleListText = '';
+          foreach ($articleList as $key => $value) {
+
+
+            //内容截取
+            $articleContent = mb_substr($value['article_content'],0,175);
+            //var_dump($articleContent);
+            //exit;
+            $action = 'index/article_list';
+            $id = 'id';
+            //内容过滤
+            $articleContent = str_replace(['#','<pre>','<pre'],'',$articleContent);
+            $articleId = $value['id'];
+
+            //$article_details_url =  "{:url('{$action}',['{$id}'=>{$articleId}])}";
+            $article_details_url =  "index/index/article_details/id$articleId.html";
+            //echo $article_details_url;
+            //exit;
+            $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+      								<div class="content-box posts-gallery-box">
+      									<div class="posts-gallery-img">
+      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
+      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
+      											'</a>
+      									</div>
+      									<div class="posts-gallery-content"> '.
+      										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
+
+      										'<div class="posts-gallery-text">'.$articleContent.'</div>
+      										<div class="posts-default-info posts-gallery-info">
+      											<ul> '.
+      												"<li class='ico-cat'><i class='icon-list-2'></i> <a href=''>{$value['cate_name']}</a></li>
+      												<li class='ico-time'><i class='icon-clock-1'></i> {$value['article_date']}</li>
+      												<li class='ico-eye'><i class='icon-eye-4'></i>{$value['article_views']}</li>
+      												<li class='ico-like'><i class='icon-heart'></i> {$value['article_like']}</li> ".
+      											'</ul>
+      										</div>
+      									</div>
+      								</div>
+      							</div>';
+                    //echo $text;
+                    //exit;
+          }
+        }
+        else {
+          $articleListText = 0;
+        }
+      }
+      $articleData = [
+        'code'=>200,
+        'msg' =>'成功',
+        'next' => $page + 1,
+        'total' => $offset + 2,
+        'postlist' => $articleListText
+
+      ];
+      return json($articleData);
     }
 }

@@ -206,7 +206,19 @@
 						</div>
 						<div class="clearfix"></div>
 						<div id="ajax-load-posts">
-							<button id="fa-loadmore" class="button button-more " data-wow-delay="0.3s" data-home="true" data-paged="2" data-action="fa_load_postlist" data-total="11">加载更多</button> </div>
+							<button id="fa-loadmore" class="button button-more " data-wow-delay="0.3s" data-home="true" data-paged="1" data-action="index_load_postlist" data-total="{$dataTotal}">加载更多</button>
+							<div id="box" style="display:none">
+								<div  class="box" >
+
+								  <span class="line"></span>
+
+								  <span class="text">我是有底线的!!!</span>
+
+								  <span class="line"></span>
+
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="sidebar wow bounceInRight">
 						<!-- <div class="widget widget_suxingme_postlist">
@@ -432,8 +444,16 @@
 	<script type='text/javascript' src='__STATIC__/index/js/bootstrap.min.js'></script>
 	<script type='text/javascript'>
 		/* <![CDATA[ */
+		// var suxingme_url = {
+		// 	"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+		// 	"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
+		// 	"roll": "1",
+		// 	"headfixed": "1",
+		// 	"slidestyle": "index_slide_sytle_4",
+		// 	"wow": "1"
+		// };
 		var suxingme_url = {
-			"url_ajax": "https:\/\/www.nutgeek.com\/wp-admin\/admin-ajax.php",
+			"url_ajax": "{:url('index/moreArticleList')}",
 			"url_theme": "https:\/\/www.nutgeek.com\/wp-content\/themes\/Grace",
 			"roll": "1",
 			"headfixed": "1",
