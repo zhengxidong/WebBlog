@@ -258,10 +258,8 @@ class Index extends Controller
         //查询当天访问记录是否已经存在该ip记录
         $value = Cookie::get($name,'views_');
         $val = explode('_',$value);
-        echo $ip;
-        echo $id;
         $today = date("Y-m-d");
-        echo $today;
+
         $map['ip'] =  $ip;
         $map['article_id'] = $id;
         $map['access_date'] = $today;
@@ -269,14 +267,11 @@ class Index extends Controller
         $accessInfo = $access->where($map)->select();
         //$accessInfo = AccessRecordsModel::get(['ip'=>$ip,'article_id'=>$id,'access_date'=>'{$today}']);
 
-        // var_dump($accessInfo);
-        // var_dump(AccessRecordsModel::getLastSql());
-        // exit;
         //如果数据库不存在当前ip地址及文章id和当前日期
         if(empty($accessInfo))
         {
           $ipInfo = getAddress($ip);
-          //var_dump($ipInfo);
+
           if($ipInfo)
           {
             if(!empty($ipInfo->area))
