@@ -174,6 +174,10 @@ class Index extends Controller
 
     public function article_details($id)
     {
+
+      // var_dump(date("h:i:s"));
+      // var_dump(strtotime());
+      // exit;
       //获取栏目列表
       $cate = new CateModel();
       $cateList = $cate->order('cate_id','asc')->select();
@@ -192,10 +196,6 @@ class Index extends Controller
 
       $cateInfo = CateModel::get($articleInfo->cate_id);
       $this->assign('cateInfo',$cateInfo);
-      //获取当前文章标签
-      //$articleForTag = new ArticleForTagModel;
-      //$currentArticleTagList = Db::table('bg_')
-      //$this->assign('currentArticleTagList',$currentArticleTagList);
 
       //获取所有标签
       $tag = new TagModel;
@@ -211,17 +211,32 @@ class Index extends Controller
 
       //文章访问量
       $request = Request::instance();
-      $expire = 24 * 60 * 60;
+      //$expire = 24 * 60 * 60;
+
+      //计算过期时间,距离第二天剩余时间作为过期时间
+      $expire = strtotime(date("Y-m-d 12:00:00")) - time();
+      //$expire = floor($expire/3600);
+      //var_dump(floor($expire/60/60));
+      //exit;
+      //$expire = date("Y-m-d");
       $ip = $request->ip(0,true);
       $newIp = str_replace('.','_',$ip);
+
+      //ip地址+文章ID
       $name = $newIp.'_'.$id;
+
 
       if(!Cookie::has($name,'views_'))
       {
         //没有访问量过，则数据库文章访问量加1
         $articleViews = $articleInfo->article_views + 1;
-        $value = $articleViews;
-        Cookie::set($name,$value,['prefix'=>'views_','expire'=>$expire]);
+        //echo "浏览数".$articleViews."<br/>";
+        //$value = $articleViews;
+        $cookieValue = $articleViews.'_'.$expire;//浏览量+过期时间戳
+
+        //echo $cookieValue;
+        //exit;
+        Cookie::set($name,$cookieValue,['prefix'=>'views_','expire'=>$expire]);
 
         $articleInfo->article_views = $articleViews;
         $articleInfo->save();
@@ -230,37 +245,62 @@ class Index extends Controller
       }
       else
       {
+
         $value = Cookie::get($name,'views_');
-        $this->assign('articleViews',$value);
+        $val = explode('_',$value);
+
+        $this->assign('articleViews',$val[0]);
       }
 
       //访问记录
       if(!empty($ip))
       {
-        $ipInfo = getAddress($ip);
-        //var_dump($ipInfo);
-        if($ipInfo)
+        //查询当天访问记录是否已经存在该ip记录
+        $value = Cookie::get($name,'views_');
+        $val = explode('_',$value);
+        echo $ip;
+        echo $id;
+        $today = date("Y-m-d");
+        echo $today;
+        $map['ip'] =  $ip;
+        $map['article_id'] = $id;
+        $map['access_date'] = $today;
+        $access = new AccessRecordsModel;
+        $accessInfo = $access->where($map)->select();
+        //$accessInfo = AccessRecordsModel::get(['ip'=>$ip,'article_id'=>$id,'access_date'=>'{$today}']);
+
+        // var_dump($accessInfo);
+        // var_dump(AccessRecordsModel::getLastSql());
+        // exit;
+        //如果数据库不存在当前ip地址及文章id和当前日期
+        if(empty($accessInfo))
         {
-          if(!empty($ipInfo->area))
+          $ipInfo = getAddress($ip);
+          //var_dump($ipInfo);
+          if($ipInfo)
           {
-            $area = $ipInfo->area; //区
+            if(!empty($ipInfo->area))
+            {
+              $area = $ipInfo->area; //区
+            }
+            if(!empty($ipInfo->county))
+            {
+                $area = $ipInfo->county;   //县
+            }
+            $accessRecords = new AccessRecordsModel;
+            $accessRecords->ip            = $ip;
+            $accessRecords->article_id    = $articleInfo->id;
+            $accessRecords->article_name  = $articleInfo->article_title;
+            $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
+            $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
+            $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
+            $accessRecords->area_name     = (!empty($area)) ? $area : null;
+            $accessRecords->access_time   = date("Y-m-d H:i:s");
+            $accessRecords->access_date   = date("Y-m-d");
+            $accessRecords->save();
           }
-          if(!empty($ipInfo->county))
-          {
-              $area = $ipInfo->county;   //县
-          }
-          $accessRecords = new AccessRecordsModel;
-          $accessRecords->ip            = $ip;
-          $accessRecords->article_id    = $articleInfo->id;
-          $accessRecords->article_name  = $articleInfo->article_title;
-          $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
-          $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
-          $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
-          $accessRecords->area_name     = (!empty($area)) ? $area : null;
-          $accessRecords->access_time   = date("Y-m-d H:i:s");
-          $accessRecords->access_date   = date("Y-m-d");
-          $accessRecords->save();
         }
+        //AccessRecordsModel::whereTime('access_time','>',["$analyze_firstday 00:00:00"])->select();
       }
 
       $this->assign('articleId',$id);
