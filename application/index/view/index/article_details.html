@@ -79,8 +79,8 @@
 					<div class="post">
 						<div class="post-title">
 							<div class="post-entry-categories">
-								{volist name="articleTagList" id="vo"}
-								<a href="{:url('index/tag_search_list',['searchTagId'=>$vo.id])}" rel="tag" style="background-color:{$vo.color}">{$cateInfo.cate_name}</a>
+								{volist name="currentArticleTagList" id="vo"}
+								<a href="{:url('index/tag_search_list',['searchTagId'=>$vo.id])}" rel="tag" style="background-color:{$vo.color}">{$vo.tag_name}</a>
 								{/volist}
 							</div>
 							<h1 class="title">{$articleInfo.article_title}</h1>

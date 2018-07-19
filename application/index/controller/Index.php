@@ -8,6 +8,7 @@ use app\index\model\Article as ArticleModel;
 use app\index\model\Cate as CateModel;
 use app\manage\model\AccessRecords as AccessRecordsModel;
 use app\index\model\Tag as TagModel;
+use app\index\model\ArticleForTag as ArticleForTagModel;
 class Index extends Controller
 {
     public function index()
@@ -178,18 +179,23 @@ class Index extends Controller
       $cateList = $cate->order('cate_id','asc')->select();
       $this->assign('cateList',$cateList);
 
-      $articleTagList = Db::table('bg_article_for_tag')
+      //获取当前文章标签
+      $currentArticleTagList = Db::table('bg_article_for_tag')
       ->alias('aft')
       ->join('bg_tag t','aft.tag_id = t.id')
       ->where("aft.article_id = $id")
       ->where('t.status = 1')
       ->select();
-      $this->assign('articleTagList',$articleTagList);
+      $this->assign('currentArticleTagList',$currentArticleTagList);
 
       $articleInfo = ArticleModel::get($id);
 
       $cateInfo = CateModel::get($articleInfo->cate_id);
       $this->assign('cateInfo',$cateInfo);
+      //获取当前文章标签
+      //$articleForTag = new ArticleForTagModel;
+      //$currentArticleTagList = Db::table('bg_')
+      //$this->assign('currentArticleTagList',$currentArticleTagList);
 
       //获取所有标签
       $tag = new TagModel;
