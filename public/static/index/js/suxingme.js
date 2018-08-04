@@ -341,7 +341,16 @@ document.addEventListener('DOMContentLoaded', function(){
 jQuery(document).on("click", ".facetoggle", function($) {
     jQuery(".comment-form-smilies").toggle();
 });
+// 大于等于20条，则显示加载更多
+jQuery(document).ready(function(){
+  var articleList = $('.ajax-load-box').children().length;
+  if(articleList >= 20)
+  {
+    $('#fa-loadmore').css('display','inline-block');
+  }
+})
 
+// 加载更多
 jQuery(document).on("click", "#fa-loadmore", function($) {
     var _self = jQuery(this),
         _postlistWrap = jQuery('.posts-con'),

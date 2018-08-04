@@ -94,11 +94,11 @@
 							{volist name="articleList" id="vo"}
 							<div class="ajax-load-con content wow bounceInUp">
 								<div class="content-box posts-gallery-box">
-									<div class="posts-gallery-img">
+									<!-- <div class="posts-gallery-img">
 										<a href="{:url('index/article_details',['id'=>$vo.id])}" title="{$vo.article_title}">
 									  <img class="thumbnail" src="__STATIC__/index/img/default.png" alt="{$vo.article_title}" />
 											</a>
-									</div>
+									</div> -->
 									<div class="posts-gallery-content">
 										<h2><a href="{:url('index/article_details',['id'=>$vo.article_id])}" title="{$vo.article_title}" >{$vo.article_title}</a></h2>
 										<div class="posts-gallery-text">{$vo.article_content|mb_substr=0,175|str_replace=['#','<pre>','<pre','>'],'',###} &hellip;</div>
