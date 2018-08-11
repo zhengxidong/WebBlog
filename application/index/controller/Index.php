@@ -133,11 +133,6 @@ class Index extends Controller
             //exit;
             $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
       								<div class="content-box posts-gallery-box">
-      									<div class="posts-gallery-img">
-      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
-      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
-      											'</a>
-      									</div>
       									<div class="posts-gallery-content"> '.
       										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
 
@@ -433,11 +428,6 @@ class Index extends Controller
             //exit;
             $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
       								<div class="content-box posts-gallery-box">
-      									<div class="posts-gallery-img">
-      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
-      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
-      											'</a>
-      									</div>
       									<div class="posts-gallery-content"> '.
       										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
 
@@ -565,11 +555,6 @@ class Index extends Controller
             //exit;
             $articleListText .= '<div class="ajax-load-con content wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
       								<div class="content-box posts-gallery-box">
-      									<div class="posts-gallery-img">
-      										<a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'> ".
-      									  '<img class="thumbnail" src="/static/index/img/default.png" '." alt='{$value['article_title']}'> ".
-      											'</a>
-      									</div>
       									<div class="posts-gallery-content"> '.
       										'<h2><a href='.'"'.$article_details_url.'"'." title='{$value['article_title']}'>{$value['article_title']}</a></h2> ".
 

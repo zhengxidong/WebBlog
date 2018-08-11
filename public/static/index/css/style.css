@@ -184,7 +184,7 @@ select{border:1px solid #efefef;background:url(img/select-arrow.png) right cente
 .posts-default-content{position:relative;line-height:normal}
 .posts-default-content .posts-text{line-height:1.6;margin-bottom:20px;color:#566573}
 .posts-default-info{position:relative;display:inline-block}
-.posts-gallery-info{position:absolute;bottom:32px}
+.posts-gallery-info{position:absolute;bottom:10px}
 .posts-default-info ul li{font-size:12px;letter-spacing:-.2px;float:left;padding:0;margin:0 10px 0 0;color:#748594;position:relative;line-height:1.5;list-style-type:none;}
 .posts-default-info ul li a{color:#748594}
 .posts-default-info ul li.post-author{padding-left:30px}
@@ -964,7 +964,8 @@ header.header-02 .burger-menu{top:-10px}
 .blog-post,.blog-posts,.pages{width:100%;padding-left:5px;padding-right:5px}
 .content{margin-bottom:2px}
 .content-box,.content-box .posts-default-img,.posts-default-box{padding:20px 15px}
-.posts-gallery-content{margin-left:245px}
+/* 平板展示文章列表 */
+/* .posts-gallery-content{margin-left:245px} */
 .post-entry-categories a{padding:2px 8px}
 .posts-default-title{margin-bottom:20px}
 .posts-default-title h2{margin-bottom:15px;padding-bottom:15px}
@@ -1097,16 +1098,17 @@ h6{font-size:12px}
 .posts-gallery-img{width:33.3333%;height:auto;max-height:98.34px}
 .posts-gallery-img img{width:100%;height:auto;min-height:0}
 .posts-gallery-info .i-tgwz{padding:0 6px;font-size:10px;line-height:1.6}
-.posts-gallery-content{margin-left:36%}
+/* 手机端展示文章列表 */
+/* .posts-gallery-content{margin-left:36%} */
 .posts-gallery-content h2{height:38px;max-height:none;margin-bottom:0}
 .posts-default-title h2{margin:0 0 5px 0;border-bottom-width:0;padding:0;font-weight:700}
 .posts-default-title h2,.posts-gallery-content h2{font-size:15px;line-height:1.3;font-weight:700}
 .posts-default-title h2:after{height:0}
 .posts-default-content .posts-text{display:none;line-height:0}
-.posts-gallery-content .posts-gallery-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:5px;display:none}
+.posts-gallery-content .posts-gallery-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:45px;display:none}
 .post-style-tips{bottom:18px;right:15px}
 .post-style-tips a{padding:4px 6px;font-size:10px}
-.posts-gallery-info{bottom:15px;position:absolute}
+.posts-gallery-info{bottom:10px;position:absolute}
 .posts-default-info ul li.post-author{padding-left:20px;letter-spacing:-.6px}
 .posts-default-info ul li .avatar{width:16px;top:0}
 .posts-default-info ul li .avatar img{width:16px;height:16px}
