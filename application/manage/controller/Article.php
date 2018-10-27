@@ -67,6 +67,9 @@ class Article extends Base
           {
             $this->error('请填写完整','article/index');
           }
+
+          //var_dump($data);
+          //exit;
           //模型操作
           $article = new ArticleModel;
           $cateId = $data['cate_id'];
@@ -74,7 +77,7 @@ class Article extends Base
           $articleTitle   = $data['title'];
           $articleExcerpt = $data['excerpt'];
           $articleContent = $data['test-editormd-markdown-doc'];
-          $articleStatus  = $data['status'];
+          $articleStatus  = empty($data['status']) ? '' : $data['status'];
           $articlePassword = $data['password'];
           $articleName     = $data['name'];
 
@@ -90,6 +93,7 @@ class Article extends Base
             'article_name'    => $articleName,                         //文章缩略名
             'cate_id'         => $cateId
           ];
+
           //unset($data['test-editormd-markdown-doc']);
           //unset($data['title']);
           //unset($data['test-editormd-html-code']);
@@ -183,14 +187,13 @@ class Article extends Base
 
         //更新标签
         //获取当前文章所有标签
-        if(isset($data['tagId']) && !empty($data['tagId']))
-        {
           $articleForTag = new ArticleForTagModel;
           $articleForTagList = $articleForTag->where("article_id = $articleId")->select();
           $tagId = [];
           foreach ($articleForTagList as $value) {
             $tagId[$value->id] = $value->tag_id;
           }
+          $data['tagId'] = !empty($data['tagId']) ? $data['tagId'] : [];
 
           //多则加
           $add = array_diff($data['tagId'],$tagId);
@@ -208,15 +211,26 @@ class Article extends Base
               $articleForTag->save();
             }
           }
-          if(!empty($delete))
+          else if(!empty($delete) || (!empty($data['tagId']) && empty($delete)))
           {
-            $tagId = array_keys($delete);
-            foreach ($tagId as $id) {
-              $articleForTag = ArticleForTagModel::get($id);
-              $articleForTag->delete();
+
+            if(!empty($delete))
+            {
+              $tagId = array_keys($delete);
+              foreach ($tagId as $id) {
+                $articleForTag = ArticleForTagModel::get($id);
+                $articleForTag->delete();
+              }
             }
+            else if(!empty($data['tagId'])){
+
+              foreach ($data['tagId'] as $id) {
+                $articleForTag = ArticleForTagModel::get($id);
+                $articleForTag->delete();
+              }
+            }
+
           }
-        }
         $this->redirect('article/index');
 
       }
