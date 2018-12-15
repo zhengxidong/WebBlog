@@ -195,10 +195,8 @@ class Article extends Base
           }
           $data['tagId'] = !empty($data['tagId']) ? $data['tagId'] : [];
 
-          //多则加
           $add = array_diff($data['tagId'],$tagId);
 
-          //少则减
           $delete = array_diff($tagId,$data['tagId']);
 
           if(!empty($add))
@@ -211,26 +209,15 @@ class Article extends Base
               $articleForTag->save();
             }
           }
-          else if(!empty($delete) || (!empty($data['tagId']) && empty($delete)))
+          if(!empty($delete))
           {
-
-            if(!empty($delete))
-            {
-              $tagId = array_keys($delete);
+            $tagId = array_keys($delete);
               foreach ($tagId as $id) {
                 $articleForTag = ArticleForTagModel::get($id);
                 $articleForTag->delete();
               }
-            }
-            else if(!empty($data['tagId'])){
-
-              foreach ($data['tagId'] as $id) {
-                $articleForTag = ArticleForTagModel::get($id);
-                $articleForTag->delete();
-              }
-            }
-
           }
+          
         $this->redirect('article/index');
 
       }
