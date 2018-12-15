@@ -233,12 +233,12 @@ class Article extends Base
       $request = Request::instance()->post();
       if(!empty($request))
       {
-        if($request['status'] == 'open')
+        if($request['status'] == '是')
         {
-          $status = 'close';
+          $status = '否';
         }
         else {
-          $status = 'open';
+          $status = '是';
         }
         $article = ArticleModel::get($request['articleId']);
         if(!empty($article))

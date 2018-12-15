@@ -285,7 +285,7 @@
                       发布时间
                     </th>
                     <th class="hidden-xs">
-                      状态
+                      是否公开
                     </th>
                     <th>操作</th>
                   </thead>
@@ -306,9 +306,9 @@
                       <td class="hidden-xs">
 
                         {if condition="$vo.article_status == 'open'"}
-                        <span class="label label-success"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">{$vo.article_status}</a></span>
+                        <span class="label label-success"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">是</a></span>
                         {else/}
-                        <span class="label label-danger"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">close</a></span>
+                        <span class="label label-danger"><a style="text-decoration:none;color: #fff;cursor:pointer;" class="article_status" id="{$vo.id}" value="{$vo.id}">否</a></span>
                         {/if}
                       </td>
                       <td class="actions">
@@ -339,8 +339,8 @@
           var articleId = $(this).attr('value');
           var status = $(this).text();
 
-          console.log(articleId);
-          console.log(status);
+          //console.log(articleId);
+          //console.log(status);
           //alert(val);
           $.post(
             "{:url('article/changeState')}",
@@ -352,8 +352,8 @@
             }
             else
             {
-              console.log(data);
-              if(data == 'open')
+              //console.log(data);
+              if(data == '是')
               {
                 $("#"+articleId).parent('span').addClass('label-success');
                 $("#"+articleId).parent('span').removeClass('label-danger');
