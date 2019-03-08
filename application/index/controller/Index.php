@@ -27,23 +27,23 @@ class Index extends Controller
         //存储访问记录ip地址
         $request = Request::instance();
         $ip = $request->ip(0,true);
-        if(!empty($ip))
+        if($ip)
         {
           $ipInfo = getAddress($ip);
 
           if($ipInfo)
           {
-            if(!empty($ipInfo->area))
+            if($ipInfo->area)
             {
               $area = $ipInfo->area; //区
             }
-            if(!empty($ipInfo->county))
+            if($ipInfo->county)
             {
                 $area = $ipInfo->county;   //县
             }
             $accessRecords = new AccessRecordsModel;
             $accessRecords->ip            = $ip;
-            $accessRecords->article_id    = null;
+            $accessRecords->article_id    = 0;
             $accessRecords->country_name  = (!empty($ipInfo->country)) ? $ipInfo->country : null;
             $accessRecords->province_name = (!empty($ipInfo->region)) ? $ipInfo->region : null;
             $accessRecords->city_name     = (!empty($ipInfo->city)) ? $ipInfo->city : null;
@@ -248,7 +248,7 @@ class Index extends Controller
       }
 
       //访问记录
-      if(!empty($ip))
+      if($ip)
       {
         //查询当天访问记录是否已经存在该ip记录
         $value = Cookie::get($name,'views_');
@@ -269,11 +269,11 @@ class Index extends Controller
 
           if($ipInfo)
           {
-            if(!empty($ipInfo->area))
+            if($ipInfo->area)
             {
               $area = $ipInfo->area; //区
             }
-            if(!empty($ipInfo->county))
+            if($ipInfo->county)
             {
                 $area = $ipInfo->county;   //县
             }
