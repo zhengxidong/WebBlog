@@ -33,6 +33,7 @@ class Index extends Controller
 
           if($ipInfo)
           {
+
             if($ipInfo->area)
             {
               $area = $ipInfo->area; //区
