@@ -60,16 +60,11 @@ class Article extends Base
           // unset($data['test-editormd-html-code']);
           // Db::table('bg_article')->insert($data);
 
-          //var_dump($data);
-          //exit;
           if(!isset($data['cate_id']) && !empty($data['cate_id'])
           && !isset($data['title']) && !empty($data['title']))
           {
             $this->error('请填写完整','article/index');
           }
-
-          //var_dump($data);
-          //exit;
           //模型操作
           $article = new ArticleModel;
           $cateId = $data['cate_id'];
@@ -81,46 +76,50 @@ class Article extends Base
           $articlePassword = $data['password'];
           $articleName     = $data['name'];
 
-          $articleData = [
+          try{
 
-            'article_title'   => $articleTitle,                       //文章标题
-            'article_author'  => '1',                                 //文章作者ID
-            'article_date'    => date('Y-m-d H:i:s'),                   //文章发布时间
-            'article_excerpt' => $articleExcerpt,                   //文章摘录
-            'article_content' => $articleContent,//文章内容
-            'article_status'  => (empty($articleStatus)) ? 'close':'open',                              //文章状态，是否公开
-            'article_password'=> $articlePassword,                        //文章密码
-            'article_name'    => $articleName,                         //文章缩略名
-            'cate_id'         => $cateId
-          ];
+          
+            $articleData = [
 
-          //unset($data['test-editormd-markdown-doc']);
-          //unset($data['title']);
-          //unset($data['test-editormd-html-code']);
+              'article_title'   => $articleTitle,                       //文章标题
+              'article_author'  => '1',                                 //文章作者ID
+              'article_date'    => date('Y-m-d H:i:s'),                   //文章发布时间
+              'article_excerpt' => $articleExcerpt,                   //文章摘录
+              'article_content' => $articleContent,//文章内容
+              'article_status'  => (empty($articleStatus)) ? 'close':'open',                              //文章状态，是否公开
+              'article_password'=> $articlePassword,                        //文章密码
+              'article_name'    => $articleName,                         //文章缩略名
+              'cate_id'         => $cateId
+            ];
 
-          $article->data($articleData);
+            //unset($data['test-editormd-markdown-doc']);
+            //unset($data['title']);
+            //unset($data['test-editormd-html-code']);
 
-          if(!$article->save())
-          {
-            $this->error('网络错误,文章添加失败！','article/index');
-          }
+            $article->data($articleData);
+            $article->save();
 
-          if(isset($data['tagId']) && !empty($data['tagId']))
-          {
-            foreach ($data['tagId'] as $key => $id) {
-              //保存标签
-              $articleForTag = new ArticleForTagModel;
-              $articleForTag->article_id = $article->id;
-              $articleForTag->tag_id = $id;
-              $articleForTag->created_by = 'system';
-              $articleForTag->created_on = date("Y-m-d H:i:s");
-              if(!$articleForTag->save())
-              {
-                $this->error('网络错误,标签添加失败！','article/index');
+            if(isset($data['tagId']) && !empty($data['tagId']))
+            {
+              foreach ($data['tagId'] as $key => $id) {
+                //保存标签
+                $articleForTag = new ArticleForTagModel;
+                $articleForTag->article_id = $article->id;
+                $articleForTag->tag_id = $id;
+                $articleForTag->created_by = 'system';
+                $articleForTag->created_on = date("Y-m-d H:i:s");
+                if(!$articleForTag->save())
+                {
+                  $this->error('网络错误,标签添加失败！','article/index');
+                }
               }
+
             }
 
-          }
+        }
+        catch(\Exception $e){
+          $this->error('发生错误:'.$e->getMessage(),'article/index');
+        }
 
           $this->redirect('article/index');
           //$this->success('发布成功','article/index');
