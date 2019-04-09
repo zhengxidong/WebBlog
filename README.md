@@ -6,10 +6,10 @@
 克隆项目
 > git clone https://github.com/zhengxidong/WebBlog.git
 
-建立软连接
+给上传图片目录建立软连接
 
 
-### 配置容器内nginx
+配置容器内nginx
 
 重写地址
 ```js
@@ -22,7 +22,7 @@ location / {
 }
 ```
 
-### 注意事项
+## 注意事项
 
 访问站点出现以下错误
 
