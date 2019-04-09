@@ -7,7 +7,7 @@
 > git clone https://github.com/zhengxidong/WebBlog.git
 
 给上传图片目录建立软连接
-
+>
 
 配置容器内nginx，重写地址
 ```js
