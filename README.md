@@ -2,8 +2,9 @@
 
 切换到home目录
 > cd /home
-克隆项目
 
+克隆项目
+> git clone https://github.com/zhengxidong/WebBlog.git
 
 建立软连接
 
