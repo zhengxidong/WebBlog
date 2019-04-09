@@ -9,9 +9,7 @@
 给上传图片目录建立软连接
 
 
-配置容器内nginx
-
-重写地址
+配置容器内nginx，重写地址
 ```js
 location / {
 
@@ -30,7 +28,7 @@ location / {
 file_put_contents(/usr/local/nginx/html/blog/runtime/temp/f8b69fbc1e64f49a2a62a21dd941bfea.php): failed to open stream: Permission denied
 ```
 
-解决方法
+解决方法：
 
 赋予runtime目录下执行权限
 
