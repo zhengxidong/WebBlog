@@ -17,7 +17,7 @@ cd ..
 git pull
 
 # 实例化容器
-docker run -d --restart=alwls -p 7777:80 --name web-blog \
+docker run -d --restart=always -p 8080:80 --name web-blog \
 	-v ./application:/usr/local/nginx/html/www.itellyou.site/application \
 	-v ./extend:/usr/local/nginx/html/www.itellyou.site/extend \
 	-v ./public:/usr/local/nginx/html/www.itellyou.site/public \
