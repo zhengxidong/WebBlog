@@ -12,6 +12,12 @@
 * shell
 * mysql
 
+## 系统环境要求
+
+* php >= 5.4
+* redis
+* docker
+
 ## 部署
 
 切换到home目录
