@@ -25,4 +25,5 @@ docker run -d --restart=always -p 8080:80 --name web-blog \
 	-v /home/www/WebBlog/thinkphp:/usr/local/nginx/html/www.itellyou.site/thinkphp \
 	-v /home/www/WebBlog/vendor:/usr/local/nginx/html/www.itellyou.site/vendor \
 	-v /home/www/WebBlog/etc/nginx/conf.d/itellyou.site.conf:/etc/nginx/conf.d/itellyou.site.conf \
+	-v /home/data/uploads:/usr/local/nginx/html/www.itellyou.site/public/static/uploads \
 	blog
