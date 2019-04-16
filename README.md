@@ -21,6 +21,7 @@
 ## 部署
 
 切换到home目录
+
      cd /home
 
 克隆项目
@@ -29,6 +30,7 @@
 
 给上传图片目录建立软连接
 ln -s 源目录 目标目录
+
      ln -s /home/WebBlog/public/static/uploads /home/data/uploads
 
 配置容器内nginx，重写地址
