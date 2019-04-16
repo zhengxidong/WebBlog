@@ -15,8 +15,8 @@
 ## 系统环境要求
 
 * php >= 5.4
-* redis
-* docker
+* php redis 扩展
+* docker 服务
 
 ## 部署
 
