@@ -6,7 +6,7 @@ use think\Request;
 use think\Cookie;
 use app\index\model\Article as ArticleModel;
 use app\index\model\Cate as CateModel;
-use app\manage\model\AccessRecords as AccessRecordsModel;
+use app\index\model\AccessRecords as AccessRecordsModel;
 use app\index\model\Tag as TagModel;
 use app\index\model\ArticleForTag as ArticleForTagModel;
 class Index extends Controller
