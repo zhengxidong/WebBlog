@@ -175,3 +175,5 @@ CREATE TABLE `bg_url` (
   KEY `idx_cate_id` (`cate_id`),
   KEY `idx_created_on` (`created_on`)
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COMMENT='资料地址表';
+
+alter table bg_article add article_code text not null comment '文章源码';
