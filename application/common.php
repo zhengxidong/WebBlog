@@ -105,74 +105,59 @@ function mbSubStr($content)
   $content = mb_substr($content,0,175);
   return $content;
 }
-function getAddress($ip)
-{
+/**
+ * 通过ip地址获取地理信息
+ *
+ * @param [string] $ip
+ * @return void
+ */
+function getAddress($ip){
 
-   
    if(empty($ip)) return false;
+
    $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
 
    $curl = curl_init();
 
    curl_setopt($curl,CURLOPT_URL,$url);
-   curl_setopt($curl,CURLOPT_HEADER,0);
+   //curl_setopt($curl,CURLOPT_HEADER,0);
 
-   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+   //设置超时时间
+   curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
    $outInput = curl_exec($curl);
    $curl_errno = curl_errno($curl);
-        $curl_error = curl_error($curl);
+   $curl_error = curl_error($curl);
    curl_close($curl);
 
    if ($curl_errno > 0) {
-                //echo "cURL Error ($curl_errno): $curl_error\n";
+        //echo "cURL Error ($curl_errno): $curl_error\n";
 		return false;
-        } 
-	//else {
-                //echo "Data received: $data\n";
-        //}
-
-   //return $data->data;
-	//print_r($data);
+    } 
 
 	$data = json_decode($outInput,true);
-	//var_dump($data['data']);
 
 	$returnData = [
 
-	'ip' => $data['data']['ip'],
-	'country' => $data['data']['country'],
-	'area' => $data['data']['area'],
-	'region' => $data['data']['region'],
-	'city' => $data['data']['city'],
-	'county' => $data['data']['county'],
-	'isp' => $data['data']['isp'],
-	'country_id' => $data['data']['country_id'],
-	'area_id' => $data['data']['area_id'],
+	'ip'        => $data['data']['ip'],
+	'country'   => $data['data']['country'],
+	'area'      => $data['data']['area'],
+	'region'    => $data['data']['region'],
+	'city'      => $data['data']['city'],
+	'county'    => $data['data']['county'],
+	'isp'       => $data['data']['isp'],
+	'country_id'=> $data['data']['country_id'],
+	'area_id'   => $data['data']['area_id'],
 	'region_id' => $data['data']['region_id'],
-	'city_id' => $data['data']['city_id'],
+	'city_id'   => $data['data']['city_id'],
 	'county_id' => $data['data']['county_id'],
-	'isp_id' => $data['data']['isp_id'],
+	'isp_id'    => $data['data']['isp_id'],
 
 	];
 
 	$returnData = (object)$returnData;
-   //var_dump($returnData);
-   //exit;
 
 	return $returnData;
-   //print_r(file_get_contents($url));
-   #$ipinfo=json_decode(file_get_contents($url));
-
-   #var_dump($ipinfo);
-
-   #exit;	
-   #if(!$ipinfo){
-   #   return false;
-   #}
-   #if($ipinfo->code=='1'){
-   #    return false;
-   #}
-   //$city = $ipinfo->data->region.$ipinfo->data->city;
-   //return $ipinfo->data;
+ 
 }
